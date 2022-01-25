@@ -136,7 +136,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">18</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">21</span></a>
 
   </li>
   </ul>
@@ -166,7 +166,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://kevinyulei.github.io/2022/01/24/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B1/Part07-Markdown%E4%BB%A3%E7%A0%81%E8%AF%AD%E6%B3%95/">
+    <link itemprop="mainEntityOfPage" href="https://kevinyulei.github.io/2022/01/24/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Part10-Markdown%E5%9B%BE%E7%89%87%E8%AF%AD%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/01.jpg">
@@ -180,7 +180,331 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/01/24/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B1/Part07-Markdown%E4%BB%A3%E7%A0%81%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">Part07-Markdown代码语法</a>
+            <a href="/2022/01/24/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Part10-Markdown%E5%9B%BE%E7%89%87%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">Part10-Markdown图片语法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-01-24 14:46:00" itemprop="dateCreated datePublished" datetime="2022-01-24T14:46:00+08:00">2022-01-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-01-25 13:50:22" itemprop="dateModified" datetime="2022-01-25T13:50:22+08:00">2022-01-25</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">Markdown官方教程</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">基本语法</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>本文转自<a target="_blank" rel="noopener" href="https://markdown.com.cn/">Markdown官方教程</a>, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除</p>
+</blockquote>
+<h1 id="Markdown-图片语法"><a href="#Markdown-图片语法" class="headerlink" title="Markdown 图片语法"></a>Markdown 图片语法</h1><p>要添加图像，请使用感叹号 (!), 然后在方括号增加替代文本，图片链接放在圆括号里，括号里的链接后可以增加一个可选的图片标题文本。</p>
+<p>插入图片Markdown语法代码：<code>![图片alt](图片链接 "图片title")。</code></p>
+<p>对应的HTML代码：<code>&lt;img src="图片链接" alt="图片alt" title="图片title"&gt;</code></p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![这是图片](/assets/img/philly-magic-garden.jpg "Magic Gardens")</span><br></pre></td></tr></tbody></table></figure>
+
+<p>渲染效果如下：<br><img src="/assets/img/philly-magic-garden.jpg" alt="这是图片" title="Magic Gardens"></p>
+<h2 id="链接图片"><a href="#链接图片" class="headerlink" title="链接图片"></a>链接图片</h2><p>给图片增加链接，请将图像的Markdown 括在方括号中，然后将链接添加在圆括号中。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[![沙漠中的岩石图片](/assets/img/shiprock.jpg "Shiprock")](https://markdown.com.cn)</span><br></pre></td></tr></tbody></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://markdown.com.cn/"><img src="/assets/img/shiprock.jpg" alt="沙漠中的岩石图片" title="Shiprock"></a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://kevinyulei.github.io/2022/01/24/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Part09-Markdown%E9%93%BE%E6%8E%A5%E8%AF%AD%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/01.jpg">
+      <meta itemprop="name" content="雨泪丶">
+      <meta itemprop="description" content="一位普通建筑生的心血来潮">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="雨泪丶的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/01/24/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Part09-Markdown%E9%93%BE%E6%8E%A5%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">Part09-Markdown链接语法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-01-24 13:59:00" itemprop="dateCreated datePublished" datetime="2022-01-24T13:59:00+08:00">2022-01-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-01-25 13:48:35" itemprop="dateModified" datetime="2022-01-25T13:48:35+08:00">2022-01-25</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">Markdown官方教程</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">基本语法</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>本文转自<a target="_blank" rel="noopener" href="https://markdown.com.cn/">Markdown官方教程</a>, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除</p>
+</blockquote>
+<h1 id="Markdown-链接语法"><a href="#Markdown-链接语法" class="headerlink" title="Markdown 链接语法"></a>Markdown 链接语法</h1><p>链接文本放在中括号内，链接地址放在后面的括号中，链接title可选。</p>
+<p>超链接Markdown语法代码：[超链接显示名](超链接地址 “超链接title”)</p>
+<p>对应的HTML代码：&lt;a href=”超链接地址” title=”超链接title”&gt;超链接显示名&lt;/a&gt;</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是一个链接 [Markdown语法](https://markdown.com.cn)。</span><br></pre></td></tr></tbody></table></figure>
+
+<p>渲染效果如下：<br>这是一个链接 <a target="_blank" rel="noopener" href="https://markdown.com.cn/">Markdown语法</a>。</p>
+<h2 id="给链接增加-Title"><a href="#给链接增加-Title" class="headerlink" title="给链接增加 Title"></a>给链接增加 Title</h2><p>链接title是当鼠标悬停在链接上时会出现的文字，这个title是可选的，它放在圆括号中链接地址后面，跟链接地址之间以空格分隔。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是一个链接 [Markdown语法](https://markdown.com.cn "最好的markdown教程")。</span><br></pre></td></tr></tbody></table></figure>
+
+<p>渲染效果如下：<br>这是一个链接 <a target="_blank" rel="noopener" href="https://markdown.com.cn/" title="最好的markdown教程">Markdown语法</a>。</p>
+<h2 id="网址和Email地址"><a href="#网址和Email地址" class="headerlink" title="网址和Email地址"></a>网址和Email地址</h2><p>使用尖括号可以很方便地把URL或者email地址变成可点击的链接。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;https://markdown.com.cn&gt;</span><br><span class="line">&lt;fake@example.com&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>渲染效果如下：<br><a target="_blank" rel="noopener" href="https://markdown.com.cn/">https://markdown.com.cn</a><br><a href="mailto:fake@example.com">fake@example.com</a></p>
+<h2 id="带格式化的链接"><a href="#带格式化的链接" class="headerlink" title="带格式化的链接"></a>带格式化的链接</h2><p>若要强调链接, 则在链接语法前后增加星号。若要将链接表示为代码，请在方括号中添加反引号。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">I love supporting the **[EFF](https://eff.org)**.</span><br><span class="line">This is the *[Markdown Guide](https://www.markdownguide.org)*.</span><br><span class="line">See the section on [`code`](#code).</span><br></pre></td></tr></tbody></table></figure>
+
+<p>渲染效果如下：<br>I love supporting the <strong><a target="_blank" rel="noopener" href="https://eff.org/">EFF</a></strong>.<br>This is the <em><a target="_blank" rel="noopener" href="https://www.markdownguide.org/">Markdown Guide</a></em>.<br>See the section on <a href="#code"><code>code</code></a>.</p>
+<h2 id="引用类型链接"><a href="#引用类型链接" class="headerlink" title="引用类型链接"></a>引用类型链接</h2><p>引用样式链接是一种特殊的链接，它使URL在Markdown中更易于显示和阅读。参考样式链接分为两部分：与文本保持内联的部分以及存储在文件中其他位置的部分，以使文本易于阅读。</p>
+<h3 id="链接的第一部分格式"><a href="#链接的第一部分格式" class="headerlink" title="链接的第一部分格式"></a>链接的第一部分格式</h3><p>引用类型的链接的第一部分使用两组括号进行格式设置。第一组方括号包围应显示为链接的文本。第二组括号显示了一个标签，该标签用于指向您存储在文档其他位置的链接。</p>
+<p>尽管不是必需的，可以在第一组和第二组括号之间包含一个空格。第二组括号中的标签不区分大小写，可以包含字母，数字，空格或标点符号。</p>
+<p>以下示例格式对于链接的第一部分效果相同：</p>
+<ul>
+<li><code>[hobbit-hole][1]</code></li>
+<li><code>[hobbit-hole] [1]</code></li>
+</ul>
+<h3 id="链接的第二部分格式"><a href="#链接的第二部分格式" class="headerlink" title="链接的第二部分格式"></a>链接的第二部分格式</h3><p>引用类型链接的第二部分使用以下属性设置格式：</p>
+<ol>
+<li>放在括号中的标签，其后紧跟一个冒号和至少一个空格（例如<code>[label]: </code>）。</li>
+<li>链接的URL，可以选择将其括在尖括号中。</li>
+<li>链接的可选标题，可以将其括在双引号，单引号或括号中。</li>
+</ol>
+<p>以下示例格式对于链接的第二部分效果相同：</p>
+<ul>
+<li><code>[1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle</code></li>
+<li><code>[1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle "Hobbit lifestyles"</code></li>
+<li><code>[1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle 'Hobbit lifestyles'</code></li>
+<li><code>[1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle (Hobbit lifestyles)</code></li>
+<li><code>[1]: &lt;https://en.wikipedia.org/wiki/Hobbit#Lifestyle&gt; "Hobbit lifestyles"</code></li>
+<li><code>[1]: &lt;https://en.wikipedia.org/wiki/Hobbit#Lifestyle&gt; 'Hobbit lifestyles'</code></li>
+<li><code>[1]: &lt;https://en.wikipedia.org/wiki/Hobbit#Lifestyle&gt; (Hobbit lifestyles)</code></li>
+</ul>
+<p>可以将链接的第二部分放在Markdown文档中的任何位置。有些人将它们放在出现的段落之后，有些人则将它们放在文档的末尾（例如尾注或脚注）。</p>
+<h2 id="链接最佳实践"><a href="#链接最佳实践" class="headerlink" title="链接最佳实践"></a>链接最佳实践</h2><p>不同的 Markdown 应用程序处理URL中间的空格方式不一样。为了兼容性，请尽量使用%20代替空格。</p>
+<table>
+<thead>
+<tr>
+<th><span class="github-emoji"><span>✔</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>Do this</th>
+<th><span class="github-emoji"><span>❌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>Don’t do this</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[link](https://www.example.com/my%20great%20page)</code></td>
+<td><code>[link](https://www.example.com/my great page)</code></td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://kevinyulei.github.io/2022/01/24/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Part08-Markdown%E5%88%86%E9%9A%94%E7%BA%BF%E8%AF%AD%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/01.jpg">
+      <meta itemprop="name" content="雨泪丶">
+      <meta itemprop="description" content="一位普通建筑生的心血来潮">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="雨泪丶的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/01/24/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Part08-Markdown%E5%88%86%E9%9A%94%E7%BA%BF%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">Part08-Markdown分隔线语法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-01-24 13:45:00" itemprop="dateCreated datePublished" datetime="2022-01-24T13:45:00+08:00">2022-01-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-01-25 13:49:59" itemprop="dateModified" datetime="2022-01-25T13:49:59+08:00">2022-01-25</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">Markdown官方教程</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">基本语法</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>本文转自<a target="_blank" rel="noopener" href="https://markdown.com.cn/">Markdown官方教程</a>, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除</p>
+</blockquote>
+<h1 id="Markdown-分隔线语法"><a href="#Markdown-分隔线语法" class="headerlink" title="Markdown 分隔线语法"></a>Markdown 分隔线语法</h1><p>要创建分隔线，请在单独一行上使用三个或多个星号 (***)、破折号 (—) 或下划线 (___) ，并且不能包含其他内容。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">***</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">_________________</span><br></pre></td></tr></tbody></table></figure>
+
+<p>以上三个分隔线的渲染效果看起来都一样：</p>
+<hr>
+<h2 id="分隔线（Horizontal-Rule）用法最佳实践"><a href="#分隔线（Horizontal-Rule）用法最佳实践" class="headerlink" title="分隔线（Horizontal Rule）用法最佳实践"></a>分隔线（Horizontal Rule）用法最佳实践</h2><p>为了兼容性，请在分隔线的前后均添加空白行。</p>
+<table>
+<thead>
+<tr>
+<th><span class="github-emoji"><span>✔</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>Do this</th>
+<th><span class="github-emoji"><span>❌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>Don’t do this</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Try to put a blank line before…<br><br>—<br><br>…and after a horizontal rule.</td>
+<td>Without blank lines, this would be a heading.<br>—<br>Don’t do this!</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://kevinyulei.github.io/2022/01/24/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Part07-Markdown%E4%BB%A3%E7%A0%81%E8%AF%AD%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/01.jpg">
+      <meta itemprop="name" content="雨泪丶">
+      <meta itemprop="description" content="一位普通建筑生的心血来潮">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="雨泪丶的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/01/24/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Part07-Markdown%E4%BB%A3%E7%A0%81%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">Part07-Markdown代码语法</a>
         </h2>
 
         <div class="post-meta">
@@ -276,7 +600,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://kevinyulei.github.io/2022/01/23/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B1/Part06-Markdown%E5%88%97%E8%A1%A8%E8%AF%AD%E6%B3%95/">
+    <link itemprop="mainEntityOfPage" href="https://kevinyulei.github.io/2022/01/23/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Part06-Markdown%E5%88%97%E8%A1%A8%E8%AF%AD%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/01.jpg">
@@ -290,7 +614,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/01/23/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B1/Part06-Markdown%E5%88%97%E8%A1%A8%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">Part06-Markdown列表语法</a>
+            <a href="/2022/01/23/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Part06-Markdown%E5%88%97%E8%A1%A8%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">Part06-Markdown列表语法</a>
         </h2>
 
         <div class="post-meta">
@@ -475,7 +799,7 @@
 <li><p> Open the file containing the Linux mascot.</p>
 </li>
 <li><p>Marvel at its beauty.</p>
-<p> <img src="/2022/01/23/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B1/Part06-Markdown%E5%88%97%E8%A1%A8%E8%AF%AD%E6%B3%95/......%5Cthemes%5Cnext%5Csource%5Cimages%5C01.jpg" alt="Picture"></p>
+<p> <img src="/2022/01/23/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Part06-Markdown%E5%88%97%E8%A1%A8%E8%AF%AD%E6%B3%95/......%5Cthemes%5Cnext%5Csource%5Cimages%5C01.jpg" alt="Picture"></p>
 </li>
 <li><p> Close the file.</p>
 </li>
@@ -513,7 +837,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://kevinyulei.github.io/2022/01/23/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B1/Part05-Markdown%E5%BC%95%E7%94%A8%E8%AF%AD%E6%B3%95/">
+    <link itemprop="mainEntityOfPage" href="https://kevinyulei.github.io/2022/01/23/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Part05-Markdown%E5%BC%95%E7%94%A8%E8%AF%AD%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/01.jpg">
@@ -527,7 +851,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/01/23/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B1/Part05-Markdown%E5%BC%95%E7%94%A8%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">Part05-Markdown引用语法</a>
+            <a href="/2022/01/23/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Part05-Markdown%E5%BC%95%E7%94%A8%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">Part05-Markdown引用语法</a>
         </h2>
 
         <div class="post-meta">
@@ -629,7 +953,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://kevinyulei.github.io/2022/01/23/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B1/Part04-Markdown%E5%BC%BA%E8%B0%83%E8%AF%AD%E6%B3%95/">
+    <link itemprop="mainEntityOfPage" href="https://kevinyulei.github.io/2022/01/23/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Part04-Markdown%E5%BC%BA%E8%B0%83%E8%AF%AD%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/01.jpg">
@@ -643,7 +967,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/01/23/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B1/Part04-Markdown%E5%BC%BA%E8%B0%83%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">Part04-Markdown强调语法</a>
+            <a href="/2022/01/23/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Part04-Markdown%E5%BC%BA%E8%B0%83%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">Part04-Markdown强调语法</a>
         </h2>
 
         <div class="post-meta">
@@ -834,7 +1158,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://kevinyulei.github.io/2022/01/23/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B1/Part03-Markdown%E6%8D%A2%E8%A1%8C%E8%AF%AD%E6%B3%95/">
+    <link itemprop="mainEntityOfPage" href="https://kevinyulei.github.io/2022/01/23/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Part03-Markdown%E6%8D%A2%E8%A1%8C%E8%AF%AD%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/01.jpg">
@@ -848,7 +1172,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/01/23/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B1/Part03-Markdown%E6%8D%A2%E8%A1%8C%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">Part03-Markdown换行语法</a>
+            <a href="/2022/01/23/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Part03-Markdown%E6%8D%A2%E8%A1%8C%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">Part03-Markdown换行语法</a>
         </h2>
 
         <div class="post-meta">
@@ -944,7 +1268,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://kevinyulei.github.io/2022/01/23/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B1/Part02-Markdown%E6%AE%B5%E8%90%BD%E8%AF%AD%E6%B3%95/">
+    <link itemprop="mainEntityOfPage" href="https://kevinyulei.github.io/2022/01/23/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Part02-Markdown%E6%AE%B5%E8%90%BD%E8%AF%AD%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/01.jpg">
@@ -958,7 +1282,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/01/23/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B1/Part02-Markdown%E6%AE%B5%E8%90%BD%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">Part02-Markdown段落语法</a>
+            <a href="/2022/01/23/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Part02-Markdown%E6%AE%B5%E8%90%BD%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">Part02-Markdown段落语法</a>
         </h2>
 
         <div class="post-meta">
@@ -1052,7 +1376,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://kevinyulei.github.io/2022/01/23/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B1/Part01-Markdown%E6%A0%87%E9%A2%98%E8%AF%AD%E6%B3%95/">
+    <link itemprop="mainEntityOfPage" href="https://kevinyulei.github.io/2022/01/23/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Part01-Markdown%E6%A0%87%E9%A2%98%E8%AF%AD%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/01.jpg">
@@ -1066,7 +1390,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/01/23/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B1/Part01-Markdown%E6%A0%87%E9%A2%98%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">Part01-Markdown标题语法</a>
+            <a href="/2022/01/23/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Part01-Markdown%E6%A0%87%E9%A2%98%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">Part01-Markdown标题语法</a>
         </h2>
 
         <div class="post-meta">
@@ -1201,84 +1525,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://kevinyulei.github.io/2022/01/21/01-HTML%E5%AD%A6%E4%B9%A0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/01.jpg">
-      <meta itemprop="name" content="雨泪丶">
-      <meta itemprop="description" content="一位普通建筑生的心血来潮">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="雨泪丶的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/01/21/01-HTML%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">01-HTML学习</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-01-21 18:51:23" itemprop="dateCreated datePublished" datetime="2022-01-21T18:51:23+08:00">2022-01-21</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-01-23 22:37:37" itemprop="dateModified" datetime="2022-01-23T22:37:37+08:00">2022-01-23</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/HTML%E8%8F%9C%E9%B8%9F%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">HTML菜鸟教程</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="1-HTML语法规范"><a href="#1-HTML语法规范" class="headerlink" title="1.HTML语法规范"></a>1.HTML语法规范</h1><h2 id="1-1基本语法概述"><a href="#1-1基本语法概述" class="headerlink" title="1.1基本语法概述"></a>1.1基本语法概述</h2><p>1.HTML标签是有尖括号包围的关键词，例如。<br>2.HTML标签通常是成对出现的，例如和，我们称为双标签。标签对中的第一个标签是开始标签，第二个标签是结束标签。<br>3.有些特殊的标签必须是单个标签（极少情况），例如<br>，我们称为单标签。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1346,7 +1596,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">21</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
