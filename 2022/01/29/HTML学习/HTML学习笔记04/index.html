@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"kevinyulei.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="1.HTML语法规范1.1基本语法概述1.HTML标签是有尖括号包围的关键词，例如。2.HTML标签通常是成对出现的，例如和，我们称为双标签。标签对中的第一个标签是开始标签，第二个标签是结束标签。3.有些特殊的标签必须是单个标签（极少情况），例如，我们称为单标签。">
+  <meta name="description" content="HTML学习笔记 Part04-CSS层叠样式表 二目录 Emmet语法 CSS的复合选择器 CSS的元素显示模式 CSS的背景 CSS的三大特性 CSS的注释  1. Emmet语法Emmet语法的前身是Zen coding，它使用缩写来提高html&#x2F;css的编写速度，VSCode内部已经集成了该语法。 1.1 快速生成HTML结构语法 生成标签：直接输入标签名，按tab键即可。比如 div 然">
 <meta property="og:type" content="article">
-<meta property="og:title" content="01-HTML学习">
-<meta property="og:url" content="https://kevinyulei.github.io/2022/01/21/01-HTML%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:title" content="HTML学习笔记Part04">
+<meta property="og:url" content="https://kevinyulei.github.io/2022/01/29/HTML%E5%AD%A6%E4%B9%A0/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B004/index.html">
 <meta property="og:site_name" content="雨泪丶的博客">
-<meta property="og:description" content="1.HTML语法规范1.1基本语法概述1.HTML标签是有尖括号包围的关键词，例如。2.HTML标签通常是成对出现的，例如和，我们称为双标签。标签对中的第一个标签是开始标签，第二个标签是结束标签。3.有些特殊的标签必须是单个标签（极少情况），例如，我们称为单标签。">
+<meta property="og:description" content="HTML学习笔记 Part04-CSS层叠样式表 二目录 Emmet语法 CSS的复合选择器 CSS的元素显示模式 CSS的背景 CSS的三大特性 CSS的注释  1. Emmet语法Emmet语法的前身是Zen coding，它使用缩写来提高html&#x2F;css的编写速度，VSCode内部已经集成了该语法。 1.1 快速生成HTML结构语法 生成标签：直接输入标签名，按tab键即可。比如 div 然">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-01-21T10:51:23.000Z">
-<meta property="article:modified_time" content="2022-01-23T14:37:37.772Z">
+<meta property="article:published_time" content="2022-01-29T07:30:00.000Z">
+<meta property="article:modified_time" content="2022-01-29T14:25:15.890Z">
 <meta property="article:author" content="雨泪丶">
 <meta property="article:tag" content="HTML">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://kevinyulei.github.io/2022/01/21/01-HTML%E5%AD%A6%E4%B9%A0/">
+<link rel="canonical" href="https://kevinyulei.github.io/2022/01/29/HTML%E5%AD%A6%E4%B9%A0/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B004/">
 
 
 <script id="page-configurations">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>01-HTML学习 | 雨泪丶的博客</title>
+  <title>HTML学习笔记Part04 | 雨泪丶的博客</title>
   
 
 
@@ -138,7 +138,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">23</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">26</span></a>
 
   </li>
   </ul>
@@ -169,7 +169,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://kevinyulei.github.io/2022/01/21/01-HTML%E5%AD%A6%E4%B9%A0/">
+    <link itemprop="mainEntityOfPage" href="https://kevinyulei.github.io/2022/01/29/HTML%E5%AD%A6%E4%B9%A0/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B004/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/01.jpg">
@@ -182,7 +182,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          01-HTML学习
+          HTML学习笔记Part04
         </h1>
 
         <div class="post-meta">
@@ -191,23 +191,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2022-01-21 18:51:23" itemprop="dateCreated datePublished" datetime="2022-01-21T18:51:23+08:00">2022-01-21</time>
+              <time title="创建时间：2022-01-29 15:30:00 / 修改时间：22:25:15" itemprop="dateCreated datePublished" datetime="2022-01-29T15:30:00+08:00">2022-01-29</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-01-23 22:37:37" itemprop="dateModified" datetime="2022-01-23T22:37:37+08:00">2022-01-23</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/HTML%E8%8F%9C%E9%B8%9F%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">HTML菜鸟教程</span></a>
+                  <a href="/categories/HTML/" itemprop="url" rel="index"><span itemprop="name">HTML</span></a>
                 </span>
             </span>
 
@@ -222,8 +216,54 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="1-HTML语法规范"><a href="#1-HTML语法规范" class="headerlink" title="1.HTML语法规范"></a>1.HTML语法规范</h1><h2 id="1-1基本语法概述"><a href="#1-1基本语法概述" class="headerlink" title="1.1基本语法概述"></a>1.1基本语法概述</h2><p>1.HTML标签是有尖括号包围的关键词，例如。<br>2.HTML标签通常是成对出现的，例如和，我们称为双标签。标签对中的第一个标签是开始标签，第二个标签是结束标签。<br>3.有些特殊的标签必须是单个标签（极少情况），例如<br>，我们称为单标签。</p>
-
+        <h1 id="HTML学习笔记-Part04-CSS层叠样式表-二"><a href="#HTML学习笔记-Part04-CSS层叠样式表-二" class="headerlink" title="HTML学习笔记 Part04-CSS层叠样式表 二"></a>HTML学习笔记 Part04-CSS层叠样式表 二</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ol>
+<li>Emmet语法</li>
+<li>CSS的复合选择器</li>
+<li>CSS的元素显示模式</li>
+<li>CSS的背景</li>
+<li>CSS的三大特性</li>
+<li>CSS的注释</li>
+</ol>
+<h2 id="1-Emmet语法"><a href="#1-Emmet语法" class="headerlink" title="1. Emmet语法"></a>1. Emmet语法</h2><p>Emmet语法的前身是Zen coding，它使用缩写来提高html/css的编写速度，VSCode内部已经集成了该语法。</p>
+<h3 id="1-1-快速生成HTML结构语法"><a href="#1-1-快速生成HTML结构语法" class="headerlink" title="1.1 快速生成HTML结构语法"></a>1.1 快速生成HTML结构语法</h3><ol>
+<li>生成标签：直接输入标签名，按tab键即可。比如 div 然后tab键，就可以生成&lt;div&gt;&lt;/div&gt;</li>
+<li>如果想要生成多个相同标签，加上*就可以了。比如 div*3，就可以快速生成3个div</li>
+<li>如果有父子级关系（包含关系）的标签，可以用 &gt; 。比如ul&gt;li就可以了</li>
+<li>如果有兄弟级关系（并列关系）的标签，用 + 就可以了。比如 div+p</li>
+<li>如果生成带有类名或者id名字的，直接写 .demo 或者 #two tab键就可以了</li>
+<li>如果生成的div类名是有顺序的，可以用自增符号 $，并配合*与数字</li>
+<li>如果想要在生成的标签内部写内容可以用{}表示</li>
+</ol>
+<h3 id="1-2-快速生成CSS语法样式"><a href="#1-2-快速生成CSS语法样式" class="headerlink" title="1.2 快速生成CSS语法样式"></a>1.2 快速生成CSS语法样式</h3><p>CSS基本采取简写形式即可。</p>
+<ol>
+<li>比如w200 按tab键。生成：width: 200px;</li>
+<li>比如lh26 按tab键。生成：line-height: 26px;</li>
+</ol>
+<h3 id="1-3-快速格式化代码"><a href="#1-3-快速格式化代码" class="headerlink" title="1.3 快速格式化代码"></a>1.3 快速格式化代码</h3><p>VSCode快速格式化代码：Shift-Alt-F</p>
+<p><strong>可设置当我们保存页面的时候自动格式化代码：</strong></p>
+<p>旧版本VSCode：</p>
+<ol>
+<li>文件-首选项-设置</li>
+<li>搜索emmet.include;</li>
+<li>在settings.json下的【用户】中添加以下语句：<blockquote>
+<p>“editor.formatOnType”:true,<br>“editor.formatOnSave”:true<br>只需要设置一次即可，以后都可以自动保存格式化代码</p>
+</blockquote>
+</li>
+</ol>
+<p>新版本VSCode：</p>
+<ol>
+<li>文件-首选项-设置</li>
+<li>搜索format</li>
+<li>勾选Editor:Format On Save</li>
+</ol>
+<h2 id="2-CSS的复合选择器"><a href="#2-CSS的复合选择器" class="headerlink" title="2. CSS的复合选择器"></a>2. CSS的复合选择器</h2><h3 id="2-1-什么是复合选择器"><a href="#2-1-什么是复合选择器" class="headerlink" title="2.1 什么是复合选择器"></a>2.1 什么是复合选择器</h3><p>在CSS中，可以根据选择器的类型把选择器分为<span style="color: red">基础选择器</span>和<span style="color: red">复合选择器</span>，复合选择器是建立在基础选择器之上，对基本选择器进行组合形成的。</p>
+<ul>
+<li>复合选择器可以更准确、更高效地选择目标元素（标签）</li>
+<li>复合选择器是由两个或多个基础选择器，通过不同的方式组合而成</li>
+<li>常用的复合选择器包括：后代选择器、字选择器、并集选择器、伪类选择器等等</li>
+</ul>
+<p>p97</p>
+<h2 id="3-CSS的元素显示模式"><a href="#3-CSS的元素显示模式" class="headerlink" title="3. CSS的元素显示模式"></a>3. CSS的元素显示模式</h2><h2 id="4-CSS的背景"><a href="#4-CSS的背景" class="headerlink" title="4. CSS的背景"></a>4. CSS的背景</h2><h2 id="5-CSS的三大特性"><a href="#5-CSS的三大特性" class="headerlink" title="5. CSS的三大特性"></a>5. CSS的三大特性</h2><h2 id="6-CSS的注释"><a href="#6-CSS的注释" class="headerlink" title="6. CSS的注释"></a>6. CSS的注释</h2>
     </div>
 
     
@@ -238,7 +278,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://kevinyulei.github.io/2022/01/21/01-HTML%E5%AD%A6%E4%B9%A0/" title="01-HTML学习">https://kevinyulei.github.io/2022/01/21/01-HTML学习/</a>
+    <a href="https://kevinyulei.github.io/2022/01/29/HTML%E5%AD%A6%E4%B9%A0/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B004/" title="HTML学习笔记Part04">https://kevinyulei.github.io/2022/01/29/HTML学习/HTML学习笔记04/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -258,13 +298,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/01/20/About-me/" rel="prev" title="关于我">
-      <i class="fa fa-chevron-left"></i> 关于我
+    <a href="/2022/01/28/HTML%E5%AD%A6%E4%B9%A0/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B003/" rel="prev" title="HTML学习笔记Part03">
+      <i class="fa fa-chevron-left"></i> HTML学习笔记Part03
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2022/01/23/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Part01-Markdown%E6%A0%87%E9%A2%98%E8%AF%AD%E6%B3%95/" rel="next" title="Part01-Markdown标题语法">
-      Part01-Markdown标题语法 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -323,7 +360,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-HTML%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83"><span class="nav-number">1.</span> <span class="nav-text">1.HTML语法规范</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E6%A6%82%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">1.1基本语法概述</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-Part04-CSS%E5%B1%82%E5%8F%A0%E6%A0%B7%E5%BC%8F%E8%A1%A8-%E4%BA%8C"><span class="nav-number">1.</span> <span class="nav-text">HTML学习笔记 Part04-CSS层叠样式表 二</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95"><span class="nav-number">1.1.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Emmet%E8%AF%AD%E6%B3%95"><span class="nav-number">1.2.</span> <span class="nav-text">1. Emmet语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90HTML%E7%BB%93%E6%9E%84%E8%AF%AD%E6%B3%95"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.1 快速生成HTML结构语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90CSS%E8%AF%AD%E6%B3%95%E6%A0%B7%E5%BC%8F"><span class="nav-number">1.2.2.</span> <span class="nav-text">1.2 快速生成CSS语法样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-%E5%BF%AB%E9%80%9F%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%BB%A3%E7%A0%81"><span class="nav-number">1.2.3.</span> <span class="nav-text">1.3 快速格式化代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-CSS%E7%9A%84%E5%A4%8D%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.3.</span> <span class="nav-text">2. CSS的复合选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E4%BB%80%E4%B9%88%E6%98%AF%E5%A4%8D%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.3.1.</span> <span class="nav-text">2.1 什么是复合选择器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-CSS%E7%9A%84%E5%85%83%E7%B4%A0%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.4.</span> <span class="nav-text">3. CSS的元素显示模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-CSS%E7%9A%84%E8%83%8C%E6%99%AF"><span class="nav-number">1.5.</span> <span class="nav-text">4. CSS的背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-CSS%E7%9A%84%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7"><span class="nav-number">1.6.</span> <span class="nav-text">5. CSS的三大特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-CSS%E7%9A%84%E6%B3%A8%E9%87%8A"><span class="nav-number">1.7.</span> <span class="nav-text">6. CSS的注释</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -339,7 +376,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-count">26</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
