@@ -28,7 +28,7 @@
 <meta property="og:description" content="西安交通大学2021年下半学年（大三上学期）建筑结构与选型考试题目（附答案与计算过程）前言： 本文仅供学习参考，未经作者允许请勿转发，违者必究。  一、填空题 梁与柱的区分：梁所受的荷载是横向作用的，荷载与构件(即梁)的纵轴线相____；柱所受的荷载是纵向作用，荷载与构件(即柱)的纵轴线相____。  受弯构件按照破坏的性质，有两种破坏的可能，分别是：____破坏和____破坏。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-02-23T09:26:00.000Z">
-<meta property="article:modified_time" content="2022-02-23T09:33:45.250Z">
+<meta property="article:modified_time" content="2022-02-23T09:42:12.134Z">
 <meta property="article:author" content="雨泪丶">
 <meta property="article:tag" content="建筑结构">
 <meta name="twitter:card" content="summary">
@@ -77,7 +77,11 @@
   </style>
 </noscript>
 
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end -->
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
 </head>
 
@@ -193,7 +197,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-02-23 17:26:00 / 修改时间：17:33:45" itemprop="dateCreated datePublished" datetime="2022-02-23T17:26:00+08:00">2022-02-23</time>
+              <time title="创建时间：2022-02-23 17:26:00 / 修改时间：17:42:12" itemprop="dateCreated datePublished" datetime="2022-02-23T17:26:00+08:00">2022-02-23</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -226,8 +230,7 @@
 </li>
 </ol>
 <span id="more"></span>
-
-<ol start="3">
+<ol>
 <li><p>大偏心受压短柱的受力、变形特点与____梁类似，属于延性破坏。大偏心受压承载力主要取决于____钢筋。</p>
 </li>
 <li><p>混凝土保护层用来____和使钢筋在混凝土中____。</p>
@@ -241,7 +244,7 @@
 <li><p>砌体结构中的墙体有承重和非承重区分，填充墙或隔墙非承重墙体的设计主要考虑的是稳定性，进行____验算；而作为受压构件的承重墙，需承受外荷载的作用，设计时除了考虑稳定性外，还必须满足____要求；另外，还需验算大梁下____问题。</p>
 </li>
 </ol>
-<ol start="9">
+<ol>
 <li>横墙承重方案特点：横墙间距____，又有纵墙拉结，建筑物整体性____，空间刚度____，对抗风、抗震都____；纵墙门窗开洞灵活；平面布置不能____。</li>
 </ol>
 <p>答案：</p>
@@ -284,33 +287,62 @@
 <ul>
 <li>$\alpha_1=1.0,f_c=11.9N/mm^2$ ($C_{25}$的数据)</li>
 <li>$f_y=300N/mm^2$ (HRB335的数据)</li>
-<li>$\xi_b=0.55,\rho_{min}=0.2%$</li>
+<li>$\xi_b=0.55,\rho_{min}=0.2\%$</li>
 <li>$a_s=40mm$</li>
 </ul>
 <p><strong>解：</strong></p>
 <ol>
 <li><strong>计算截面有效高度$h_0$:</strong></li>
 </ol>
-<p>$$<br>h_0=h-a_s=500-40=460mm<br>$$</p>
-<ol start="2">
+<script type="math/tex; mode=display">
+h_0=h-a_s=500-40=460mm</script><ol>
 <li><strong>判断T形截面类型：</strong></li>
 </ol>
-<p>$$<br>\begin{aligned}<br>    f_y A_s<br>    &amp;= 300<em>1520=456000N=456kN \<br>    \alpha_1 f_c b_f^{‘} h_f^{‘}<br>    &amp;= 1.0</em>11.9<em>800</em>120=1142400N=1142.4kN<br>\end{aligned}<br>$$</p>
-<p>$$<br>\begin{aligned}<br>    &amp;\because f_y A_s=456kN &lt; \alpha_1 f_c b_f^{‘} h_f^{‘}=1142.4kN \<br>    &amp;\therefore 该T形截面属于第一类T形截面<br>\end{aligned}<br>$$</p>
-<ol start="3">
+<script type="math/tex; mode=display">
+\begin{aligned}
+    f_y A_s 
+    &= 300*1520=456000N=456kN \\
+    \alpha_1 f_c b_f^{'} h_f^{'} 
+    &= 1.0*11.9*800*120=1142400N=1142.4kN
+\end{aligned}</script><script type="math/tex; mode=display">
+\begin{aligned}
+    &\because f_y A_s=456kN < \alpha_1 f_c b_f^{'} h_f^{'}=1142.4kN \\
+    &\therefore 该T形截面属于第一类T形截面
+\end{aligned}</script><ol>
 <li><strong>计算受压区高度$x$：</strong></li>
 </ol>
-<p>$$<br>\begin{aligned}<br>    x<br>    &amp;= \frac{f_y A_s}{\alpha_1 f_c b_f^{‘}} \<br>    &amp;= \frac{300<em>1520}{1.0</em>11.9<em>800} \<br>    &amp; \approx 47.90 mm\<br>    \xi_b h_0<br>    &amp;=0.55</em>460=253mm&gt;x \<br>    \<br>    &amp;\therefore 该T型梁不为超筋梁 \<br>    \<br>    \rho<br>    &amp;=\frac{A_s}{bh}=\frac{1520}{350*500} \approx 0.89% &gt; \rho_{min}=0.2% \<br>    \<br>    &amp;\therefore该T型梁不为少筋梁<br>\end{aligned}<br>$$</p>
-<ol start="4">
+<script type="math/tex; mode=display">
+\begin{aligned}
+    x
+    &= \frac{f_y A_s}{\alpha_1 f_c b_f^{'}} \\
+    &= \frac{300*1520}{1.0*11.9*800} \\
+    & \approx 47.90 mm\\
+    \xi_b h_0
+    &=0.55*460=253mm>x \\ 
+    \\
+    &\therefore 该T型梁不为超筋梁 \\
+    \\
+    \rho
+    &=\frac{A_s}{bh}=\frac{1520}{350*500} \approx 0.89\% > \rho_{min}=0.2\% \\
+    \\
+    &\therefore该T型梁不为少筋梁
+\end{aligned}</script><ol>
 <li><strong>计算受弯承载力$M_u$：</strong></li>
 </ol>
-<p>$$<br>\begin{aligned}<br>    M_u&amp;=\alpha_1 f_C b_f^{‘} x(h_0-\frac{x}{2}) \<br>    &amp;= 1.0<em>11.9</em>800*47.90(460-\frac{49.90}{2}) \<br>    &amp;= 198842288.4 N \cdot mm \<br>    &amp; \approx 198.84 kN \cdot m \<br>    M_u &amp;= 198.84kN \cdot m &lt; M=480kN \cdot m \<br>    &amp;\therefore 该T型截面不安全<br>\end{aligned}<br>$$</p>
-<p>2.某钢筋混凝土偏心受压柱，截面尺寸$b \times h=350mm \times 450mm$，计算高度$l_0=4.0m$。该梁采用$C_{45}$混凝土，HRB400钢筋。截面承受轴向力$N=1500kN$，考虑二阶效应的弯矩$M=320kN \cdot m$。<br>(1)请判断偏心受压类型<br>(2)计算钢筋面积$A_s=A_s^{‘}$</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+    M_u&=\alpha_1 f_C b_f^{'} x(h_0-\frac{x}{2}) \\
+    &= 1.0*11.9*800*47.90(460-\frac{49.90}{2}) \\
+    &= 198842288.4 N \cdot mm \\
+    & \approx 198.84 kN \cdot m \\
+    M_u &= 198.84kN \cdot m < M=480kN \cdot m \\
+    &\therefore 该T型截面不安全
+\end{aligned}</script><p>2.某钢筋混凝土偏心受压柱，截面尺寸$b \times h=350mm \times 450mm$，计算高度$l_0=4.0m$。该梁采用$C_{45}$混凝土，HRB400钢筋。截面承受轴向力$N=1500kN$，考虑二阶效应的弯矩$M=320kN \cdot m$。<br>(1)请判断偏心受压类型<br>(2)计算钢筋面积$A_s=A_s^{‘}$</p>
 <p>相关数据如下：</p>
 <ul>
 <li>$\alpha_1=1.0,f_c=21.1N/mm^2$ ($C_{45}$的数据)</li>
 <li>$f_y=f_y^{‘}=360N/mm^2$ (HRB400的数据)</li>
-<li>$\xi_b=0.518,\rho_{min}=0.2%$</li>
+<li>$\xi_b=0.518,\rho_{min}=0.2\%$</li>
 <li>$a_s=a_s^{‘}=40mm$</li>
 <li>$e_a=20mm$</li>
 <li>$\xi=\frac{N-\alpha_1 f_c b h_0 \xi_b}{\frac{Ne-0.43 \alpha_1 f_c b h_0^2}{(\beta_1-\xi_b)(h_0-a_s^{‘})}+\alpha_1 f_c b h_0}+\xi_b$ (小偏心受压公式)</li>
@@ -320,36 +352,68 @@
 <ol>
 <li><strong>计算截面有效高度$h_0$：</strong></li>
 </ol>
-<p>$$<br>h_0=h-a_s=450-40=410mm<br>$$</p>
-<ol start="2">
+<script type="math/tex; mode=display">
+h_0=h-a_s=450-40=410mm</script><ol>
 <li><strong>计算受压区高度$x$：</strong></li>
 </ol>
-<p>$$<br>x=\frac{N}{\alpha_1 f_c b}=\frac{1500<em>10^3}{1.0</em>21.1*350} \approx 2033.11mm<br>$$</p>
-<ol start="3">
+<script type="math/tex; mode=display">
+x=\frac{N}{\alpha_1 f_c b}=\frac{1500*10^3}{1.0*21.1*350} \approx 2033.11mm</script><ol>
 <li><strong>判断偏心受压类型：</strong></li>
 </ol>
-<p>$$<br>\xi_b h_0=0.518*410=212.38mm&gt;x<br>$$</p>
-<p>$$<br>\therefore 该偏心受压柱属于大偏心受压类型<br>$$</p>
-<p><strong>(2)</strong></p>
+<script type="math/tex; mode=display">
+\xi_b h_0=0.518*410=212.38mm>x</script><script type="math/tex; mode=display">
+\therefore 该偏心受压柱属于大偏心受压类型</script><p><strong>(2)</strong></p>
 <ol>
 <li><strong>计算e：</strong></li>
 </ol>
-<p>$$<br>\begin{aligned}<br>    e_0 &amp;= \frac{M}{N}=\frac{320*10^3}{1500} \approx 213.33mm \<br>    e_i &amp;= e_0+e_a=213.33+20=233.33mm \<br>    e   &amp;= e_i+\frac{h}{2}-a_s=233.33+\frac{450}{2}-40=418.33mm<br>\end{aligned}<br>$$</p>
-<ol start="2">
+<script type="math/tex; mode=display">
+\begin{aligned}
+    e_0 &= \frac{M}{N}=\frac{320*10^3}{1500} \approx 213.33mm \\
+    e_i &= e_0+e_a=213.33+20=233.33mm \\
+    e   &= e_i+\frac{h}{2}-a_s=233.33+\frac{450}{2}-40=418.33mm
+\end{aligned}</script><ol>
 <li><strong>计算$A_s、A_s^{‘}$：</strong></li>
 </ol>
-<p>$$<br>\begin{aligned}<br>    \because 2a_s^{‘}&amp;=2<em>40=80mm&lt;x=203.11mm \<br>    \therefore A_s<br>    &amp;= A_s^{‘} \<br>    &amp;= \frac{Ne-\alpha_1 f_c b x(h_0-\frac{x}{2})}{f_y^{‘} (h_0-a_s^{‘})} \<br>    &amp;= \frac{1500</em>10^3<em>418.33-1.0</em>21.1<em>350</em>203.11*(410-\frac{203.11}{2})}{360*(410-40)} \<br>    &amp; \approx 1237.52mm^2<br>\end{aligned}<br>$$</p>
-<ol start="3">
+<script type="math/tex; mode=display">
+\begin{aligned}
+    \because 2a_s^{'}&=2*40=80mm<x=203.11mm \\
+    \therefore A_s
+    &= A_s^{'} \\
+    &= \frac{Ne-\alpha_1 f_c b x(h_0-\frac{x}{2})}{f_y^{'} (h_0-a_s^{'})} \\
+    &= \frac{1500*10^3*418.33-1.0*21.1*350*203.11*(410-\frac{203.11}{2})}{360*(410-40)} \\
+    & \approx 1237.52mm^2
+\end{aligned}</script><ol>
 <li><strong>验算配筋率$\rho$：</strong></li>
 </ol>
-<p>$$<br>\begin{aligned}<br>    \rho<br>    &amp;= \frac{A_s}{bh}=\frac{1237.52}{350*450} \approx 0.79 % &lt; 3% \<br>    \rho<br>    &amp;= 0.79% &gt; \rho_{min}=0.2%<br>\end{aligned}<br>$$</p>
-<p>$$<br>\therefore 该钢筋面积符合要求<br>$$</p>
-<ol start="4">
+<script type="math/tex; mode=display">
+\begin{aligned}
+    \rho
+    &= \frac{A_s}{bh}=\frac{1237.52}{350*450} \approx 0.79 \% < 3\% \\
+    \rho
+    &= 0.79\% > \rho_{min}=0.2\%
+\end{aligned}</script><script type="math/tex; mode=display">
+\therefore 该钢筋面积符合要求</script><ol>
 <li><strong>验算垂直于弯矩作用平面的受压承载力$N_u$:</strong></li>
 </ol>
-<p>$$<br>\begin{aligned}<br>    \frac{l_0}{b}<br>    &amp;= \frac{4000}{350} \approx 11.43 &gt; 8 \<br>    \varphi<br>    &amp;= \frac{1}{1+0.002(\frac{l_0}{b}-8)^2} \<br>    &amp;= \frac{1}{1+0.002*(11.43-8)^2} \<br>    &amp;\approx 0.98\<br>    N_u<br>    &amp;= 0.9\varphi[f_c A+f_y{‘}(A_s+A_s^{‘})] \<br>    &amp;= 0.9<em>0.98</em>[21.1<em>350</em>450+360*(1237.52*2)] \<br>    &amp;= 3716981.201 N \<br>    &amp; \approx 3716.98 kN<br>\end{aligned}<br>$$</p>
-<p>$$<br>\begin{aligned}<br>    &amp;\because N_u=3716.98kN &gt; N=1500kN \<br>    &amp;\therefore 受压承载力满足要求 \<br>    &amp;\therefore 综上，A_s=A_s^{‘}=1237.52 mm^2<br>\end{aligned}<br>$$</p>
-<p>3.某单层仓库承重外纵墙，墙高$H_0=H=4.8m$，墙厚$h=240mm$，由$MU10$的烧结页岩砖和$M2.5$的水泥砂浆砌筑而成，采用刚性方案。横墙间距$s=24m$。沿墙长每$4m$设$1.2m$宽窗洞，同时沿墙长每$4m$设截面尺寸为$240mm \times 240mm$的钢筋混凝土构造柱。试验算该外纵墙构造柱间墙的高厚比。</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+    \frac{l_0}{b}
+    &= \frac{4000}{350} \approx 11.43 > 8 \\
+    \varphi
+    &= \frac{1}{1+0.002(\frac{l_0}{b}-8)^2} \\
+    &= \frac{1}{1+0.002*(11.43-8)^2} \\
+    &\approx 0.98\\
+    N_u
+    &= 0.9\varphi[f_c A+f_y{'}(A_s+A_s^{'})] \\
+    &= 0.9*0.98*[21.1*350*450+360*(1237.52*2)] \\
+    &= 3716981.201 N \\
+    & \approx 3716.98 kN
+\end{aligned}</script><script type="math/tex; mode=display">
+\begin{aligned}
+    &\because N_u=3716.98kN > N=1500kN \\
+    &\therefore 受压承载力满足要求 \\
+    &\therefore 综上，A_s=A_s^{'}=1237.52 mm^2
+\end{aligned}</script><p>3.某单层仓库承重外纵墙，墙高$H_0=H=4.8m$，墙厚$h=240mm$，由$MU10$的烧结页岩砖和$M2.5$的水泥砂浆砌筑而成，采用刚性方案。横墙间距$s=24m$。沿墙长每$4m$设$1.2m$宽窗洞，同时沿墙长每$4m$设截面尺寸为$240mm \times 240mm$的钢筋混凝土构造柱。试验算该外纵墙构造柱间墙的高厚比。</p>
 <p>相关数据如下：</p>
 <ul>
 <li>$[\beta]=22$</li>
@@ -359,45 +423,71 @@
 <ol>
 <li><strong>计算高厚比$\beta$:</strong></li>
 </ol>
-<p>$$<br>\beta=\frac{H_0}{h}=\frac{4800}{240}=20<br>$$</p>
-<ol start="2">
+<script type="math/tex; mode=display">
+\beta=\frac{H_0}{h}=\frac{4800}{240}=20</script><ol>
 <li><strong>计算$\mu_1$：</strong></li>
 </ol>
-<p>$$<br>\begin{aligned}<br>    &amp;\because 该墙为承重墙 \<br>    &amp;\therefore \mu_1=1.0<br>\end{aligned}<br>$$</p>
-<ol start="3">
+<script type="math/tex; mode=display">
+\begin{aligned}
+    &\because 该墙为承重墙 \\
+    &\therefore \mu_1=1.0
+\end{aligned}</script><ol>
 <li><strong>计算$\mu_2$：</strong></li>
 </ol>
-<p>$$<br>\begin{aligned}<br>    \mu_2 = 1-0.4 \frac{b_s}{s} = 1-0.4*\frac{1200}{4000} = 0.88 &gt; 0.7 \<br>\end{aligned}<br>$$</p>
-<ol start="4">
+<script type="math/tex; mode=display">
+\begin{aligned}
+    \mu_2 = 1-0.4 \frac{b_s}{s} = 1-0.4*\frac{1200}{4000} = 0.88 > 0.7 \\
+\end{aligned}</script><ol>
 <li><strong>计算$\mu_c$：</strong></li>
 </ol>
-<p>$$<br>\begin{aligned}<br>    &amp;\because 该墙体由烧结页岩砖砌筑 \<br>    &amp;\therefore \gamma=1.5 \<br>    &amp;\mu_c = 1+\gamma \frac{b_s}{l} = 1+1.5*\frac{240}{4000} = 1.09 \<br>\end{aligned}<br>$$</p>
-<ol start="5">
+<script type="math/tex; mode=display">
+\begin{aligned}
+    &\because 该墙体由烧结页岩砖砌筑 \\
+    &\therefore \gamma=1.5 \\
+    &\mu_c = 1+\gamma \frac{b_s}{l} = 1+1.5*\frac{240}{4000} = 1.09 \\
+\end{aligned}</script><ol>
 <li><strong>验算高厚比$\beta$：</strong></li>
 </ol>
-<p>$$<br>\begin{aligned}<br>    \mu_1 \mu_2 \mu_c [\beta] &amp;= 1.0<em>0.88</em>1.09*22=21.1024 &gt; \beta = 20 \<br>    &amp;\therefore 整片墙的高厚比满足要求<br>\end{aligned}<br>$$</p>
-<p><strong>(2) 验算构造柱间墙的高厚比</strong></p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+    \mu_1 \mu_2 \mu_c [\beta] &= 1.0*0.88*1.09*22=21.1024 > \beta = 20 \\
+    &\therefore 整片墙的高厚比满足要求
+\end{aligned}</script><p><strong>(2) 验算构造柱间墙的高厚比</strong></p>
 <ol>
 <li><strong>计算$H_0$：</strong></li>
 </ol>
-<p>$$<br>\begin{aligned}<br>    此时s&amp;取构造柱间距离 \<br>    s &amp;= l=4m \<br>    \because \frac{s}{H} &amp;= \frac{4000}{4800} \approx 0.83 &lt; 1.0 \<br>    \therefore H_0 &amp;= 0.6s=0.6*4=2.4m \<br>\end{aligned}<br>$$</p>
-<ol start="2">
+<script type="math/tex; mode=display">
+\begin{aligned}
+    此时s&取构造柱间距离 \\
+    s &= l=4m \\
+    \because \frac{s}{H} &= \frac{4000}{4800} \approx 0.83 < 1.0 \\
+    \therefore H_0 &= 0.6s=0.6*4=2.4m \\
+\end{aligned}</script><ol>
 <li><strong>计算高厚比$\beta$:</strong></li>
 </ol>
-<p>$$<br>\beta=\frac{H_0}{h}=\frac{2400}{240}=10<br>$$</p>
-<ol start="3">
+<script type="math/tex; mode=display">
+\beta=\frac{H_0}{h}=\frac{2400}{240}=10</script><ol>
 <li><strong>计算$\mu_1$：</strong></li>
 </ol>
-<p>$$<br>\begin{aligned}<br>    &amp;\because 该墙为承重墙 \<br>    &amp;\therefore \mu_1=1.0<br>\end{aligned}<br>$$</p>
-<ol start="4">
+<script type="math/tex; mode=display">
+\begin{aligned}
+    &\because 该墙为承重墙 \\
+    &\therefore \mu_1=1.0
+\end{aligned}</script><ol>
 <li><strong>计算$\mu_2$：</strong></li>
 </ol>
-<p>$$<br>\begin{aligned}<br>    \mu_2 = 1-0.4 \frac{b_s}{s} = 1-0.4*\frac{1200}{4000} = 0.88 &gt; 0.7 \<br>\end{aligned}<br>$$</p>
-<ol start="5">
+<script type="math/tex; mode=display">
+\begin{aligned}
+    \mu_2 = 1-0.4 \frac{b_s}{s} = 1-0.4*\frac{1200}{4000} = 0.88 > 0.7 \\
+\end{aligned}</script><ol>
 <li><strong>验算高厚比$\beta$：</strong></li>
 </ol>
-<p>$$<br>\begin{aligned}<br>    \mu_1 \mu_2 [\beta] &amp;= 1.0<em>0.88</em>22=19.36 &gt; \beta = 10 \<br>    &amp;\therefore 构造柱间墙的高厚比满足要求 \<br>    (&amp;\therefore 综上，该外纵墙的高厚比满足要求)(若计算了(1),可以添加此句)<br>\end{aligned}<br>$$</p>
-
+<script type="math/tex; mode=display">
+\begin{aligned}
+    \mu_1 \mu_2 [\beta] &= 1.0*0.88*22=19.36 > \beta = 10 \\
+    &\therefore 构造柱间墙的高厚比满足要求 \\
+    (&\therefore 综上，该外纵墙的高厚比满足要求)(若计算了(1),可以添加此句)
+\end{aligned}</script>
     </div>
 
     
@@ -624,6 +714,61 @@
 
 
   
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
