@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"kevinyulei.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="前言 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除  Markdown 链接语法链接文本放在中括号内，链接地址放在后面的括号中，链接title可选。 超链接Markdown语法代码：[超链接显示名](超链接地址 “超链接title”) 对应的HTML代码：&lt;a href&#x3D;”超链接地址” title&#x3D;”超链接title">
+  <meta name="description" content="前言 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除  Markdown 链接语法链接文本放在中括号内，链接地址放在后面的括号中，链接title可选。 超链接Markdown语法代码：[超链接显示名](超链接地址 “超链接title”) 对应的HTML代码：\超链接显示名\ 1这是一个链接 [Markdown语法](http">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Part09-Markdown链接语法">
 <meta property="og:url" content="https://kevinyulei.github.io/2022/01/24/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Part09-Markdown%E9%93%BE%E6%8E%A5%E8%AF%AD%E6%B3%95/index.html">
 <meta property="og:site_name" content="雨泪丶的博客">
-<meta property="og:description" content="前言 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除  Markdown 链接语法链接文本放在中括号内，链接地址放在后面的括号中，链接title可选。 超链接Markdown语法代码：[超链接显示名](超链接地址 “超链接title”) 对应的HTML代码：&lt;a href&#x3D;”超链接地址” title&#x3D;”超链接title">
+<meta property="og:description" content="前言 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除  Markdown 链接语法链接文本放在中括号内，链接地址放在后面的括号中，链接title可选。 超链接Markdown语法代码：[超链接显示名](超链接地址 “超链接title”) 对应的HTML代码：\超链接显示名\ 1这是一个链接 [Markdown语法](http">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://github.githubassets.com/images/icons/emoji/unicode/2714.png?v8">
 <meta property="og:image" content="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">
@@ -238,24 +238,19 @@
 </blockquote>
 <h1 id="Markdown-链接语法"><a href="#Markdown-链接语法" class="headerlink" title="Markdown 链接语法"></a>Markdown 链接语法</h1><p>链接文本放在中括号内，链接地址放在后面的括号中，链接title可选。</p>
 <p>超链接Markdown语法代码：[超链接显示名](超链接地址 “超链接title”)</p>
-<p>对应的HTML代码：&lt;a href=”超链接地址” title=”超链接title”&gt;超链接显示名&lt;/a&gt;</p>
+<p>对应的HTML代码：\<a href="超链接地址" title="超链接title">超链接显示名\</a></p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是一个链接 [Markdown语法](https://markdown.com.cn)。</span><br></pre></td></tr></tbody></table></figure>
-
 <span id="more"></span>
-
-<p>渲染效果如下：<br>这是一个链接 <a target="_blank" rel="noopener" href="https://markdown.com.cn/">Markdown语法</a>。</p>
+<p>渲染效果如下：<br>这是一个链接 <a target="_blank" rel="noopener" href="https://markdown.com.cn">Markdown语法</a>。</p>
 <h2 id="给链接增加-Title"><a href="#给链接增加-Title" class="headerlink" title="给链接增加 Title"></a>给链接增加 Title</h2><p>链接title是当鼠标悬停在链接上时会出现的文字，这个title是可选的，它放在圆括号中链接地址后面，跟链接地址之间以空格分隔。</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是一个链接 [Markdown语法](https://markdown.com.cn "最好的markdown教程")。</span><br></pre></td></tr></tbody></table></figure>
-
-<p>渲染效果如下：<br>这是一个链接 <a target="_blank" rel="noopener" href="https://markdown.com.cn/" title="最好的markdown教程">Markdown语法</a>。</p>
+<p>渲染效果如下：<br>这是一个链接 <a target="_blank" rel="noopener" href="https://markdown.com.cn" title="最好的markdown教程">Markdown语法</a>。</p>
 <h2 id="网址和Email地址"><a href="#网址和Email地址" class="headerlink" title="网址和Email地址"></a>网址和Email地址</h2><p>使用尖括号可以很方便地把URL或者email地址变成可点击的链接。</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;https://markdown.com.cn&gt;</span><br><span class="line">&lt;fake@example.com&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>渲染效果如下：<br><a target="_blank" rel="noopener" href="https://markdown.com.cn/">https://markdown.com.cn</a><br><a href="mailto:fake@example.com">fake@example.com</a></p>
+<p>渲染效果如下：<br><a target="_blank" rel="noopener" href="https://markdown.com.cn">https://markdown.com.cn</a><br><a href="mailto:fake@example.com">fake@example.com</a></p>
 <h2 id="带格式化的链接"><a href="#带格式化的链接" class="headerlink" title="带格式化的链接"></a>带格式化的链接</h2><p>若要强调链接, 则在链接语法前后增加星号。若要将链接表示为代码，请在方括号中添加反引号。</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">I love supporting the **[EFF](https://eff.org)**.</span><br><span class="line">This is the *[Markdown Guide](https://www.markdownguide.org)*.</span><br><span class="line">See the section on [`code`](#code).</span><br></pre></td></tr></tbody></table></figure>
-
-<p>渲染效果如下：<br>I love supporting the <strong><a target="_blank" rel="noopener" href="https://eff.org/">EFF</a></strong>.<br>This is the <em><a target="_blank" rel="noopener" href="https://www.markdownguide.org/">Markdown Guide</a></em>.<br>See the section on <a href="#code"><code>code</code></a>.</p>
+<p>渲染效果如下：<br>I love supporting the <strong><a target="_blank" rel="noopener" href="https://eff.org">EFF</a></strong>.<br>This is the <em><a target="_blank" rel="noopener" href="https://www.markdownguide.org">Markdown Guide</a></em>.<br>See the section on <a href="#code"><code>code</code></a>.</p>
 <h2 id="引用类型链接"><a href="#引用类型链接" class="headerlink" title="引用类型链接"></a>引用类型链接</h2><p>引用样式链接是一种特殊的链接，它使URL在Markdown中更易于显示和阅读。参考样式链接分为两部分：与文本保持内联的部分以及存储在文件中其他位置的部分，以使文本易于阅读。</p>
 <h3 id="链接的第一部分格式"><a href="#链接的第一部分格式" class="headerlink" title="链接的第一部分格式"></a>链接的第一部分格式</h3><p>引用类型的链接的第一部分使用两组括号进行格式设置。第一组方括号包围应显示为链接的文本。第二组括号显示了一个标签，该标签用于指向您存储在文档其他位置的链接。</p>
 <p>尽管不是必需的，可以在第一组和第二组括号之间包含一个空格。第二组括号中的标签不区分大小写，可以包含字母，数字，空格或标点符号。</p>
@@ -266,7 +261,7 @@
 </ul>
 <h3 id="链接的第二部分格式"><a href="#链接的第二部分格式" class="headerlink" title="链接的第二部分格式"></a>链接的第二部分格式</h3><p>引用类型链接的第二部分使用以下属性设置格式：</p>
 <ol>
-<li>放在括号中的标签，其后紧跟一个冒号和至少一个空格（例如<code>[label]: </code>）。</li>
+<li>放在括号中的标签，其后紧跟一个冒号和至少一个空格（例如<code>[label]:</code>）。</li>
 <li>链接的URL，可以选择将其括在尖括号中。</li>
 <li>链接的可选标题，可以将其括在双引号，单引号或括号中。</li>
 </ol>
@@ -282,6 +277,7 @@
 </ul>
 <p>可以将链接的第二部分放在Markdown文档中的任何位置。有些人将它们放在出现的段落之后，有些人则将它们放在文档的末尾（例如尾注或脚注）。</p>
 <h2 id="链接最佳实践"><a href="#链接最佳实践" class="headerlink" title="链接最佳实践"></a>链接最佳实践</h2><p>不同的 Markdown 应用程序处理URL中间的空格方式不一样。为了兼容性，请尽量使用%20代替空格。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -289,11 +285,14 @@
 <th><span class="github-emoji"><span>❌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>Don’t do this</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td><code>[link](https://www.example.com/my%20great%20page)</code></td>
 <td><code>[link](https://www.example.com/my great page)</code></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 
     </div>
 

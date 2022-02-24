@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"kevinyulei.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="前言 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除  Markdown 段落要创建段落，请使用空白行将一行或多行文本进行分隔。    Markdown语法 HTML 预览效果    I really like using Markdown.I think I’ll use it to format all of my do">
+  <meta name="description" content="前言 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除  Markdown 段落要创建段落，请使用空白行将一行或多行文本进行分隔。     Markdown语法 HTML 预览效果     I really like using Markdown.I think I’ll use it to format all of my">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Part02-Markdown段落语法">
 <meta property="og:url" content="https://kevinyulei.github.io/2022/01/23/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Part02-Markdown%E6%AE%B5%E8%90%BD%E8%AF%AD%E6%B3%95/index.html">
 <meta property="og:site_name" content="雨泪丶的博客">
-<meta property="og:description" content="前言 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除  Markdown 段落要创建段落，请使用空白行将一行或多行文本进行分隔。    Markdown语法 HTML 预览效果    I really like using Markdown.I think I’ll use it to format all of my do">
+<meta property="og:description" content="前言 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除  Markdown 段落要创建段落，请使用空白行将一行或多行文本进行分隔。     Markdown语法 HTML 预览效果     I really like using Markdown.I think I’ll use it to format all of my">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://github.githubassets.com/images/icons/emoji/unicode/2714.png?v8">
 <meta property="og:image" content="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">
@@ -237,6 +237,7 @@
 <p>本文转自<a target="_blank" rel="noopener" href="https://markdown.com.cn/">Markdown官方教程</a>, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除</p>
 </blockquote>
 <h1 id="Markdown-段落"><a href="#Markdown-段落" class="headerlink" title="Markdown 段落"></a>Markdown 段落</h1><p>要创建段落，请使用空白行将一行或多行文本进行分隔。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -245,15 +246,18 @@
 <th>预览效果</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>I really like using Markdown.<br><br>I think I’ll use it to format all of my documents from now on.</td>
-<td>&lt;p&gt;I really like using Markdown.&lt;/p&gt;<br><br>&lt;p&gt;I think I’ll use it to format all of my documents from now on.&lt;/p&gt;</td>
-<td><p>I really like using Markdown.</p><p>I think I’ll use it to format all of my documents from now on.</p></td>
+<td>\<p>I really like using Markdown.\</p><br><br>\<p>I think I'll use it to format all of my documents from now on.\</p></td>
+<td><p>I really like using Markdown.</p><p>I think I'll use it to format all of my documents from now on.</p></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <span id="more"></span>
-
 <h3 id="段落（Paragraph）用法的最佳实践"><a href="#段落（Paragraph）用法的最佳实践" class="headerlink" title="段落（Paragraph）用法的最佳实践"></a>段落（Paragraph）用法的最佳实践</h3><p>不要用空格（spaces）或制表符（ tabs）缩进段落。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -261,11 +265,14 @@
 <th><span class="github-emoji"><span>❌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>Don’t do this</th>
 </tr>
 </thead>
-<tbody><tr>
-<td><p>Don’t put tabs or spaces in front of your paragraphs.</p><br><p>Keep lines left-aligned like this.</p></td>
-<td><p>0000This can result in unexpected formatting problems.</p><br><p>0000Don’t add tabs or spaces in front of paragraphs.</p><br><p>用0表示空格</p></td>
+<tbody>
+<tr>
+<td><p>Don't put tabs or spaces in front of your paragraphs.</p><br><p>Keep lines left-aligned like this.</p></td>
+<td><p>0000This can result in unexpected formatting problems.</p><br><p>0000Don't add tabs or spaces in front of paragraphs.</p><br><p>用0表示空格</p></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 
     </div>
 

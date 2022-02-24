@@ -227,7 +227,6 @@
 </blockquote>
 <h1 id="Markdown-删除线"><a href="#Markdown-删除线" class="headerlink" title="Markdown 删除线"></a>Markdown 删除线</h1><p>您可以通过在单词中心放置一条水平线来删除单词。结果看起来<del>像这样</del>。此功能使您可以指示某些单词是一个错误，要从文档中删除。若要删除单词，请在单词前后使用两个波浪号<code>~~</code>。</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~世界是平坦的。~~ 我们现在知道世界是圆的。</span><br></pre></td></tr></tbody></table></figure>
-
 <p>呈现的输出如下所示：</p>
 <p><del>世界是平坦的。</del> 我们现在知道世界是圆的。</p>
 
@@ -489,8 +488,8 @@
 <p>本文转自<a target="_blank" rel="noopener" href="https://markdown.com.cn/">Markdown官方教程</a>, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除</p>
 </blockquote>
 <h1 id="Markdown-脚注"><a href="#Markdown-脚注" class="headerlink" title="Markdown 脚注"></a>Markdown 脚注</h1><p>脚注使您可以添加注释和参考，而不会使文档正文混乱。当您创建脚注时，带有脚注的上标数字会出现在您添加脚注参考的位置。读者可以单击链接以跳至页面底部的脚注内容。</p>
-<p>要创建脚注参考，请在方括号（[^1]）内添加插入符号和标识符。标识符可以是数字或单词，但不能包含空格或制表符。标识符仅将脚注参考与脚注本身相关联-在输出中，脚注按顺序编号。</p>
-<p>在括号内使用另一个插入符号和数字添加脚注，并用冒号和文本（[^1]: My footnote.）。您不必在文档末尾添加脚注。您可以将它们放在除列表，块引号和表之类的其他元素之外的任何位置。</p>
+<p>要创建脚注参考，请在方括号（<sup><a href="#fn_1" id="reffn_1">1</a></sup>）内添加插入符号和标识符。标识符可以是数字或单词，但不能包含空格或制表符。标识符仅将脚注参考与脚注本身相关联-在输出中，脚注按顺序编号。</p>
+<p>在括号内使用另一个插入符号和数字添加脚注，并用冒号和文本（<sup><a href="#fn_1" id="reffn_1">1</a></sup>: My footnote.）。您不必在文档末尾添加脚注。您可以将它们放在除列表，块引号和表之类的其他元素之外的任何位置。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2022/01/24/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E6%8B%93%E5%B1%95%E8%AF%AD%E6%B3%95/Part03-Markdown%E8%84%9A%E6%B3%A8/#more" rel="contents">
@@ -666,7 +665,7 @@
           <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
 <p>本文转自<a target="_blank" rel="noopener" href="https://markdown.com.cn/">Markdown官方教程</a>, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除</p>
 </blockquote>
-<h1 id="Markdown-表格"><a href="#Markdown-表格" class="headerlink" title="Markdown 表格"></a>Markdown 表格</h1><p>要添加表，请使用三个或多个连字符（—）创建每列的标题，并使用管道（|）分隔每列。您可以选择在表的任一端添加管道。</p>
+<h1 id="Markdown-表格"><a href="#Markdown-表格" class="headerlink" title="Markdown 表格"></a>Markdown 表格</h1><p>要添加表，请使用三个或多个连字符（—-）创建每列的标题，并使用管道（|）分隔每列。您可以选择在表的任一端添加管道。</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| Syntax      | Description |</span><br><span class="line">| ----------- | ----------- |</span><br><span class="line">| Header      | Title       |</span><br><span class="line">| Paragraph   | Text        |</span><br></pre></td></tr></tbody></table></figure>
           <!--noindex-->
             <div class="post-button">
@@ -756,7 +755,7 @@
 <p>本文转自<a target="_blank" rel="noopener" href="https://markdown.com.cn/">Markdown官方教程</a>, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除</p>
 </blockquote>
 <h1 id="Markdown-内嵌HTML标签"><a href="#Markdown-内嵌HTML标签" class="headerlink" title="Markdown 内嵌HTML标签"></a>Markdown 内嵌HTML标签</h1><p>对于 Markdown 涵盖范围之外的标签，都可以直接在文件里面用 HTML 本身。如需使用 HTML，不需要额外标注这是 HTML 或是 Markdown，只需 HTML 标签添加到 Markdown 文本中即可。</p>
-<h2 id="行级內联标签"><a href="#行级內联标签" class="headerlink" title="行级內联标签"></a>行级內联标签</h2><p>HTML 的行级內联标签如 &lt;span&gt;、&lt;cite&gt;、&lt;del&gt; 不受限制，可以在 Markdown 的段落、列表或是标题里任意使用。依照个人习惯，甚至可以不用 Markdown 格式，而采用 HTML 标签来格式化。例如：如果比较喜欢 HTML 的 &lt;a&gt; 或 &lt;img&gt; 标签，可以直接使用这些标签，而不用 Markdown 提供的链接或是图片语法。当你需要更改元素的属性时（例如为文本指定颜色或更改图像的宽度），使用 HTML 标签更方便些。</p>
+<h2 id="行级內联标签"><a href="#行级內联标签" class="headerlink" title="行级內联标签"></a>行级內联标签</h2><p>HTML 的行级內联标签如 \<span>、\<cite>、\<del> 不受限制，可以在 Markdown 的段落、列表或是标题里任意使用。依照个人习惯，甚至可以不用 Markdown 格式，而采用 HTML 标签来格式化。例如：如果比较喜欢 HTML 的 \<a> 或 \<img> 标签，可以直接使用这些标签，而不用 Markdown 提供的链接或是图片语法。当你需要更改元素的属性时（例如为文本指定颜色或更改图像的宽度），使用 HTML 标签更方便些。</a></del></cite></span></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2022/01/24/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Part12-Markdown%E5%86%85%E5%B5%8CHTML%E6%A0%87%E7%AD%BE/#more" rel="contents">
@@ -846,7 +845,6 @@
 </blockquote>
 <h1 id="Markdown-转义字符语法"><a href="#Markdown-转义字符语法" class="headerlink" title="Markdown 转义字符语法"></a>Markdown 转义字符语法</h1><p>要显示原本用于格式化 Markdown 文档的字符，请在字符前面添加反斜杠字符 \ 。</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\* Without the backslash, this would be a bullet in an unordered list.</span><br></pre></td></tr></tbody></table></figure>
-
 <p>* Without the backslash, this would be a bullet in an unordered list.</p>
           <!--noindex-->
             <div class="post-button">
@@ -1028,7 +1026,7 @@
 </blockquote>
 <h1 id="Markdown-链接语法"><a href="#Markdown-链接语法" class="headerlink" title="Markdown 链接语法"></a>Markdown 链接语法</h1><p>链接文本放在中括号内，链接地址放在后面的括号中，链接title可选。</p>
 <p>超链接Markdown语法代码：[超链接显示名](超链接地址 “超链接title”)</p>
-<p>对应的HTML代码：&lt;a href=”超链接地址” title=”超链接title”&gt;超链接显示名&lt;/a&gt;</p>
+<p>对应的HTML代码：\<a href="超链接地址" title="超链接title">超链接显示名\</a></p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是一个链接 [Markdown语法](https://markdown.com.cn)。</span><br></pre></td></tr></tbody></table></figure>
           <!--noindex-->
             <div class="post-button">

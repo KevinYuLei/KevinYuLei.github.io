@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"kevinyulei.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="前言 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除  Markdown 分隔线语法要创建分隔线，请在单独一行上使用三个或多个星号 (***)、破折号 (—) 或下划线 (___) ，并且不能包含其他内容。 12345***---_________________">
+  <meta name="description" content="前言 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除  Markdown 分隔线语法要创建分隔线，请在单独一行上使用三个或多个星号 (*)、破折号 (—-) 或下划线 (___) ，并且不能包含其他内容。 12345***---_________________">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Part08-Markdown分隔线语法">
 <meta property="og:url" content="https://kevinyulei.github.io/2022/01/24/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Part08-Markdown%E5%88%86%E9%9A%94%E7%BA%BF%E8%AF%AD%E6%B3%95/index.html">
 <meta property="og:site_name" content="雨泪丶的博客">
-<meta property="og:description" content="前言 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除  Markdown 分隔线语法要创建分隔线，请在单独一行上使用三个或多个星号 (***)、破折号 (—) 或下划线 (___) ，并且不能包含其他内容。 12345***---_________________">
+<meta property="og:description" content="前言 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除  Markdown 分隔线语法要创建分隔线，请在单独一行上使用三个或多个星号 (*)、破折号 (—-) 或下划线 (___) ，并且不能包含其他内容。 12345***---_________________">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://github.githubassets.com/images/icons/emoji/unicode/2714.png?v8">
 <meta property="og:image" content="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8">
@@ -236,14 +236,13 @@
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
 <p>本文转自<a target="_blank" rel="noopener" href="https://markdown.com.cn/">Markdown官方教程</a>, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除</p>
 </blockquote>
-<h1 id="Markdown-分隔线语法"><a href="#Markdown-分隔线语法" class="headerlink" title="Markdown 分隔线语法"></a>Markdown 分隔线语法</h1><p>要创建分隔线，请在单独一行上使用三个或多个星号 (***)、破折号 (—) 或下划线 (___) ，并且不能包含其他内容。</p>
+<h1 id="Markdown-分隔线语法"><a href="#Markdown-分隔线语法" class="headerlink" title="Markdown 分隔线语法"></a>Markdown 分隔线语法</h1><p>要创建分隔线，请在单独一行上使用三个或多个星号 (<em>*</em>)、破折号 (—-) 或下划线 (___) ，并且不能包含其他内容。</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">***</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">_________________</span><br></pre></td></tr></tbody></table></figure>
-
 <span id="more"></span>
-
 <p>以上三个分隔线的渲染效果看起来都一样：</p>
 <hr>
 <h2 id="分隔线（Horizontal-Rule）用法最佳实践"><a href="#分隔线（Horizontal-Rule）用法最佳实践" class="headerlink" title="分隔线（Horizontal Rule）用法最佳实践"></a>分隔线（Horizontal Rule）用法最佳实践</h2><p>为了兼容性，请在分隔线的前后均添加空白行。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -251,11 +250,14 @@
 <th><span class="github-emoji"><span>❌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/274c.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>Don’t do this</th>
 </tr>
 </thead>
-<tbody><tr>
-<td>Try to put a blank line before…<br><br>—<br><br>…and after a horizontal rule.</td>
-<td>Without blank lines, this would be a heading.<br>—<br>Don’t do this!</td>
+<tbody>
+<tr>
+<td>Try to put a blank line before…<br><br>—-<br><br>…and after a horizontal rule.</td>
+<td>Without blank lines, this would be a heading.<br>—-<br>Don’t do this!</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 
     </div>
 

@@ -236,12 +236,11 @@
 <li>Chrome调试工具</li>
 </ol>
 <span id="more"></span>
-
 <h2 id="1-CSS简介"><a href="#1-CSS简介" class="headerlink" title="1. CSS简介"></a>1. CSS简介</h2><p>CSS的主要使用场景就是美化网页，布局页面的。</p>
-<h3 id="1-1-HTML的局限性"><a href="#1-1-HTML的局限性" class="headerlink" title="1.1 HTML的局限性"></a>1.1 HTML的局限性</h3><p>HTML<strong>只关注内容的语义</strong>。比如&lt;h1&gt;表明这是一个大标题，&lt;p&gt;表明这是一个段落，&lt;img&gt;表明这儿有一个图片，&lt;a&gt;表明此处有链接。</p>
+<h3 id="1-1-HTML的局限性"><a href="#1-1-HTML的局限性" class="headerlink" title="1.1 HTML的局限性"></a>1.1 HTML的局限性</h3><p>HTML<strong>只关注内容的语义</strong>。比如\</p><h1>表明这是一个大标题，\<p>表明这是一个段落，\<img>表明这儿有一个图片，\<a>表明此处有链接。</a></p>
 <p>早期网站共同特点：丑</p>
 <p>虽然HTML可以做简单的样式，但是带来的是无尽的臃肿和繁琐……</p>
-<h3 id="1-2-CSS-网页的美容师"><a href="#1-2-CSS-网页的美容师" class="headerlink" title="1.2 CSS-网页的美容师"></a>1.2 CSS-网页的美容师</h3><p>CSS是<strong>层叠样式表（Cascading Style Sheets）</strong>的简称。</p>
+</h1><h3 id="1-2-CSS-网页的美容师"><a href="#1-2-CSS-网页的美容师" class="headerlink" title="1.2 CSS-网页的美容师"></a>1.2 CSS-网页的美容师</h3><p>CSS是<strong>层叠样式表（Cascading Style Sheets）</strong>的简称。</p>
 <p>有时我们也会称之为CSS样式表或级联样式表。</p>
 <p>CSS也是一种标记语言。</p>
 <p>CSS主要用于设置HTML页面中的文本内容（字体、大小、对齐方式等）、图片的外形（宽高、边框样式、边距等）以及版面的布局和外/观显示样式。</p>
@@ -254,7 +253,6 @@
 </ol>
 <h3 id="1-3-CSS语法规范"><a href="#1-3-CSS语法规范" class="headerlink" title="1.3 CSS语法规范"></a>1.3 CSS语法规范</h3><p>CSS规则由两个主要的部分构成：选择器以及一条或多条声明。例如：</p>
 <figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span> {</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">26px</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
 <p><strong>注意：</strong></p>
 <ol>
 <li>选择器是用于指定CSS样式的HTML标签，花括号内是对该对象设置的具体样式</li>
@@ -272,22 +270,26 @@
 <h4 id="1-4-1-样式格式书写"><a href="#1-4-1-样式格式书写" class="headerlink" title="1.4.1 样式格式书写"></a>1.4.1 样式格式书写</h4><ol>
 <li><p>紧凑格式</p>
 <blockquote>
-<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h3</span> { <span class="attribute">color</span>: deeppink; <span class="attribute">font-size</span>: <span class="number">20px</span>;}</span><br></pre></td></tr></tbody></table></figure></blockquote>
+<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h3</span> { <span class="attribute">color</span>: deeppink; <span class="attribute">font-size</span>: <span class="number">20px</span>;}</span><br></pre></td></tr></tbody></table></figure>
+</blockquote>
 </li>
 <li><p>展开格式</p>
 <blockquote>
-<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h3</span> {</span><br><span class="line">    <span class="attribute">color</span>: pink;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></blockquote>
+<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h3</span> {</span><br><span class="line">    <span class="attribute">color</span>: pink;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+</blockquote>
 </li>
 </ol>
 <p>建议使用<strong>展开格式</strong>，因为更直观</p>
 <h4 id="1-4-2-样式大小写"><a href="#1-4-2-样式大小写" class="headerlink" title="1.4.2 样式大小写"></a>1.4.2 样式大小写</h4><ol>
 <li><p>小写形式</p>
 <blockquote>
-<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h3</span> {</span><br><span class="line">    <span class="attribute">color</span>: pink;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></blockquote>
+<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h3</span> {</span><br><span class="line">    <span class="attribute">color</span>: pink;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+</blockquote>
 </li>
 <li><p>大写形式</p>
 <blockquote>
-<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">H3</span> {</span><br><span class="line">    <span class="attribute">COLOR</span>: PINK;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></blockquote>
+<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">H3</span> {</span><br><span class="line">    <span class="attribute">COLOR</span>: PINK;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+</blockquote>
 </li>
 </ol>
 <p>建议样式选择器、属性名、属性值关键字<strong>全部使用小写字母</strong>，特殊情况除外</p>
@@ -313,13 +315,12 @@
 <blockquote>
 <p>标签名 {<br>  属性1: 属性值1;<br>  属性2: 属性值2;<br>  属性3: 属性值3;<br>  ……<br>}</p>
 </blockquote>
-<p><strong>作用：</strong><br>标签选择器可以把某一类标签全部选择出来，比如所有的&lt;div&gt;标签和所有的&lt;span&gt;标签。</p>
+<p><strong>作用：</strong><br>标签选择器可以把某一类标签全部选择出来，比如所有的\</p><div>标签和所有的\<span>标签。</span></div><p></p>
 <p><strong>优点：</strong><br>能快速为页面中同类型的标签统一设置样式。</p>
 <p><strong>缺点：</strong><br>不能设计差异化样式，只能选择全部的当前标签。</p>
 <h2 id="3-CSS字体属性"><a href="#3-CSS字体属性" class="headerlink" title="3. CSS字体属性"></a>3. CSS字体属性</h2><p>CSS Fonts（字体）属性用于定义字体系列、大小、粗细、文本样式（如斜体等）。</p>
 <h3 id="3-5-字体复合属性"><a href="#3-5-字体复合属性" class="headerlink" title="3.5 字体复合属性"></a>3.5 字体复合属性</h3><p>字体属性可以把以上文字样式综合来写，以节约代码。</p>
 <figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> {</span><br><span class="line">    <span class="attribute">font</span>: font-style font-weight font-size/line-height font-family;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
 <p><strong>注意：</strong></p>
 <ul>
 <li>使用font属性时，必须按照上面语法格式中的顺序书写，<strong>不能更换顺序</strong>，并且各个属性间以<strong>空格</strong>隔开</li>
@@ -328,7 +329,7 @@
 <h2 id="4-CSS文本属性"><a href="#4-CSS文本属性" class="headerlink" title="4. CSS文本属性"></a>4. CSS文本属性</h2><p>CSS Text（文本）属性可以定义文本的<strong>外观</strong>，比如文本的颜色、对齐文本、装饰文本、文本缩进、行间距等。</p>
 <h3 id="4-1-文本颜色"><a href="#4-1-文本颜色" class="headerlink" title="4.1 文本颜色"></a>4.1 文本颜色</h3><p>color 属性用于定义文本的颜色。</p>
 <figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> {</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -336,7 +337,8 @@
 <th>属性值</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>预定义的颜色</td>
 <td>red，green，blue，pink等</td>
 </tr>
@@ -348,11 +350,13 @@
 <td>RGB代码</td>
 <td>rgb(255,0,0)或rgb(100%,0%,0%)等</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>开发中最常用的是十六进制。</p>
 <h3 id="4-2-对齐文本"><a href="#4-2-对齐文本" class="headerlink" title="4.2 对齐文本"></a>4.2 对齐文本</h3><p>text-align属性用于设置元素内文本内容的水平对齐方式</p>
 <figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> {</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -360,7 +364,8 @@
 <th>解释</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>left</td>
 <td>左对齐（默认值）</td>
 </tr>
@@ -372,10 +377,11 @@
 <td>center</td>
 <td>居中对齐</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h3 id="4-3-装饰文本"><a href="#4-3-装饰文本" class="headerlink" title="4.3 装饰文本"></a>4.3 装饰文本</h3><p>text-decoration属性规定添加到文本的修饰。可以给文本添加下划线、删除线、上划线。</p>
 <figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> {</span><br><span class="line">    <span class="attribute">text-decoration</span>: underline;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
 <table>
     <tbody><tr><th>属性值</th><th>描述</th></tr>
     <tr><td>none</td><td>默认。没有装饰线（最常用）</td></tr>
@@ -386,14 +392,11 @@
 
 <h3 id="4-4-文本缩进"><a href="#4-4-文本缩进" class="headerlink" title="4.4 文本缩进"></a>4.4 文本缩进</h3><p>text-indent属性用来指定文本的第一行的缩进，通常是将段落的首行缩进。</p>
 <figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> {</span><br><span class="line">    <span class="attribute">text-indent</span>: <span class="number">10px</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
 <p>通过设置该属性，所有元素的第一行都可以缩进一个给定的长度，甚至该长度可以是负值。</p>
 <figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> {</span><br><span class="line">    <span class="attribute">text-decoration</span>: <span class="number">2em</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
 <p>em是一个相对单位，就是当前元素（font-size）1个文字的大小，如果当前元素没有设置大小，则会按照父元素的1个文字大小。</p>
 <h3 id="4-5-行间距"><a href="#4-5-行间距" class="headerlink" title="4.5 行间距"></a>4.5 行间距</h3><p>line-height属性用于设置行间的距离（行高）。可以控制文字行与行之间的距离。</p>
 <figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> {</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">26px</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
 <p>行间距的组成：上间距、文本高度、下间距</p>
 <h3 id="4-6-文本属性总结"><a href="#4-6-文本属性总结" class="headerlink" title="4.6 文本属性总结"></a>4.6 文本属性总结</h3><table>
     <tbody><tr><th>属性</th><th>表示</th><th>注意点</th></tr>
@@ -412,7 +415,6 @@
 </ol>
 <h4 id="5-1-1-行内样式表"><a href="#5-1-1-行内样式表" class="headerlink" title="5.1.1 行内样式表"></a>5.1.1 行内样式表</h4><p>行内样式表（内联样式表）是在元素标签内部的style属性中设置CSS样式。适合于修改简单样式。</p>
 <figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">div</span> style="<span class="attribute">color</span>: red; <span class="attribute">font-size</span>: <span class="number">12px</span>;"&gt;青春不常在，抓紧谈恋爱&lt;/<span class="selector-tag">div</span>&gt;</span><br></pre></td></tr></tbody></table></figure>
-
 <p><strong>注意：</strong></p>
 <ul>
 <li>style其实就是标签的属性</li>
@@ -421,12 +423,11 @@
 <li>由于书写繁琐，并且没有体现出结构与样式分离的思想，所以不推荐大量使用，只有对当前元素添加简单样式的时候，可以考虑使用</li>
 <li>使用行内样式表设定CSS，通常也被成为<span style="color: red">行内式引入</span></li>
 </ul>
-<h4 id="5-1-2-内部样式表"><a href="#5-1-2-内部样式表" class="headerlink" title="5.1.2 内部样式表"></a>5.1.2 内部样式表</h4><p>内部样式表（内嵌样式表）是写到html页面内部。是将所有的CSS代码抽取出来，单独放到一个&lt;style&gt;标签中</p>
-<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    <span class="selector-tag">div</span> {</span><br><span class="line">        <span class="attribute">color</span>: red;</span><br><span class="line">        <span class="attribute">font-size</span>: <span class="number">12px</span>;</span><br><span class="line">    }</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></tbody></table></figure>
-
+<h4 id="5-1-2-内部样式表"><a href="#5-1-2-内部样式表" class="headerlink" title="5.1.2 内部样式表"></a>5.1.2 内部样式表</h4><p>内部样式表（内嵌样式表）是写到html页面内部。是将所有的CSS代码抽取出来，单独放到一个\<style>标签中</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    <span class="selector-tag">div</span> &#123;</span><br><span class="line">        <span class="attribute">color</span>: red;</span><br><span class="line">        <span class="attribute">font-size</span>: <span class="number">12px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
 <p><strong>注意：</strong></p>
 <ul>
-<li>&lt;style&gt;标签理论上可以放在HTML文档的任何地方，但一般会放在文档的&lt;head&gt;标签中。</li>
+<li>\<style>标签理论上可以放在HTML文档的任何地方，但一般会放在文档的\<head>标签中。</li>
 <li>通过此种方式，可以方便控制<strong>当前整个页面中</strong>的元素样式设置。</li>
 <li>代码结构清晰，但是并没有实现结构与样式完全分离。</li>
 <li>使用内部样式表设定CSS，通常也被称为<span style="color: red;">嵌入式引入</span>，这种方式是我们练习时常用的方式</li>
@@ -435,22 +436,21 @@
 <p>引入外部样式表步骤：</p>
 <ol>
 <li>新建一个后缀名为.css的样式文件，把所有CSS代码都放入此文件中。</li>
-<li>在HTML页面中，使用&lt;link&gt;标签引入这个CSS文件</li>
+<li>在HTML页面中，使用\<link>标签引入这个CSS文件</li>
 </ol>
-<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"css文件路径"</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css文件路径&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <table>
-    <tbody><tr><th>属性</th><th>作用</th></tr>
+    <tr><th>属性</th><th>作用</th></tr>
     <tr><td>rel</td><td>定义当前文档与被链接文档之前的关系，在这里需要指定为"stylesheet"，表示被链接的文档是一个样式表文件。</td></tr>
     <tr><td>href</td><td>定义所链接外部样式表文件的URL，可以是相对路径，也可以是绝对路径</td></tr>
-</tbody></table>
+</table>
 
 <h3 id="5-2-CSS引入方式总结"><a href="#5-2-CSS引入方式总结" class="headerlink" title="5.2 CSS引入方式总结"></a>5.2 CSS引入方式总结</h3><table>
-    <tbody><tr><th>样式表</th><th>优点</th><th>缺点</th><th>使用情况</th><th>控制范围</th></tr>
+    <tr><th>样式表</th><th>优点</th><th>缺点</th><th>使用情况</th><th>控制范围</th></tr>
     <tr><td>行内样式表</td><td>书写方便，权重高</td><td>结构样式混写</td><td>较少</td><td>控制一个标签</td></tr>
     <tr><td>内部样式表</td><td>部分结构和样式相分离</td><td>没有彻底分离</td><td>较多</td><td>控制一个页面</td></tr>
     <tr><td>外部样式表</td><td>完全实现结构和样式相分离</td><td>需要引入</td><td>最多，吐血推荐</td><td>控制多个页面</td></tr>
-</tbody></table>
+</table>
 
 <h2 id="6-综合案例"><a href="#6-综合案例" class="headerlink" title="6. 综合案例"></a>6. 综合案例</h2><p>制作页面整体步骤：</p>
 <ol>
@@ -468,7 +468,7 @@
 <li>如果点击元素，发现右侧没有样式引入，极有可能是类名或者样式引入错误</li>
 <li>如果有样式，但是样式前面有<span style="color: red">黄色叹号提示</span>，则是样式属性书写错误</li>
 </ol>
-
+</style></p>
     </div>
 
     
@@ -568,7 +568,10 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-Part03-CSS%E5%B1%82%E5%8F%A0%E6%A0%B7%E5%BC%8F%E8%A1%A8-%E4%B8%80"><span class="nav-number">1.</span> <span class="nav-text">HTML学习笔记 Part03-CSS层叠样式表 一</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95"><span class="nav-number">1.1.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-CSS%E7%AE%80%E4%BB%8B"><span class="nav-number">1.2.</span> <span class="nav-text">1. CSS简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-HTML%E7%9A%84%E5%B1%80%E9%99%90%E6%80%A7"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.1 HTML的局限性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-CSS-%E7%BD%91%E9%A1%B5%E7%9A%84%E7%BE%8E%E5%AE%B9%E5%B8%88"><span class="nav-number">1.2.2.</span> <span class="nav-text">1.2 CSS-网页的美容师</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-CSS%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83"><span class="nav-number">1.2.3.</span> <span class="nav-text">1.3 CSS语法规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-CSS%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC"><span class="nav-number">1.2.4.</span> <span class="nav-text">1.4 CSS代码风格</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-1-%E6%A0%B7%E5%BC%8F%E6%A0%BC%E5%BC%8F%E4%B9%A6%E5%86%99"><span class="nav-number">1.2.4.1.</span> <span class="nav-text">1.4.1 样式格式书写</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-2-%E6%A0%B7%E5%BC%8F%E5%A4%A7%E5%B0%8F%E5%86%99"><span class="nav-number">1.2.4.2.</span> <span class="nav-text">1.4.2 样式大小写</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-3-%E7%A9%BA%E6%A0%BC%E8%A7%84%E8%8C%83"><span class="nav-number">1.2.4.3.</span> <span class="nav-text">1.4.3 空格规范</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-CSS%E5%9F%BA%E7%A1%80%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.3.</span> <span class="nav-text">2. CSS基础选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-CSS%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">1.3.1.</span> <span class="nav-text">2.1 CSS选择器的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E9%80%89%E6%8B%A9%E5%99%A8%E5%88%86%E7%B1%BB"><span class="nav-number">1.3.2.</span> <span class="nav-text">2.2 选择器分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E6%A0%87%E7%AD%BE%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.3.3.</span> <span class="nav-text">2.3 标签选择器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-CSS%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7"><span class="nav-number">1.4.</span> <span class="nav-text">3. CSS字体属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-%E5%AD%97%E4%BD%93%E5%A4%8D%E5%90%88%E5%B1%9E%E6%80%A7"><span class="nav-number">1.4.1.</span> <span class="nav-text">3.5 字体复合属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-CSS%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7"><span class="nav-number">1.5.</span> <span class="nav-text">4. CSS文本属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-%E6%96%87%E6%9C%AC%E9%A2%9C%E8%89%B2"><span class="nav-number">1.5.1.</span> <span class="nav-text">4.1 文本颜色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-%E5%AF%B9%E9%BD%90%E6%96%87%E6%9C%AC"><span class="nav-number">1.5.2.</span> <span class="nav-text">4.2 对齐文本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-%E8%A3%85%E9%A5%B0%E6%96%87%E6%9C%AC"><span class="nav-number">1.5.3.</span> <span class="nav-text">4.3 装饰文本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-%E6%96%87%E6%9C%AC%E7%BC%A9%E8%BF%9B"><span class="nav-number">1.5.4.</span> <span class="nav-text">4.4 文本缩进</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-%E8%A1%8C%E9%97%B4%E8%B7%9D"><span class="nav-number">1.5.5.</span> <span class="nav-text">4.5 行间距</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7%E6%80%BB%E7%BB%93"><span class="nav-number">1.5.6.</span> <span class="nav-text">4.6 文本属性总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-CSS%E7%9A%84%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="nav-number">1.6.</span> <span class="nav-text">5. CSS的引入方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-CSS%E7%9A%84%E4%B8%89%E7%A7%8D%E6%A0%B7%E5%BC%8F%E8%A1%A8"><span class="nav-number">1.6.1.</span> <span class="nav-text">5.1 CSS的三种样式表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-1-%E8%A1%8C%E5%86%85%E6%A0%B7%E5%BC%8F%E8%A1%A8"><span class="nav-number">1.6.1.1.</span> <span class="nav-text">5.1.1 行内样式表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-2-%E5%86%85%E9%83%A8%E6%A0%B7%E5%BC%8F%E8%A1%A8"><span class="nav-number">1.6.1.2.</span> <span class="nav-text">5.1.2 内部样式表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-3-%E5%A4%96%E9%83%A8%E6%A0%B7%E5%BC%8F%E8%A1%A8"><span class="nav-number">1.6.1.3.</span> <span class="nav-text">5.1.3 外部样式表</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-CSS%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F%E6%80%BB%E7%BB%93"><span class="nav-number">1.6.2.</span> <span class="nav-text">5.2 CSS引入方式总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B"><span class="nav-number">1.7.</span> <span class="nav-text">6. 综合案例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7"><span class="nav-number">1.8.</span> <span class="nav-text">7. 调试工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-%E6%89%93%E5%BC%80%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7"><span class="nav-number">1.8.1.</span> <span class="nav-text">7.1 打开调试工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-%E4%BD%BF%E7%94%A8%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7"><span class="nav-number">1.8.2.</span> <span class="nav-text">7.2 使用调试工具</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-Part03-CSS%E5%B1%82%E5%8F%A0%E6%A0%B7%E5%BC%8F%E8%A1%A8-%E4%B8%80"><span class="nav-number">1.</span> <span class="nav-text">HTML学习笔记 Part03-CSS层叠样式表 一</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95"><span class="nav-number">1.1.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-CSS%E7%AE%80%E4%BB%8B"><span class="nav-number">1.2.</span> <span class="nav-text">1. CSS简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-HTML%E7%9A%84%E5%B1%80%E9%99%90%E6%80%A7"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.1 HTML的局限性</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">表明这是一个大标题，\表明这是一个段落，\表明这儿有一个图片，\表明此处有链接。
+早期网站共同特点：丑
+虽然HTML可以做简单的样式，但是带来的是无尽的臃肿和繁琐……
+</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-CSS-%E7%BD%91%E9%A1%B5%E7%9A%84%E7%BE%8E%E5%AE%B9%E5%B8%88"><span class="nav-number">2.0.1.</span> <span class="nav-text">1.2 CSS-网页的美容师</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-CSS%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83"><span class="nav-number">2.0.2.</span> <span class="nav-text">1.3 CSS语法规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-CSS%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC"><span class="nav-number">2.0.3.</span> <span class="nav-text">1.4 CSS代码风格</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-1-%E6%A0%B7%E5%BC%8F%E6%A0%BC%E5%BC%8F%E4%B9%A6%E5%86%99"><span class="nav-number">2.0.3.1.</span> <span class="nav-text">1.4.1 样式格式书写</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-2-%E6%A0%B7%E5%BC%8F%E5%A4%A7%E5%B0%8F%E5%86%99"><span class="nav-number">2.0.3.2.</span> <span class="nav-text">1.4.2 样式大小写</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-3-%E7%A9%BA%E6%A0%BC%E8%A7%84%E8%8C%83"><span class="nav-number">2.0.3.3.</span> <span class="nav-text">1.4.3 空格规范</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-CSS%E5%9F%BA%E7%A1%80%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.1.</span> <span class="nav-text">2. CSS基础选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-CSS%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">2.1.1.</span> <span class="nav-text">2.1 CSS选择器的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E9%80%89%E6%8B%A9%E5%99%A8%E5%88%86%E7%B1%BB"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.2 选择器分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E6%A0%87%E7%AD%BE%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.1.3.</span> <span class="nav-text">2.3 标签选择器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-CSS%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7"><span class="nav-number">2.2.</span> <span class="nav-text">3. CSS字体属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-%E5%AD%97%E4%BD%93%E5%A4%8D%E5%90%88%E5%B1%9E%E6%80%A7"><span class="nav-number">2.2.1.</span> <span class="nav-text">3.5 字体复合属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-CSS%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7"><span class="nav-number">2.3.</span> <span class="nav-text">4. CSS文本属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-%E6%96%87%E6%9C%AC%E9%A2%9C%E8%89%B2"><span class="nav-number">2.3.1.</span> <span class="nav-text">4.1 文本颜色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-%E5%AF%B9%E9%BD%90%E6%96%87%E6%9C%AC"><span class="nav-number">2.3.2.</span> <span class="nav-text">4.2 对齐文本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-%E8%A3%85%E9%A5%B0%E6%96%87%E6%9C%AC"><span class="nav-number">2.3.3.</span> <span class="nav-text">4.3 装饰文本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-%E6%96%87%E6%9C%AC%E7%BC%A9%E8%BF%9B"><span class="nav-number">2.3.4.</span> <span class="nav-text">4.4 文本缩进</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-%E8%A1%8C%E9%97%B4%E8%B7%9D"><span class="nav-number">2.3.5.</span> <span class="nav-text">4.5 行间距</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7%E6%80%BB%E7%BB%93"><span class="nav-number">2.3.6.</span> <span class="nav-text">4.6 文本属性总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-CSS%E7%9A%84%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="nav-number">2.4.</span> <span class="nav-text">5. CSS的引入方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-CSS%E7%9A%84%E4%B8%89%E7%A7%8D%E6%A0%B7%E5%BC%8F%E8%A1%A8"><span class="nav-number">2.4.1.</span> <span class="nav-text">5.1 CSS的三种样式表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-1-%E8%A1%8C%E5%86%85%E6%A0%B7%E5%BC%8F%E8%A1%A8"><span class="nav-number">2.4.1.1.</span> <span class="nav-text">5.1.1 行内样式表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-2-%E5%86%85%E9%83%A8%E6%A0%B7%E5%BC%8F%E8%A1%A8"><span class="nav-number">2.4.1.2.</span> <span class="nav-text">5.1.2 内部样式表</span></a></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
