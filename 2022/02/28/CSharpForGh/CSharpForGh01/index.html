@@ -33,8 +33,10 @@
 <meta property="og:image" content="https://kevinyulei.github.io/2022/02/28/CSharpForGh/CSharpForGh01/04creationEvent.jpg">
 <meta property="og:image" content="https://kevinyulei.github.io/2022/02/28/CSharpForGh/CSharpForGh01/05findLibraries.jpg">
 <meta property="og:image" content="https://kevinyulei.github.io/2022/02/28/CSharpForGh/CSharpForGh01/06closeGhFile.jpg">
+<meta property="og:image" content="https://kevinyulei.github.io/2022/02/28/CSharpForGh/CSharpForGh01/07firstComponent.jpg">
+<meta property="og:image" content="https://kevinyulei.github.io/2022/02/28/CSharpForGh/CSharpForGh01/08updateComponent.jpg">
 <meta property="article:published_time" content="2022-02-28T06:30:00.000Z">
-<meta property="article:modified_time" content="2022-02-28T11:28:26.464Z">
+<meta property="article:modified_time" content="2022-02-28T12:31:31.805Z">
 <meta property="article:author" content="雨泪丶">
 <meta property="article:tag" content="Grasshopper">
 <meta name="twitter:card" content="summary">
@@ -204,7 +206,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-02-28 14:30:00 / 修改时间：19:28:26" itemprop="dateCreated datePublished" datetime="2022-02-28T14:30:00+08:00">2022-02-28</time>
+              <time title="创建时间：2022-02-28 14:30:00 / 修改时间：20:31:31" itemprop="dateCreated datePublished" datetime="2022-02-28T14:30:00+08:00">2022-02-28</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -285,30 +287,78 @@
 <h4>4.1 设置生成事件</h4>
 
 <p>于VS界面右侧的解决方案资源管理器中，右击Properties-打开-生成实践，进入生成后事件命令行。</p>
-<p><img src="/2022/02/28/CSharpForGh/CSharpForGh01/04creationEvent.jpg" alt="设置生成事件" title="设置生成事件"><br><br></p>
+<p><img src="/2022/02/28/CSharpForGh/CSharpForGh01/04creationEvent.jpg" alt="设置生成事件" title="设置生成事件"><br><br><br><br></p>
 <p>可以看见文本框中已有以下内容：</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Copy "$(TargetPath)" "$(TargetDir)$(ProjectName).gha"</span><br><span class="line"></span><br><span class="line">Erase "$(TargetPath)"</span><br></pre></td></tr></tbody></table></figure>
 <p>其中，第一行代码的作用就是将gha文件生成于项目所在文件夹的bin文件夹中。</p>
 <p>基于此，我们可以将该gha文件直接生成至GH的Libraries文件夹，只需添加一行代码：</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Copy "$(TargetPath)" "$(TargetDir)$(ProjectName).gha"</span><br><span class="line">Copy "$(TargetPath)" "C:\Users\UserName\AppData\Roaming\Grasshopper\Libraries\$(ProjectName).gha"</span><br><span class="line">Erase "$(TargetPath)"</span><br></pre></td></tr></tbody></table></figure>
 <p>Libraries文件夹可以通过GH界面的菜单栏中：FIle-Special Foders-Components Folder打开，进而获得路径。</p>
-<p><img src="/2022/02/28/CSharpForGh/CSharpForGh01/05findLibraries.jpg" alt="寻找Libraries路径" title="寻找Libraries路径"><br><br></p>
+<p><img src="/2022/02/28/CSharpForGh/CSharpForGh01/05findLibraries.jpg" alt="寻找Libraries路径" title="寻找Libraries路径"><br><br><br><br></p>
 <h4>4.2 使用指令重新加载GH</h4>
 
 <p>进行C#开发GH插件时，每次重新生成事件后，GH一般处于开启状态，此时若要对重新生成的电池进行测试，需要关闭GH文件，然后输入指令进行GH的重新加载。</p>
 <p>关闭GH文件需要点击窗口右上角 X(关闭窗口) 按钮下方的按钮,该窗口可以切换用户已打开的不同GH电池文件,点击对应GH文件的关闭按钮即可关闭GH文件。重新加载时需要保证所有GH文件已关闭。</p>
-<p><img src="/2022/02/28/CSharpForGh/CSharpForGh01/06closeGhFile.jpg" alt="关闭GH文件" title="关闭GH文件"><br><br></p>
+<p><img src="/2022/02/28/CSharpForGh/CSharpForGh01/06closeGhFile.jpg" alt="关闭GH文件" title="关闭GH文件"><br><br><br><br></p>
 <p>进入Rhino界面，于指令输入处输入：<code>_GrasshopperReloadAssemblies</code>，看见指令窗口显示<br><code>only use it if it *really* solves a problem you are having.</code>说明该指令执行成功。</p>
 <p>注：笔者这里将该指令记录为别名GRA，便于输入。读者可以根据自己喜好将该指令设置为别名或者快捷键。</p>
 <p><strong>别名设置方法：</strong><br>Rhino菜单栏处点击：工具-选项-别名-新增</p>
 <p>笔者设置效果如下：</p>
-<table>
+<p><table>
     <tbody><tr><th>别名</th><th>指令巨集：</th></tr>
     <tr><td>GRA</td><td>_GrasshopperReloadAssemblies</td></tr>
-</tbody></table>
-
+</tbody></table><br><br></p>
 <p><strong>快捷键设置方法：</strong><br>Rhino菜单栏处点击：工具-选项-键盘</p>
 <h3 id="title5">5. 创建第一个电池</h3>
+
+<h4>5.1 修改公共构造函数</h4>
+
+<p>点击component.cs文件，进入文件内部，找到如下代码：</p>
+<figure class="highlight csharp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">CSharpForGhTutorialComponent</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">  : <span class="title">base</span>(<span class="params"><span class="string">"CSharpForGhTutorial"</span>, <span class="string">"Nickname"</span>,</span></span></span><br><span class="line"><span class="params"><span class="function">      <span class="string">"Description"</span>,</span></span></span><br><span class="line"><span class="params"><span class="function">      <span class="string">"Category"</span>, <span class="string">"Subcategory"</span></span>)</span></span><br><span class="line">{</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>这是电池的构造函数，每一个电池都必须提供一个没有任何参数的公共构造函数。</p>
+<p>各参数的含义如下：</p>
+<p><table>
+    <tbody><tr><th>参数（字符串）</th><th>含义</th><th>注意</th></tr>
+    <tr><td>"CSharpForGhTutorial"</td><td>电池的完整名称</td><td>该字符串与用户创建项目时的名称相同</td></tr>
+    <tr><td>"Nickname"</td><td>电池的完整名称</td><td></td></tr>
+    <tr><td>"Description"</td><td>电池的功能描述</td><td></td></tr>
+    <tr><td>"Category"</td><td>组件将出现在其中的选项卡</td><td>若用户使用不存在的选项卡，将自动创建新的选项卡/td&gt;</td></tr>
+    <tr><td>"Subcategory"</td><td>组件将出现在其中的面板</td><td>若用户使用不存在的面板，将自动创建新的面板</td></tr>
+</tbody></table><br><br></p>
+<p>将该部分代码修改成如下所示，便于体会其功能：</p>
+<figure class="highlight csharp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">CSharpForGhTutorialComponent</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">  : <span class="title">base</span>(<span class="params"><span class="string">"CSharpForGhTutorial"</span>, <span class="string">"C#ForGh"</span>,</span></span></span><br><span class="line"><span class="params"><span class="function">      <span class="string">"Test Component"</span>,</span></span></span><br><span class="line"><span class="params"><span class="function">      <span class="string">"Params"</span>, <span class="string">"Primitive"</span></span>)</span></span><br><span class="line">{</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h4>5.2 生成电池</h4>
+
+<p>于VS的菜单栏中点击：生成-生成解决方案。快捷键 <code>Ctrl+Shift+B</code><br>底部输出信息显示成功即可。</p>
+<p>第一次加载一般需要重新关闭Rhino软件，打开后进入GH界面，发现在Parmrs选项卡的Primitive面板中，增加了名为CSharpForGhTutorial的电池。</p>
+<p><img src="/2022/02/28/CSharpForGh/CSharpForGh01/07firstComponent.jpg" alt="生成第一个电池" title="生成第一个电池"><br><br><br><br></p>
+<h4>5.3 完善电池功能</h4>
+
+<h5>5.3.1 完善输入参数</h5>
+
+<p>回到VS界面，于component.cs文件中找到如下代码：</p>
+<figure class="highlight csharp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">RegisterInputParams</span>(<span class="params">GH_Component.GH_InputParamManager pManager</span>)</span></span><br><span class="line">{</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>该函数的作用是为电池增加输入参数。</p>
+<p>下面我们为其增加一个输入端，输入类型为double型数字：</p>
+<figure class="highlight csharp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">RegisterInputParams</span>(<span class="params">GH_Component.GH_InputParamManager pManager</span>)</span></span><br><span class="line">{</span><br><span class="line">    pManager.AddNumberParameter(<span class="string">"testInput"</span>, <span class="string">"tI"</span>, <span class="string">"The input for testing"</span>, GH_ParamAccess.item);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h5>5.3.2 完善输出参数</h5>
+
+<p>找到如下代码：</p>
+<figure class="highlight csharp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">RegisterOutputParams</span>(<span class="params">GH_Component.GH_OutputParamManager pManager</span>)</span></span><br><span class="line">{</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>该函数的作用是为电池增加输出参数。</p>
+<p>同样为其增加一个输入端，输入类型为double型数字：<br></p><figure class="highlight csharp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">RegisterOutputParams</span>(<span class="params">GH_Component.GH_OutputParamManager pManager</span>)</span></span><br><span class="line">{</span><br><span class="line">    pManager.AddNumberParameter(<span class="string">"testOutput"</span>, <span class="string">"tO"</span>, <span class="string">"The output for testing"</span>, GH_ParamAccess.item);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h5>5.3.3 完善功能代码</h5>
+
+<figure class="highlight csharp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">SolveInstance</span>(<span class="params">IGH_DataAccess DA</span>)</span></span><br><span class="line">{</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>该函数为电池运行的功能代码。</p>
+<p>增加代码使其完成简单的+1功能：</p>
+<figure class="highlight csharp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">SolveInstance</span>(<span class="params">IGH_DataAccess DA</span>)</span></span><br><span class="line">{</span><br><span class="line">    <span class="built_in">double</span> input = <span class="built_in">double</span>.NaN;</span><br><span class="line">    DA.GetData(<span class="string">"testInput"</span>, <span class="keyword">ref</span> input);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">double</span> output = input + <span class="number">1</span>;</span><br><span class="line">    DA.SetData(<span class="string">"testOutput"</span>, output);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h4>5.4 更新电池</h4>
+
+<p>保证代码输入正确后，点击：生成-生成解决方案，重新生成gha文件；<br>回到GH界面，关闭所有GH文件，包括空白的unnamed文件也要关闭；<br>于Rhino中输入<code>_GrasshopperReloadAssemblies</code>（笔者输入别名 <code>GRA</code>），更新GH；<br>发现电池已经拥有了输入端和输出端，并且可以完成简单的+1功能了。</p>
+<p><img src="/2022/02/28/CSharpForGh/CSharpForGh01/08updateComponent.jpg" alt="生成第一个电池" title="生成第一个电池"><br><br><br><br></p>
+<p>以上，读者就已经掌握了基础的通过VS开发GH插件的工作流程。<br>希望本篇文章对您有所帮助！</p>
+
     </div>
 
     
@@ -405,7 +455,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8EC-%E7%9A%84GH%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91Part1"><span class="nav-number">1.</span> <span class="nav-text">基于C#的GH插件开发Part1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#title1"><span class="nav-number">1.0.1.</span> <span class="nav-text">1. 所需软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#title2"><span class="nav-number">1.0.2.</span> <span class="nav-text">2. 下载并安装Grasshopper模板文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#title3"><span class="nav-number">1.0.3.</span> <span class="nav-text">3. 创建一个GH项目</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.0.3.1.</span> <span class="nav-text">3.1 新建项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.0.3.2.</span> <span class="nav-text">3.2 添加References and debug paths</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#title4"><span class="nav-number">1.0.4.</span> <span class="nav-text">4. 链接VS与GH</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.0.4.1.</span> <span class="nav-text">4.1 设置生成事件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.0.4.2.</span> <span class="nav-text">4.2 使用指令重新加载GH</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#title5"><span class="nav-number">1.0.5.</span> <span class="nav-text">5. 创建第一个电池</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8EC-%E7%9A%84GH%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91Part1"><span class="nav-number">1.</span> <span class="nav-text">基于C#的GH插件开发Part1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#title1"><span class="nav-number">1.0.1.</span> <span class="nav-text">1. 所需软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#title2"><span class="nav-number">1.0.2.</span> <span class="nav-text">2. 下载并安装Grasshopper模板文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#title3"><span class="nav-number">1.0.3.</span> <span class="nav-text">3. 创建一个GH项目</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.0.3.1.</span> <span class="nav-text">3.1 新建项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.0.3.2.</span> <span class="nav-text">3.2 添加References and debug paths</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#title4"><span class="nav-number">1.0.4.</span> <span class="nav-text">4. 链接VS与GH</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.0.4.1.</span> <span class="nav-text">4.1 设置生成事件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.0.4.2.</span> <span class="nav-text">4.2 使用指令重新加载GH</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#title5"><span class="nav-number">1.0.5.</span> <span class="nav-text">5. 创建第一个电池</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.0.5.1.</span> <span class="nav-text">5.1 修改公共构造函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.0.5.2.</span> <span class="nav-text">5.2 生成电池</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.0.5.3.</span> <span class="nav-text">5.3 完善电池功能</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link"><span class="nav-number">1.0.5.3.1.</span> <span class="nav-text">5.3.1 完善输入参数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link"><span class="nav-number">1.0.5.3.2.</span> <span class="nav-text">5.3.2 完善输出参数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link"><span class="nav-number">1.0.5.3.3.</span> <span class="nav-text">5.3.3 完善功能代码</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.0.5.4.</span> <span class="nav-text">5.4 更新电池</span></a></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
