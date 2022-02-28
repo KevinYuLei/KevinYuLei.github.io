@@ -130,17 +130,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">4</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">5</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">6</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">8</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">28</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">29</span></a>
 
   </li>
   </ul>
@@ -230,6 +230,100 @@
 <p>QQ：2818897318  （添加请注明原因）</p>
 <p>B站主页：<a target="_blank" rel="noopener" href="https://space.bilibili.com/6577873">雨泪落林泣丶</a></p>
 
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://kevinyulei.github.io/2022/02/28/Grasshopper%E6%95%99%E5%AD%A6/C#_For_Gh/%E5%9F%BA%E4%BA%8EC#%E7%9A%84GH%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91Part1/%E5%9F%BA%E4%BA%8EC#%E7%9A%84GH%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91Part1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/01.jpg">
+      <meta itemprop="name" content="雨泪丶">
+      <meta itemprop="description" content="一位普通建筑生的心血来潮">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="雨泪丶的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/02/28/Grasshopper%E6%95%99%E5%AD%A6/C#_For_Gh/%E5%9F%BA%E4%BA%8EC#%E7%9A%84GH%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91Part1/%E5%9F%BA%E4%BA%8EC#%E7%9A%84GH%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91Part1/" class="post-title-link" itemprop="url">基于C#的GH插件开发Part1</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-02-28 14:30:00 / 修改时间：19:17:45" itemprop="dateCreated datePublished" datetime="2022-02-28T14:30:00+08:00">2022-02-28</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Grasshopper/" itemprop="url" rel="index"><span itemprop="name">Grasshopper</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Grasshopper/C-For-Gh/" itemprop="url" rel="index"><span itemprop="name">C#_For_Gh</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="基于C-的GH插件开发Part1"><a href="#基于C-的GH插件开发Part1" class="headerlink" title="基于C#的GH插件开发Part1"></a>基于C#的GH插件开发Part1</h1><p><strong>前言</strong></p>
+<blockquote>
+<p>搜寻国内大多数视频网站与博客，均未见详细系统介绍Grasshopper插件开发的内容<br>故撰写本文章，为有此方面兴趣的小伙伴提供参考</p>
+<p>本文内容基于 <a target="_blank" rel="noopener" href="https://www.icd.uni-stuttgart.de/teaching/workshops/workshop-live-streaming-c-scripting-and-plugin-development-for-grasshopper/">斯图加特大学公开课程：C# Scripting and Plugin Development for Grasshopper</a><br>视频学习内容详见：<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=pFCrIzENDn8&amp;t=1s">https://www.youtube.com/watch?v=pFCrIzENDn8&amp;t=1s</a><br>(注：某视频网站有转载视频，可供学习)</p>
+<p>文章仅供学习参考，严禁用于商业用途,未经作者允许，请勿转载，违者必究！</p>
+</blockquote>
+<p>本文主要讲解如何搭建Visual Studio与GH工作流。</p>
+
+<p>无论什么专业的工作，良好的工作流都可以不同程度地提高工作效率。在基于C#的GH插件开发中，使用Visual Studio已有模板进行插件开发，搭建良好的工作流直观具体的体现便是减少了无效的窗口切换与鼠标点击，极大地提高了测试电池的效率。</p>
+
+<p><strong>目录</strong></p>
+<p><a href="#title1">1. 所需软件</a></p>
+<p><a href="#title2">2. 下载并安装Grasshopper模板文件</a></p>
+<p><a href="#title3">3. 创建一个GH项目</a> </p>
+<p><a href="#title4">4. 链接Visual Studio与GH</a> </p>
+<p><a href="#title5">5. 创建第一个电池</a> </p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/28/Grasshopper%E6%95%99%E5%AD%A6/C#_For_Gh/%E5%9F%BA%E4%BA%8EC#%E7%9A%84GH%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91Part1/%E5%9F%BA%E4%BA%8EC#%E7%9A%84GH%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91Part1/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -360,10 +454,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-02-03 22:48:00 / 修改时间：22:50:26" itemprop="dateCreated datePublished" datetime="2022-02-03T22:48:00+08:00">2022-02-03</time>
+              <time title="创建时间：2022-02-03 22:48:00" itemprop="dateCreated datePublished" datetime="2022-02-03T22:48:00+08:00">2022-02-03</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-02-28 18:06:32" itemprop="dateModified" datetime="2022-02-28T18:06:32+08:00">2022-02-28</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -538,7 +638,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-02-03 14:43:39" itemprop="dateModified" datetime="2022-02-03T14:43:39+08:00">2022-02-03</time>
+                <time title="修改时间：2022-02-28 19:17:50" itemprop="dateModified" datetime="2022-02-28T19:17:50+08:00">2022-02-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -561,7 +661,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="HTML学习笔记-Part03-CSS层叠样式表-一"><a href="#HTML学习笔记-Part03-CSS层叠样式表-一" class="headerlink" title="HTML学习笔记 Part03-CSS层叠样式表 一"></a>HTML学习笔记 Part03-CSS层叠样式表 一</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ol>
+          <h1 id="HTML学习笔记-Part03-CSS层叠样式表-一"><a href="#HTML学习笔记-Part03-CSS层叠样式表-一" class="headerlink" title="HTML学习笔记 Part03-CSS层叠样式表 一"></a>HTML学习笔记 Part03-CSS层叠样式表 一</h1><p>&lt;   strong&gt;目录&lt;/strong&gt;</p>
+<ol>
 <li>CSS简介</li>
 <li>CSS基础选择器</li>
 <li>CSS字体属性</li>
@@ -627,7 +728,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-02-03 14:37:25" itemprop="dateModified" datetime="2022-02-03T14:37:25+08:00">2022-02-03</time>
+                <time title="修改时间：2022-02-28 15:02:40" itemprop="dateModified" datetime="2022-02-28T15:02:40+08:00">2022-02-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -650,7 +751,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="HTML学习笔记-Part02-HTML标签（下）"><a href="#HTML学习笔记-Part02-HTML标签（下）" class="headerlink" title="HTML学习笔记 Part02-HTML标签（下）"></a>HTML学习笔记 Part02-HTML标签（下）</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ol>
+          <h1 id="HTML学习笔记-Part02-HTML标签（下）"><a href="#HTML学习笔记-Part02-HTML标签（下）" class="headerlink" title="HTML学习笔记 Part02-HTML标签（下）"></a>HTML学习笔记 Part02-HTML标签（下）</h1><p><strong>目录</strong></p>
+<ol>
 <li>表格标签</li>
 <li>列表标签</li>
 <li>表单标签</li>
@@ -714,7 +816,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-02-03 14:37:22" itemprop="dateModified" datetime="2022-02-03T14:37:22+08:00">2022-02-03</time>
+                <time title="修改时间：2022-02-28 18:06:33" itemprop="dateModified" datetime="2022-02-28T18:06:33+08:00">2022-02-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -737,7 +839,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="HTML学习笔记-Part01-HTML标签（上）"><a href="#HTML学习笔记-Part01-HTML标签（上）" class="headerlink" title="HTML学习笔记 Part01-HTML标签（上）"></a>HTML学习笔记 Part01-HTML标签（上）</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ol>
+          <h1 id="HTML学习笔记-Part01-HTML标签（上）"><a href="#HTML学习笔记-Part01-HTML标签（上）" class="headerlink" title="HTML学习笔记 Part01-HTML标签（上）"></a>HTML学习笔记 Part01-HTML标签（上）</h1><p><strong>目录</strong></p>
+<ol>
 <li>HTML语法规范</li>
 <li>HTML基本结构标签</li>
 <li>网页开发工具</li>
@@ -945,94 +1048,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://kevinyulei.github.io/2022/01/25/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E6%8B%93%E5%B1%95%E8%AF%AD%E6%B3%95/Part07-Markdown%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8%E8%AF%AD%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/01.jpg">
-      <meta itemprop="name" content="雨泪丶">
-      <meta itemprop="description" content="一位普通建筑生的心血来潮">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="雨泪丶的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/01/25/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E6%8B%93%E5%B1%95%E8%AF%AD%E6%B3%95/Part07-Markdown%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">Part07-Markdown任务列表语法</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-01-25 14:30:00" itemprop="dateCreated datePublished" datetime="2022-01-25T14:30:00+08:00">2022-01-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-02-03 14:41:23" itemprop="dateModified" datetime="2022-02-03T14:41:23+08:00">2022-02-03</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">Markdown官方教程</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/%E6%8B%93%E5%B1%95%E8%AF%AD%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">拓展语法</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
-<p>本文转自<a target="_blank" rel="noopener" href="https://markdown.com.cn/">Markdown官方教程</a>, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除</p>
-</blockquote>
-<h1 id="Markdown-任务列表语法"><a href="#Markdown-任务列表语法" class="headerlink" title="Markdown 任务列表语法"></a>Markdown 任务列表语法</h1><p>任务列表使您可以创建带有复选框的项目列表。在支持任务列表的Markdown应用程序中，复选框将显示在内容旁边。要创建任务列表，请在任务列表项之前添加破折号<code>-</code>和方括号<code>[ ]</code>，并在<code>[ ]</code>前面加上空格。要选择一个复选框，请在方括号<code>[x]</code>之间添加 x 。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/01/25/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E6%8B%93%E5%B1%95%E8%AF%AD%E6%B3%95/Part07-Markdown%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8%E8%AF%AD%E6%B3%95/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1104,20 +1119,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-count">29</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
