@@ -29,7 +29,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://kevinyulei.github.io/2022/03/16/JavaScript/JS%E5%AD%A6%E4%B9%A0Part01/01.jpg">
 <meta property="article:published_time" content="2022-03-16T13:30:00.000Z">
-<meta property="article:modified_time" content="2022-03-16T10:29:32.148Z">
+<meta property="article:modified_time" content="2022-03-16T10:39:47.748Z">
 <meta property="article:author" content="雨泪丶">
 <meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
@@ -199,7 +199,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-03-16 21:30:00 / 修改时间：18:29:32" itemprop="dateCreated datePublished" datetime="2022-03-16T21:30:00+08:00">2022-03-16</time>
+              <time title="创建时间：2022-03-16 21:30:00 / 修改时间：18:39:47" itemprop="dateCreated datePublished" datetime="2022-03-16T21:30:00+08:00">2022-03-16</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -386,11 +386,14 @@
 <li>src、href</li>
 <li>id、alt、title</li>
 </ol>
+<p>示例代码如下：<br></p><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- HTML --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"exampleOf4-2"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btn1OfExample4-2"</span>&gt;</span>刘德华<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btn2OfExample4-2"</span>&gt;</span>张学友<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"JS学习Part01/01.jpg"</span> <span class="attr">alt</span>=<span class="string">"刘德华"</span> <span class="attr">id</span>=<span class="string">"imgOfExample4-2"</span> <span class="attr">title</span>=<span class="string">"刘德华"</span> <span class="attr">style</span>=<span class="string">"width: 400px;"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">        <span class="comment">//1. 获取元素</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> btn1=<span class="built_in">document</span>.getElementById(<span class="string">'btn1OfExample4-2'</span>);</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> btn2=<span class="built_in">document</span>.getElementById(<span class="string">'btn2OfExample4-2'</span>);</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> img=<span class="built_in">document</span>.getElementById(<span class="string">'imgOfExample4-2'</span>);</span></span><br><span class="line"><span class="javascript">        <span class="comment">//2. 注册事件</span></span></span><br><span class="line"><span class="javascript">        btn1.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{</span></span><br><span class="line"><span class="javascript">            img.src=<span class="string">'JS学习Part01/01.jpg'</span>;</span></span><br><span class="line"><span class="javascript">            img.alt=<span class="string">'刘德华'</span>;</span></span><br><span class="line"><span class="javascript">            img.title=<span class="string">'刘德华'</span>;</span></span><br><span class="line"><span class="javascript">        }</span></span><br><span class="line"><span class="javascript">        btn2.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{</span></span><br><span class="line"><span class="javascript">            img.src=<span class="string">'JS学习Part01/02.png'</span>;</span></span><br><span class="line"><span class="javascript">            img.alt=<span class="string">'张学友'</span>;</span></span><br><span class="line"><span class="javascript">            img.title=<span class="string">'张学友'</span>;</span></span><br><span class="line"><span class="javascript">        }</span></span><br><span class="line"><span class="javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>显示效果如下：(本代码在md文件中更改src属性后出错)</p>
 
     <div class="exampleOf4-2">
         <button id="btn1OfExample4-2">刘德华</button>
         <button id="btn2OfExample4-2">张学友</button>
-        <img src="/2022/03/16/JavaScript/JS%E5%AD%A6%E4%B9%A0Part01/01.jpg" alt="刘德华" id="imgOfExample4-2" title="刘德华">
+        <br>
+        <img src="/2022/03/16/JavaScript/JS%E5%AD%A6%E4%B9%A0Part01/01.jpg" alt="刘德华" id="imgOfExample4-2" title="刘德华" style="width: 400px;">
     </div>
     <script>
         //1. 获取元素
@@ -401,7 +404,7 @@
         btn1.onclick = function() {
             img.src='JS学习Part01/01.jpg';
             img.alt='刘德华';
-            img.tilte='刘德华';
+            img.title='刘德华';
         }
         btn2.onclick = function() {
             img.src='JS学习Part01/02.png';
