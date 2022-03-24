@@ -497,36 +497,45 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="CSS学习笔记-Part02"><a href="#CSS学习笔记-Part02" class="headerlink" title="CSS学习笔记 Part02"></a>CSS学习笔记 Part02</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ol>
+                <h1>CSS学习笔记 Part02</h1>
+<h2 id="目录">目录</h2>
+<ol>
 <li>Emmet语法</li>
 <li>CSS的复合选择器</li>
 <li>CSS的元素显示模式</li>
 <li>CSS的背景</li>
 </ol>
 <span id="more"></span>
-<h2 id="1-Emmet语法"><a href="#1-Emmet语法" class="headerlink" title="1. Emmet语法"></a>1. Emmet语法</h2><p>Emmet语法的前身是Zen coding，它使用缩写来提高html/css的编写速度，VSCode内部已经集成了该语法。</p>
-<h3 id="1-1-快速生成HTML结构语法"><a href="#1-1-快速生成HTML结构语法" class="headerlink" title="1.1 快速生成HTML结构语法"></a>1.1 快速生成HTML结构语法</h3><ol>
-<li>生成标签：直接输入标签名，按tab键即可。比如 div 然后tab键，就可以生成\<div>\</div></li>
-<li>如果想要生成多个相同标签，加上<em>就可以了。比如 div\</em>3，就可以快速生成3个div</li>
+<h2 id="1-Emmet语法">1. Emmet语法</h2>
+<p>Emmet语法的前身是Zen coding，它使用缩写来提高html/css的编写速度，VSCode内部已经集成了该语法。</p>
+<h3 id="1-1-快速生成HTML结构语法">1.1 快速生成HTML结构语法</h3>
+<ol>
+<li>生成标签：直接输入标签名，按tab键即可。比如 div 然后tab键，就可以生成&lt;div&gt;&lt;/div&gt;</li>
+<li>如果想要生成多个相同标签，加上*就可以了。比如 div*3，就可以快速生成3个div</li>
 <li>如果有父子级关系（包含关系）的标签，可以用 &gt; 。比如ul&gt;li就可以了</li>
 <li>如果有兄弟级关系（并列关系）的标签，用 + 就可以了。比如 div+p</li>
 <li>如果生成带有类名或者id名字的，直接写 .demo 或者 #two tab键就可以了</li>
 <li>如果生成的div类名是有顺序的，可以用自增符号 $，并配合*与数字</li>
 <li>如果想要在生成的标签内部写内容可以用{}表示</li>
 </ol>
-<h3 id="1-2-快速生成CSS语法样式"><a href="#1-2-快速生成CSS语法样式" class="headerlink" title="1.2 快速生成CSS语法样式"></a>1.2 快速生成CSS语法样式</h3><p>CSS基本采取简写形式即可。</p>
+<h3 id="1-2-快速生成CSS语法样式">1.2 快速生成CSS语法样式</h3>
+<p>CSS基本采取简写形式即可。</p>
 <ol>
 <li>比如w200 按tab键。生成：width: 200px;</li>
 <li>比如lh26 按tab键。生成：line-height: 26px;</li>
 </ol>
-<h3 id="1-3-快速格式化代码"><a href="#1-3-快速格式化代码" class="headerlink" title="1.3 快速格式化代码"></a>1.3 快速格式化代码</h3><p>VSCode快速格式化代码：Shift-Alt-F</p>
+<h3 id="1-3-快速格式化代码">1.3 快速格式化代码</h3>
+<p>VSCode快速格式化代码：Shift-Alt-F</p>
 <p><strong>可设置当我们保存页面的时候自动格式化代码：</strong></p>
 <p>旧版本VSCode：</p>
 <ol>
 <li>文件-首选项-设置</li>
 <li>搜索emmet.include;</li>
-<li>在settings.json下的【用户】中添加以下语句：<blockquote>
-<p>“editor.formatOnType”:true,<br>“editor.formatOnSave”:true<br>只需要设置一次即可，以后都可以自动保存格式化代码</p>
+<li>在settings.json下的【用户】中添加以下语句：
+<blockquote>
+<p>“editor.formatOnType”:true,<br>
+“editor.formatOnSave”:true<br>
+只需要设置一次即可，以后都可以自动保存格式化代码</p>
 </blockquote>
 </li>
 </ol>
@@ -536,18 +545,23 @@
 <li>搜索format</li>
 <li>勾选Editor:Format On Save</li>
 </ol>
-<h2 id="2-CSS的复合选择器"><a href="#2-CSS的复合选择器" class="headerlink" title="2. CSS的复合选择器"></a>2. CSS的复合选择器</h2><h3 id="2-1-什么是复合选择器"><a href="#2-1-什么是复合选择器" class="headerlink" title="2.1 什么是复合选择器"></a>2.1 什么是复合选择器</h3><p>在CSS中，可以根据选择器的类型把选择器分为<span style="color: red">基础选择器</span>和<span style="color: red">复合选择器</span>，复合选择器是建立在基础选择器之上，对基本选择器进行组合形成的。</p>
+<h2 id="2-CSS的复合选择器">2. CSS的复合选择器</h2>
+<h3 id="2-1-什么是复合选择器">2.1 什么是复合选择器</h3>
+<p>在CSS中，可以根据选择器的类型把选择器分为<span style="color: red">基础选择器</span>和<span style="color: red">复合选择器</span>，复合选择器是建立在基础选择器之上，对基本选择器进行组合形成的。</p>
 <ul>
 <li>复合选择器可以更准确、更高效地选择目标元素（标签）</li>
 <li>复合选择器是由两个或多个基础选择器，通过不同的方式组合而成</li>
 <li>常用的复合选择器包括：后代选择器、字选择器、并集选择器、伪类选择器等等</li>
 </ul>
-<h3 id="2-2-后代选择器（重要）"><a href="#2-2-后代选择器（重要）" class="headerlink" title="2.2 后代选择器（重要）"></a>2.2 后代选择器（重要）</h3><p>后代选择器又称为包含选择器，可以选择父元素里面的子元素。其语法就是把外层标签写在前面，内层标签写在后面，中间用空格分隔。当标签发生嵌套时，内层标签就成为外层标签的后代。</p>
+<h3 id="2-2-后代选择器（重要）">2.2 后代选择器（重要）</h3>
+<p>后代选择器又称为包含选择器，可以选择父元素里面的子元素。其语法就是把外层标签写在前面，内层标签写在后面，中间用空格分隔。当标签发生嵌套时，内层标签就成为外层标签的后代。</p>
 <p>语法：</p>
-<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">元素<span class="number">1</span> 元素<span class="number">2</span> { 样式声明 }</span><br></pre></td></tr></tbody></table></figure>
+<pre class=" language-language-css"><code class="language-language-css">元素1 元素2 { 样式声明 }
+</code></pre>
 <p>上述语法表示<strong>选择元素1里面的所有元素2</strong>（后代元素）</p>
 <p>例如：</p>
-<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span> { 样式声明 } <span class="comment">/* 选择ul里面所有的li标签元素 */</span></span><br></pre></td></tr></tbody></table></figure>
+<pre class=" language-language-css"><code class="language-language-css">ul li { 样式声明 } /* 选择ul里面所有的li标签元素 */
+</code></pre>
 <p><strong>注意：</strong></p>
 <ul>
 <li>元素1 和 元素2 中间用空格隔开</li>
@@ -555,9 +569,11 @@
 <li>元素2 可以是儿子，也可以是孙子，只要是元素1的后代即可，并且可以一直嵌套。</li>
 <li>元素1 和 元素2 可以是任意基础选择器</li>
 </ul>
-<h3 id="2-3-子选择器（重要）"><a href="#2-3-子选择器（重要）" class="headerlink" title="2.3 子选择器（重要）"></a>2.3 子选择器（重要）</h3><p>子元素选择器（子选择器）只能选择作为某元素的最近一级子元素。简单理解就是选亲儿子元素。</p>
+<h3 id="2-3-子选择器（重要）">2.3 子选择器（重要）</h3>
+<p>子元素选择器（子选择器）只能选择作为某元素的最近一级子元素。简单理解就是选亲儿子元素。</p>
 <p>语法：</p>
-<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">元素<span class="number">1</span> &gt; 元素<span class="number">2</span> { 样式声明 }</span><br></pre></td></tr></tbody></table></figure>
+<pre class=" language-language-css"><code class="language-language-css">元素1 > 元素2 { 样式声明 }
+</code></pre>
 <p>上述语法表示<strong>选择元素1里面的所有直接后代（子元素）元素2</strong></p>
 <p><strong>注意：</strong></p>
 <ul>
@@ -565,13 +581,20 @@
 <li>元素1 是父级， 元素2 是子级，最终选择的是<strong>元素2</strong></li>
 <li>元素2 必须是<strong>亲儿子</strong>，其孙子等不会被选择</li>
 </ul>
-<h3 id="2-4-并集选择器（重要）"><a href="#2-4-并集选择器（重要）" class="headerlink" title="2.4 并集选择器（重要）"></a>2.4 并集选择器（重要）</h3><p>并集选择器可以选择多组标签，同时为他们定义相同的样式。通常用于集体声明。</p>
+<h3 id="2-4-并集选择器（重要）">2.4 并集选择器（重要）</h3>
+<p>并集选择器可以选择多组标签，同时为他们定义相同的样式。通常用于集体声明。</p>
 <p>并集选择器是通过**英文逗号（,）连接而成，任何形式的选择器都可以作为并集选择器的一部分。</p>
 <p>语法：</p>
-<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">元素<span class="number">1</span>, 元素<span class="number">2</span> { 样式声明 }</span><br></pre></td></tr></tbody></table></figure>
+<pre class=" language-language-css"><code class="language-language-css">元素1, 元素2 { 样式声明 }
+</code></pre>
 <p>上述语法表示选择<strong>元素1和元素2</strong></p>
 <p>例如：</p>
-<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span>, </span><br><span class="line"><span class="selector-tag">div</span> {</span><br><span class="line">     样式声明 </span><br><span class="line">} </span><br><span class="line"><span class="comment">/* 选择ul和div标签元素 */</span></span><br></pre></td></tr></tbody></table></figure>
+<pre class=" language-language-css"><code class="language-language-css">ul, 
+div {
+     样式声明 
+} 
+/* 选择ul和div标签元素 */
+</code></pre>
 <p><strong>注意：</strong></p>
 <ul>
 <li>元素1 和 元素2 中间用英文逗号隔开</li>
@@ -580,10 +603,16 @@
 <li>逗号可以理解为<strong>和</strong>的意思</li>
 <li>并集选择器通常用于集体声明</li>
 </ul>
-<h3 id="2-5-伪类选择器"><a href="#2-5-伪类选择器" class="headerlink" title="2.5 伪类选择器"></a>2.5 伪类选择器</h3><p>伪类选择器用于向某些选择器添加特殊的效果，比如给链接添加特殊效果，或选择第1个元素，第n个元素。</p>
-<p>伪类选择器书写最大的特点是用<strong>冒号（:）</strong>表示，比如： :hover 、:first-child等。</p>
+<h3 id="2-5-伪类选择器">2.5 伪类选择器</h3>
+<p>伪类选择器用于向某些选择器添加特殊的效果，比如给链接添加特殊效果，或选择第1个元素，第n个元素。</p>
+<p>伪类选择器书写最大的特点是用**冒号（:）**表示，比如： :hover 、:first-child等。</p>
 <p>伪类选择器很多，比如有链接伪类、结构伪类等。本节只介绍常用的链接伪类选择器。</p>
-<h4 id="2-5-1-链接伪类选择器"><a href="#2-5-1-链接伪类选择器" class="headerlink" title="2.5.1 链接伪类选择器"></a>2.5.1 链接伪类选择器</h4><figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:link</span>      <span class="comment">/* 选择所有未被访问的链接 */</span></span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:visited</span>   <span class="comment">/* 选择所有已被访问的链接 */</span></span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>     <span class="comment">/* 选择鼠标指针位于其上的链接 */</span></span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:active</span>    <span class="comment">/* 选择活动链接（鼠标按下未弹起的链接） */</span></span><br></pre></td></tr></tbody></table></figure>
+<h4 id="2-5-1-链接伪类选择器">2.5.1 链接伪类选择器</h4>
+<pre class=" language-language-css"><code class="language-language-css">a:link      /* 选择所有未被访问的链接 */
+a:visited   /* 选择所有已被访问的链接 */
+a:hover     /* 选择鼠标指针位于其上的链接 */
+a:active    /* 选择活动链接（鼠标按下未弹起的链接） */
+</code></pre>
 <p><strong>注意：</strong></p>
 <ol>
 <li>为了确保生效，请按照<strong style="color: red">LVHA</strong>的顺序声明:link - :visited - :hover - :active</li>
@@ -591,11 +620,24 @@
 <li>因为a链接标签在浏览器中有默认样式，所以实际工作中都需要给链接单独制定样式</li>
 </ol>
 <p><strong>链接伪类选择器实际工作开发中的写法：</strong></p>
-<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* a 是标签选择器 所有的标签 */</span></span><br><span class="line"><span class="selector-tag">a</span> {</span><br><span class="line">    <span class="attribute">color</span>: gray;</span><br><span class="line">}</span><br><span class="line"><span class="comment">/* :hover 是链接伪类选择器 鼠标经过 */</span></span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> {</span><br><span class="line">    <span class="attribute">color</span>: red;     <span class="comment">/* 鼠标经过的时候，从原来的灰色变成了红色 */</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<h4 id="2-5-2-focus伪类选择器"><a href="#2-5-2-focus伪类选择器" class="headerlink" title="2.5.2 :focus伪类选择器"></a>2.5.2 :focus伪类选择器</h4><p><span style="color: red">:focus伪类选择器</span>用于选取获得焦点的表单元素。</p>
-<p>焦点就是光标，一般情况\<input>类表单元素才能获取，因此这个选择器也主要针对于表单元素来说。</p>
-<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">input</span><span class="selector-pseudo">:focus</span> {</span><br><span class="line">    <span class="attribute">background-color</span>: yellow;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<h3 id="2-6-复合选择器总结"><a href="#2-6-复合选择器总结" class="headerlink" title="2.6 复合选择器总结"></a>2.6 复合选择器总结</h3><table>
+<pre class=" language-language-css"><code class="language-language-css">/* a 是标签选择器 所有的标签 */
+a {
+    color: gray;
+}
+/* :hover 是链接伪类选择器 鼠标经过 */
+a:hover {
+    color: red;     /* 鼠标经过的时候，从原来的灰色变成了红色 */
+}
+</code></pre>
+<h4 id="2-5-2-focus伪类选择器">2.5.2 :focus伪类选择器</h4>
+<p><span style="color: red">:focus伪类选择器</span>用于选取获得焦点的表单元素。</p>
+<p>焦点就是光标，一般情况&lt;input&gt;类表单元素才能获取，因此这个选择器也主要针对于表单元素来说。</p>
+<pre class=" language-language-css"><code class="language-language-css">input:focus {
+    background-color: yellow;
+}
+</code></pre>
+<h3 id="2-6-复合选择器总结">2.6 复合选择器总结</h3>
+<table>
     <tbody><tr><th>选择器</th><th>作用</th><th>特征</th><th>使用情况</th><th>隔开符号及用法</th></tr>
     <tr><td>后代选择器</td><td>用来选择后代元素</td><td>可以是子孙后代</td><td>较多</td><td>符号是<strong>空格</strong> .nav a</td></tr>
     <tr><td>子代选择器</td><td>选择最近一级元素</td><td>只能选亲儿子</td><td>较少</td><td>符号是<strong>大于号</strong> .nav&gt;p</td></tr>
@@ -603,11 +645,13 @@
     <tr><td>链接伪类选择器</td><td>选择不同状态的链接</td><td>跟链接相关</td><td>较多</td><td>重点记住 a{} 和 a:hover 实际开发的写法</td></tr>
     <tr><td>:focus伪类选择器</td><td>选择获得光标的表单</td><td>跟表单相关</td><td>较少</td><td>input:focus 记住这个写法</td></tr>
 </tbody></table>
-
-<h2 id="3-CSS的元素显示模式"><a href="#3-CSS的元素显示模式" class="headerlink" title="3. CSS的元素显示模式"></a>3. CSS的元素显示模式</h2><h3 id="3-1-什么是元素显示模式"><a href="#3-1-什么是元素显示模式" class="headerlink" title="3.1 什么是元素显示模式"></a>3.1 什么是元素显示模式</h3><p>作用：网页的标签非常多，在不同地方会用到不同类型的标签，了解他们的特点可以<strong>更好地布局我们的网页</strong>。</p>
-<p>元素显示模式就是元素（标签）以什么方式进行显示，比如\</p><div>自己占一行，比如一行可以放多个\<span></span></div><p></p>
+<h2 id="3-CSS的元素显示模式">3. CSS的元素显示模式</h2>
+<h3 id="3-1-什么是元素显示模式">3.1 什么是元素显示模式</h3>
+<p>作用：网页的标签非常多，在不同地方会用到不同类型的标签，了解他们的特点可以<strong>更好地布局我们的网页</strong>。</p>
+<p>元素显示模式就是元素（标签）以什么方式进行显示，比如&lt;div&gt;自己占一行，比如一行可以放多个&lt;span&gt;</p>
 <p>HTML元素一般分为<strong>块元素</strong>和<strong>行内元素</strong>两种类型</p>
-<h3 id="3-2-块元素"><a href="#3-2-块元素" class="headerlink" title="3.2 块元素"></a>3.2 块元素</h3><p>常见的块元素有\</p><h1>~\</h1><h6>、\<p>、\</p><ul>、\<ol>、\<li>等，其中\<div>标签是最典型的块元素。</div></li></ol></ul><p></p>
+<h3 id="3-2-块元素">3.2 块元素</h3>
+<p>常见的块元素有&lt;h1&gt;~&lt;h6&gt;、&lt;p&gt;、&lt;ul&gt;、&lt;ol&gt;、&lt;li&gt;等，其中&lt;div&gt;标签是最典型的块元素。</p>
 <p>块级元素的<strong>特点：</strong></p>
 <ol>
 <li>独占一行</li>
@@ -618,10 +662,11 @@
 <p><strong>注意：</strong></p>
 <ul>
 <li>文字类的元素内不能使用块级元素</li>
-<li>\<p>标签主要用于存放文字，因此\</p><p>里面不能存放块级元素，特别是不能放\</p><div></div><p></p></li>
-<li>同理，\<h1>~\</h1><h6>等都是文字类块级标签，里面也不能放其他块级元素</h6></li></ul></h6>
-
-<h3 id="3-3-行内元素"><a href="#3-3-行内元素" class="headerlink" title="3.3 行内元素"></a>3.3 行内元素</h3><p>常见的行内元素有\<a>、\<strong>、\<b>、\<em>、\<i>、\<del>、\<s>、\<ins>、\<u>、\<span>等，其中\<span>标签是最典型的行内元素。有的地方也将行内元素称为内联元素。</span></span></u></ins></s></del></i></em></b></strong></a></p>
+<li>&lt;p&gt;标签主要用于存放文字，因此&lt;p&gt;里面不能存放块级元素，特别是不能放&lt;div&gt;</li>
+<li>同理，&lt;h1&gt;~&lt;h6&gt;等都是文字类块级标签，里面也不能放其他块级元素</li>
+</ul>
+<h3 id="3-3-行内元素">3.3 行内元素</h3>
+<p>常见的行内元素有&lt;a&gt;、&lt;strong&gt;、&lt;b&gt;、&lt;em&gt;、&lt;i&gt;、&lt;del&gt;、&lt;s&gt;、&lt;ins&gt;、&lt;u&gt;、&lt;span&gt;等，其中&lt;span&gt;标签是最典型的行内元素。有的地方也将行内元素称为内联元素。</p>
 <p>行内元素的<strong>特点：</strong></p>
 <ol>
 <li>相邻行内元素在一行上，一行可以显示多个</li>
@@ -632,25 +677,31 @@
 <p><strong>注意：</strong></p>
 <ul>
 <li>链接里面不能再放链接</li>
-<li>特殊情况链接标签\<a>里面可以放块级元素，当时给\</a><a>转换一下块级模式最安全</a></li>
+<li>特殊情况链接标签&lt;a&gt;里面可以放块级元素，当时给&lt;a&gt;转换一下块级模式最安全</li>
 </ul>
-<h3 id="3-4-行内块元素"><a href="#3-4-行内块元素" class="headerlink" title="3.4 行内块元素"></a>3.4 行内块元素</h3><p>在行内元素中有几个特殊的标签——\<img>、\<input>、\，他们同时具有块元素和行内元素的特点。有些资料称他们为行内块元素。</p>
+<h3 id="3-4-行内块元素">3.4 行内块元素</h3>
+<p>在行内元素中有几个特殊的标签——&lt;img /&gt;、&lt;input /&gt;、&lt;td&gt;，他们同时具有块元素和行内元素的特点。有些资料称他们为行内块元素。</p>
 <p>行内块元素的<strong>特点：</strong></p>
 <ol>
 <li>和相邻行内元素（行内块）在一行上，但他们之间会有空白缝隙，一行可以显示多个（行内元素的特点）</li>
 <li>默认高度就是它本身内容的宽度（行内元素的特点）</li>
 <li>高度、行高、外边距以及内边距都可以控制（块级元素的特点）</li>
 </ol>
-<h3 id="3-5-元素显示模式总结"><a href="#3-5-元素显示模式总结" class="headerlink" title="3.5 元素显示模式总结"></a>3.5 元素显示模式总结</h3><table>
+<h3 id="3-5-元素显示模式总结">3.5 元素显示模式总结</h3>
+<table>
     <tbody><tr><th>元素模式</th><th>元素排列</th><th>设置样式</th><th>默认宽度</th><th>包含</th></tr>
     <tr><td>块级元素</td><td>一行只能放一个块级元素</td><td>可以设置宽度高度</td><td>容器的100%</td><td>容器级可以包含任何标签</td></tr>
     <tr><td>行内元素</td><td>一行可以放多个行内元素</td><td>不可以直接设置宽度高度</td><td>它本身内容的宽度</td><td>容纳文本或者其他行内元素</td></tr>
     <tr><td>行内块元素</td><td>一行放多个行内块元素</td><td>可以设置宽度和高度</td><td>它本身内容的宽度</td><td> </td></tr>
 </tbody></table>
-
-<h3 id="3-6-元素显示模式转换"><a href="#3-6-元素显示模式转换" class="headerlink" title="3.6 元素显示模式转换"></a>3.6 元素显示模式转换</h3><p>特殊情况下，我们需要元素模式的转换，简单理解：一个模式的元素需要另外一种模式的特性<br>比如想要增加链接\<a>的触发范围</a></p>
-<p>转换为<strong>块级元素</strong>：    <strong>display:block;</strong><br>转换为<strong>行内元素</strong>：    <strong>display:inline;</strong><br>转换为<strong>行内块元素</strong>：  <strong>display:inline-block</strong></p>
-<h3 id="3-7-一个小工具的使用-Snipaste"><a href="#3-7-一个小工具的使用-Snipaste" class="headerlink" title="3.7 一个小工具的使用 Snipaste"></a>3.7 一个小工具的使用 Snipaste</h3><p>Snipaste是一个简单但强大的截图工具，也可以让你将截图贴回到屏幕上</p>
+<h3 id="3-6-元素显示模式转换">3.6 元素显示模式转换</h3>
+<p>特殊情况下，我们需要元素模式的转换，简单理解：一个模式的元素需要另外一种模式的特性<br>
+比如想要增加链接&lt;a&gt;的触发范围</p>
+<p>转换为<strong>块级元素</strong>：    <strong>display:block;</strong><br>
+转换为<strong>行内元素</strong>：    <strong>display:inline;</strong><br>
+转换为<strong>行内块元素</strong>：  <strong>display:inline-block</strong></p>
+<h3 id="3-7-一个小工具的使用-Snipaste">3.7 一个小工具的使用 Snipaste</h3>
+<p>Snipaste是一个简单但强大的截图工具，也可以让你将截图贴回到屏幕上</p>
 <p>常用快捷方式：</p>
 <ol>
 <li>F1可以截图。同时测量大小、设置箭头、书写文字等</li>
@@ -658,11 +709,13 @@
 <li>点击图片，alt可以取色（按下shift可以切换取色模式）</li>
 <li>按下esc取消图片显示</li>
 </ol>
-<h3 id="3-8-案例：简洁版小米侧边栏"><a href="#3-8-案例：简洁版小米侧边栏" class="headerlink" title="3.8 案例：简洁版小米侧边栏"></a>3.8 案例：简洁版小米侧边栏</h3><p>案例核心思路：</p>
+<h3 id="3-8-案例：简洁版小米侧边栏">3.8 案例：简洁版小米侧边栏</h3>
+<p>案例核心思路：</p>
 <ol>
 <li>把链接a转换为块级元素，则链接可以独占一行，并且有宽度和高度</li>
 <li>鼠标经过链接a时，给链接设置背景颜色</li>
-<li>单行文字垂直居中的代码<ul>
+<li>单行文字垂直居中的代码
+<ul>
 <li>CSS没有提供文字垂直居中的代码</li>
 <li>让文字的行高等于盒子的高度，即可实现文字在当前盒子内垂直居中</li>
 <li>原理：行高=上空隙+文字本身高度+下空隙</li>
@@ -672,31 +725,90 @@
 </li>
 </ol>
 <p>代码如下：</p>
-<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* CSS代码部分 */</span></span><br><span class="line">&lt;style&gt;</span><br><span class="line">    <span class="selector-class">.nav</span> <span class="selector-tag">a</span> {</span><br><span class="line">        <span class="attribute">display</span>: block;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">230px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">        <span class="attribute">background-color</span>: <span class="number">#55585a</span>;</span><br><span class="line">        <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">        <span class="attribute">color</span>: white;</span><br><span class="line">        <span class="attribute">text-decoration</span>: none;</span><br><span class="line">        <span class="attribute">text-indent</span>: <span class="number">2em</span>;</span><br><span class="line">        <span class="attribute">line-height</span>: <span class="number">40px</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="selector-class">.nav</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> {</span><br><span class="line">        <span class="attribute">background-color</span>: orange;</span><br><span class="line">        <span class="attribute">color</span>: white;</span><br><span class="line">    }</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></tbody></table></figure>
-<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- HTML代码部分 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"nav"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>手机 电话卡<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>电视 盒子<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>笔记本 平板<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>出行 穿戴<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>智能 路由器<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>健康 儿童<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>耳机 音响<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<pre class=" language-language-css"><code class="language-language-css">/* CSS代码部分 */
+<style>
+    .nav a {
+        display: block;
+        width: 230px;
+        height: 40px;
+        background-color: #55585a;
+        font-size: 14px;
+        color: white;
+        text-decoration: none;
+        text-indent: 2em;
+        line-height: 40px;
+    }
+    .nav a:hover {
+        background-color: orange;
+        color: white;
+    }
+</style>
+</code></pre>
+<pre class=" language-language-html"><code class="language-language-html"><!-- HTML代码部分 -->
+<body>
+    <div class="nav">
+        <a href="#">手机 电话卡</a>
+        <a href="#">电视 盒子</a>
+        <a href="#">笔记本 平板</a>
+        <a href="#">出行 穿戴</a>
+        <a href="#">智能 路由器</a>
+        <a href="#">健康 儿童</a>
+        <a href="#">耳机 音响</a>
+    <div>
+<body>
+</code></pre>
 <p>显示效果如下：</p>
-<p><style><br>    .nav a {<br>        display: block;<br>        width: 230px;<br>        height: 40px;<br>        background-color: #55585a;<br>        font-size: 14px;<br>        color: white;<br>        text-decoration: none;<br>        text-indent: 2em;<br>        line-height: 40px;<br>    }<br>    .nav a:hover {<br>        background-color: orange;<br>        color: white;<br>    }
-</style></p>
-<p><br>    </p><div class="nav"><br>        <a href="#">手机 电话卡</a><br>        <a href="#">电视 盒子</a><br>        <a href="#">笔记本 平板</a><br>        <a href="#">出行 穿戴</a><br>        <a href="#">智能 路由器</a><br>        <a href="#">健康 儿童</a><br>        <a href="#">耳机 音响</a><br>    <div></div></div><p></p>
+<style>
+    .nav a {
+        display: block;
+        width: 230px;
+        height: 40px;
+        background-color: #55585a;
+        font-size: 14px;
+        color: white;
+        text-decoration: none;
+        text-indent: 2em;
+        line-height: 40px;
+    }
+    .nav a:hover {
+        background-color: orange;
+        color: white;
+    }
+</style>
 
+    <div class="nav">
+        <a href="#">手机 电话卡</a>
+        <a href="#">电视 盒子</a>
+        <a href="#">笔记本 平板</a>
+        <a href="#">出行 穿戴</a>
+        <a href="#">智能 路由器</a>
+        <a href="#">健康 儿童</a>
+        <a href="#">耳机 音响</a>
+    <div>
 
-<h2 id="4-CSS的背景"><a href="#4-CSS的背景" class="headerlink" title="4. CSS的背景"></a>4. CSS的背景</h2><p>通过CSS背景属性，可以给页面元素添加背景样式。</p>
+<h2 id="4-CSS的背景">4. CSS的背景</h2>
+<p>通过CSS背景属性，可以给页面元素添加背景样式。</p>
 <p>背景属性可以设置背景颜色、背景图片、背景平铺、背景图片位置、背景图像固定等。</p>
-<h3 id="4-1-背景颜色"><a href="#4-1-背景颜色" class="headerlink" title="4.1 背景颜色"></a>4.1 背景颜色</h3><p><strong>backgroud-color</strong>属性定义了元素的背景颜色。</p>
-<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-color</span>: 颜色值;</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="4-1-背景颜色">4.1 背景颜色</h3>
+<p><strong>backgroud-color</strong>属性定义了元素的背景颜色。</p>
+<pre class=" language-language-css"><code class="language-language-css">background-color: 颜色值;
+</code></pre>
 <p>一般情况下，元素背景颜色默认值是<strong>transparent</strong>（透明），我们也可以手动指定背景颜色为透明色。</p>
-<h3 id="4-2-背景图片"><a href="#4-2-背景图片" class="headerlink" title="4.2 背景图片"></a>4.2 背景图片</h3><p><strong>background-image</strong>属性描述了元素的背景图片。实际开发常见于logo或者一些装饰性的小图片或者是超大的背景图片。优点是非常便于控制位置。（精灵图也是一种运用场景）</p>
+<h3 id="4-2-背景图片">4.2 背景图片</h3>
+<p><strong>background-image</strong>属性描述了元素的背景图片。实际开发常见于logo或者一些装饰性的小图片或者是超大的背景图片。优点是非常便于控制位置。（精灵图也是一种运用场景）</p>
 <p>页面元素既可以添加背景颜色，也可以添加背景图片，只不过背景图片会在背景颜色图层之上。</p>
-<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-image</span>: none | <span class="built_in">url</span>(<span class="string">ulr</span>);</span><br></pre></td></tr></tbody></table></figure>
+<pre class=" language-language-css"><code class="language-language-css">background-image: none | url(ulr);
+</code></pre>
 <table>
     <tbody><tr><th style="text-align: left;">参数值</th><th style="text-align: left;">作用</th></tr>
     <tr><td>none</td><td>无背景图（默认值）</td></tr>
     <tr><td>url</td><td>使用绝对或者相对地址指定背景图片</td></tr>
 </tbody></table>
-
-<h3 id="4-3-背景平铺"><a href="#4-3-背景平铺" class="headerlink" title="4.3 背景平铺"></a>4.3 背景平铺</h3><p>如果需要在HTML页面对背景图片进行平铺，可以使用<strong>background-repeat</strong>属性。</p>
+<h3 id="4-3-背景平铺">4.3 背景平铺</h3>
+<p>如果需要在HTML页面对背景图片进行平铺，可以使用<strong>background-repeat</strong>属性。</p>
 <p>默认情况下，背景图片是平铺的。</p>
-<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-repeat</span>: repeat | no-repeat | repeat-x | repeat-y</span><br></pre></td></tr></tbody></table></figure>
+<pre class=" language-language-css"><code class="language-language-css">background-repeat: repeat | no-repeat | repeat-x | repeat-y
+</code></pre>
 <table>
     <tbody><tr><th>参数值</th><th style="text-align: left;">作用</th></tr>
     <tr><td>repeat</td><td>背景图片在纵向和横向上平铺（默认值）</td></tr>
@@ -704,51 +816,57 @@
     <tr><td>repeat-x</td><td>背景图片在横向上平铺</td></tr>
     <tr><td>repeat-y</td><td>背景图片在纵向上平铺</td></tr>
 </tbody></table>
-
-
-<h3 id="4-4-背景图片位置"><a href="#4-4-背景图片位置" class="headerlink" title="4.4 背景图片位置"></a>4.4 背景图片位置</h3><p>利用<strong>background-position</strong>属性可以改变图片在背景中的位置。</p>
-<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-position</span>: x y;</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="4-4-背景图片位置">4.4 背景图片位置</h3>
+<p>利用<strong>background-position</strong>属性可以改变图片在背景中的位置。</p>
+<pre class=" language-language-css"><code class="language-language-css">background-position: x y;
+</code></pre>
 <p>参数x、y代表：x坐标、y坐标。可以使用<strong>方位名词</strong>或者<strong>精确单位</strong></p>
 <table>
     <tbody><tr><th style="text-align: left">参数值</th><th style="text-align: left">说明</th></tr>
     <tr><td>length</td><td>百分数 | 由浮点数和单位标识符组成的长度值</td></tr>
     <tr><td>position</td><td>top | center | bottom | left | center | right 方位名词</td></tr>
 </tbody></table>
-
 <ol>
-<li><p>参数是方位名词</p>
+<li>
+<p>参数是方位名词</p>
 <ul>
 <li>如果指定的两个值都是方位名词，则两个值前后顺序无关，比如 left top 和 top left 效果一致</li>
 <li>如果只指定了一个方位名词，另一个值省略，则第二个值默认居中对齐</li>
 </ul>
 </li>
-<li><p>参数是精确单位</p>
+<li>
+<p>参数是精确单位</p>
 <ul>
 <li>如果参数值是精确坐标，那么第一个肯定是x坐标，第二个一定是y坐标</li>
 <li>如果只指定一个数值，那该数值一定是x坐标，另一个默认垂直居中</li>
 </ul>
 </li>
-<li><p>参数是混合单位</p>
+<li>
+<p>参数是混合单位</p>
 <ul>
 <li>如果两个值是精确单位和方位名词混合使用，则第一个值是x坐标，第一个值是y坐标</li>
 <li>若两者相互矛盾，如：20px left; 则图片默认位于左上角</li>
 </ul>
 </li>
 </ol>
-<h3 id="4-5-背景图像固定（背景附着）"><a href="#4-5-背景图像固定（背景附着）" class="headerlink" title="4.5 背景图像固定（背景附着）"></a>4.5 背景图像固定（背景附着）</h3><p><strong>background-attachment</strong>属性设置背景图片是否固定或者随着页面的其余部分滚动。</p>
+<h3 id="4-5-背景图像固定（背景附着）">4.5 背景图像固定（背景附着）</h3>
+<p><strong>background-attachment</strong>属性设置背景图片是否固定或者随着页面的其余部分滚动。</p>
 <p>background-attachment后期可以制作时差滚动的效果。</p>
-<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-attachment</span>: scroll | fixed;</span><br></pre></td></tr></tbody></table></figure>
+<pre class=" language-language-css"><code class="language-language-css">background-attachment: scroll | fixed;
+</code></pre>
 <table>
     <tbody><tr><th style="text-align: left">参数</th><th style="text-align: left">作用</th></tr>
     <tr><td>scroll</td><td>背景图像是随对象内容滚动</td></tr>
     <tr><td>fixed</td><td>背景图像固定</td></tr>
 </tbody></table>
-
-<h3 id="4-6-背景复合写法"><a href="#4-6-背景复合写法" class="headerlink" title="4.6 背景复合写法"></a>4.6 背景复合写法</h3><p>为了简化背景属性的代码，我们可以将这些属性合并简写在同一个属性<strong>background</strong>中。从而节约代码量。</p>
+<h3 id="4-6-背景复合写法">4.6 背景复合写法</h3>
+<p>为了简化背景属性的代码，我们可以将这些属性合并简写在同一个属性<strong>background</strong>中。从而节约代码量。</p>
 <p>当书写简写属性时，没有特定的书写顺序，但一般习惯约定顺序为：</p>
 <p>background: 背景颜色 背景图片地址 背景平铺 背景图片滚动 背景图片位置</p>
-<h3 id="4-7-背景色半透明"><a href="#4-7-背景色半透明" class="headerlink" title="4.7 背景色半透明"></a>4.7 背景色半透明</h3><p>CSS3为我们提供了背景颜色半透明的效果</p>
-<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.3</span>);</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="4-7-背景色半透明">4.7 背景色半透明</h3>
+<p>CSS3为我们提供了背景颜色半透明的效果</p>
+<pre class=" language-language-css"><code class="language-language-css">background: rgba(0, 0, 0, 0.3);
+</code></pre>
 <p><strong>注意：</strong></p>
 <ul>
 <li>最后一个参数时alpha透明度，取值范围在0~1之间</li>
@@ -757,7 +875,8 @@
 <li>CSS3新增属性，是IE9+版本浏览器才支持</li>
 <li>在实际开发中，不太关注兼容性写法，放心使用</li>
 </ul>
-<h3 id="4-8-背景总结"><a href="#4-8-背景总结" class="headerlink" title="4.8 背景总结"></a>4.8 背景总结</h3><table>
+<h3 id="4-8-背景总结">4.8 背景总结</h3>
+<table>
     <tbody><tr style="text-align: left"><th>属性</th><th>作用</th><th>值</th></tr>
     <tr><td>background-color</td><td>背景颜色</td><td>预定义的颜色值/十六进制/RGB代码</td></tr>
     <tr><td>background-image</td><td>背景图片</td><td>url(图片路径)</td></tr>
@@ -767,9 +886,9 @@
     <tr><td>背景简写</td><td>书写更简单</td><td>背景颜色 背景图片地址 背景平铺 背景滚动 背景位置</td></tr>
     <tr><td>背景色半透明</td><td>背景颜色半透明</td><td>background: rgba(0,0,0,0.3);  后面必须是4个值</td></tr>
 </tbody></table>
-
 <p>背景图片：实际开发常见于logo或者一些装饰性的小图片或者超大的背景图片，优点是非常便于控制位置。（精灵图也是一种运用场景）</p>
-<h3 id="4-9-综合案例"><a href="#4-9-综合案例" class="headerlink" title="4.9 综合案例"></a>4.9 综合案例</h3><p>案例：五彩导航</p>
+<h3 id="4-9-综合案例">4.9 综合案例</h3>
+<p>案例：五彩导航</p>
 <p>练习价值：</p>
 <ol>
 <li>链接属于行内元素，但是此时需要高度、宽度，因此需要模式转换</li>
@@ -777,10 +896,72 @@
 <li>链接里面需要设置背景图片，因此需要用到背景的相关属性设置</li>
 <li>鼠标经过变化背景图片，因此需要用到链接伪类选择器</li>
 </ol>
-<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* CSS代码部分 */</span></span><br><span class="line">&lt;style&gt;</span><br><span class="line">    <span class="selector-class">.nav</span> <span class="selector-tag">a</span> {</span><br><span class="line">        <span class="attribute">display</span>: inline-block;</span><br><span class="line">        <span class="comment">/* display: block; */</span></span><br><span class="line">        <span class="attribute">width</span>: <span class="number">120px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">58px</span>;</span><br><span class="line">        <span class="attribute">background-color</span>: black;</span><br><span class="line">        <span class="attribute">text-align</span>: center;</span><br><span class="line">        <span class="attribute">line-height</span>: <span class="number">48px</span>;</span><br><span class="line">        <span class="attribute">color</span>: white;</span><br><span class="line">        <span class="attribute">text-decoration</span>: none;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="selector-class">.nav</span> <span class="selector-class">.bg1</span> {</span><br><span class="line">        <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">images/bg1.png</span>)</span><br><span class="line">    }</span><br><span class="line">    <span class="selector-class">.nav</span> <span class="selector-class">.bg1</span><span class="selector-pseudo">:hover</span> {</span><br><span class="line">        <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">images/bg11.png</span>)</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="selector-class">.nav</span> <span class="selector-class">.bg2</span> {</span><br><span class="line">        <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">images/bg2.png</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="selector-class">.nav</span> <span class="selector-class">.bg2</span><span class="selector-pseudo">:hover</span> {</span><br><span class="line">        <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">images/bg22.png</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="selector-class">.nav</span> <span class="selector-class">.bg3</span> {</span><br><span class="line">        <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">images/bg3.jpg</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="selector-class">.nav</span> <span class="selector-class">.bg3</span><span class="selector-pseudo">:hover</span> {</span><br><span class="line">        <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">images/bg3.png</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="selector-class">.nav</span> <span class="selector-class">.bg4</span> {</span><br><span class="line">        <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">images/bg4.png</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="selector-class">.nav</span> <span class="selector-class">.bg4</span><span class="selector-pseudo">:hover</span> {</span><br><span class="line">        <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">images/bg11.png</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="selector-class">.nav</span> <span class="selector-class">.bg5</span> {</span><br><span class="line">        <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">images/bg5.png</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="selector-class">.nav</span> <span class="selector-class">.bg5</span><span class="selector-pseudo">:hover</span> {</span><br><span class="line">        <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">images/bg22.png</span>);</span><br><span class="line">    }</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></tbody></table></figure>
-<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- HTML代码部分 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"nav"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"bg1"</span>&gt;</span>导航栏1<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"bg2"</span>&gt;</span>导航栏2<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"bg3"</span>&gt;</span>导航栏3<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"bg4"</span>&gt;</span>导航栏4<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"bg5"</span>&gt;</span>导航栏5<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-<p>显示效果如下：(此为图片)<br><img src="/2022/01/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/CSS/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B002/nav_rainbow.jpg" alt="五彩导航栏" title="五彩导航栏"></p>
+<pre class=" language-language-css"><code class="language-language-css">/* CSS代码部分 */
+<style>
+    .nav a {
+        display: inline-block;
+        /* display: block; */
+        width: 120px;
+        height: 58px;
+        background-color: black;
+        text-align: center;
+        line-height: 48px;
+        color: white;
+        text-decoration: none;
+    }
 
+    .nav .bg1 {
+        background: url(images/bg1.png)
+    }
+    .nav .bg1:hover {
+        background: url(images/bg11.png)
+    }
+
+    .nav .bg2 {
+        background: url(images/bg2.png);
+    }
+
+    .nav .bg2:hover {
+        background: url(images/bg22.png);
+    }
+
+    .nav .bg3 {
+        background: url(images/bg3.jpg);
+    }
+
+    .nav .bg3:hover {
+        background: url(images/bg3.png);
+    }
+
+    .nav .bg4 {
+        background: url(images/bg4.png);
+    }
+
+    .nav .bg4:hover {
+        background: url(images/bg11.png);
+    }
+
+    .nav .bg5 {
+        background: url(images/bg5.png);
+    }
+
+    .nav .bg5:hover {
+        background: url(images/bg22.png);
+    }
+</style>
+</code></pre>
+<pre class=" language-language-html"><code class="language-language-html"><!-- HTML代码部分 -->
+<div class="nav">
+    <a href="#" class="bg1">导航栏1</a>
+    <a href="#" class="bg2">导航栏2</a>
+    <a href="#" class="bg3">导航栏3</a>
+    <a href="#" class="bg4">导航栏4</a>
+    <a href="#" class="bg5">导航栏5</a>
+</div>
+</code></pre>
+<p>显示效果如下：(此为图片)<br>
+<img src="/2022/01/29/qian-duan-xue-xi/css/css-xue-xi-bi-ji-02/nav_rainbow.jpg" alt="五彩导航栏" title="五彩导航栏"></p>
+</div></div>
                 
             </div>
             <hr/>
@@ -1031,7 +1212,16 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            CSS学习笔记 Part03目录1. CSS的三大特性2. CSS的注释3. 盒子模型4. PS基本操作(略)5. 综合案例6. 圆角边框7. 盒子阴影8. 文字阴影
+                            CSS学习笔记 Part03
+目录
+1. CSS的三大特性
+2. CSS的注释
+3. 盒子模型
+4. PS基本操作(略)
+5. 综合案例
+6. 圆角边框
+7. 盒子阴影
+8. 文字阴影
                         
                     </div>
                     <div class="publish-info">
@@ -1084,7 +1274,8 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            CSS学习笔记 Part01目录
+                            CSS学习笔记 Part01
+目录
 
 CSS简介
 CSS基础选择器

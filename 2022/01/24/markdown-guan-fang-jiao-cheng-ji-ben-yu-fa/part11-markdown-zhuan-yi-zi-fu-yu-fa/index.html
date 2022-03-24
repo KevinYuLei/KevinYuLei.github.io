@@ -497,15 +497,18 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+                <h2 id="前言-12">前言</h2>
+<blockquote>
 <p>本文转自<a target="_blank" rel="noopener" href="https://markdown.com.cn/">Markdown官方教程</a>, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除</p>
 </blockquote>
-<h1 id="Markdown-转义字符语法"><a href="#Markdown-转义字符语法" class="headerlink" title="Markdown 转义字符语法"></a>Markdown 转义字符语法</h1><p>要显示原本用于格式化 Markdown 文档的字符，请在字符前面添加反斜杠字符 \ 。</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\* Without the backslash, this would be a bullet in an unordered list.</span><br></pre></td></tr></tbody></table></figure>
+<h1>Markdown 转义字符语法</h1>
+<p>要显示原本用于格式化 Markdown 文档的字符，请在字符前面添加反斜杠字符 \ 。</p>
+<pre><code>\* Without the backslash, this would be a bullet in an unordered list.
+</code></pre>
 <p>* Without the backslash, this would be a bullet in an unordered list.</p>
 <span id="more"></span>
-<h2 id="可做转义的字符"><a href="#可做转义的字符" class="headerlink" title="可做转义的字符"></a>可做转义的字符</h2><p>以下列出的字符都可以通过使用反斜杠字符从而达到转义目的。</p>
-<div class="table-container">
+<h2 id="可做转义的字符">可做转义的字符</h2>
+<p>以下列出的字符都可以通过使用反斜杠字符从而达到转义目的。</p>
 <table>
 <thead>
 <tr>
@@ -563,30 +566,37 @@
 <td>exclamation mark</td>
 </tr>
 <tr>
-<td>\</td>
-<td></td>
+<td>|</td>
 <td>pipe (see also <strong>escaping pipe in tables</strong>)</td>
 </tr>
 </tbody>
 </table>
-</div>
-<h2 id="特殊字符自动转义"><a href="#特殊字符自动转义" class="headerlink" title="特殊字符自动转义"></a>特殊字符自动转义</h2><p>在 HTML 文件中，有两个字符需要特殊处理： <code>&lt;</code> 和 <code>&amp;</code> 。 <code>&lt;</code> 符号用于起始标签，<code>&amp;</code> 符号则用于标记 HTML 实体，如果你只是想要使用这些符号，你必须要使用实体的形式，像是 <code>&amp;lt</code>; 和 <code>&amp;amp;</code>。</p>
+<h2 id="特殊字符自动转义">特殊字符自动转义</h2>
+<p>在 HTML 文件中，有两个字符需要特殊处理： <code>&lt;</code> 和 <code>&amp;</code> 。 <code>&lt;</code> 符号用于起始标签，<code>&amp;</code> 符号则用于标记 HTML 实体，如果你只是想要使用这些符号，你必须要使用实体的形式，像是 <code>&amp;lt</code>; 和 <code>&amp;amp;</code>。</p>
 <p><code>&amp;</code> 符号其实很容易让写作网页文件的人感到困扰，如果你要打「AT&amp;T」 ，你必须要写成「<code>AT&amp;amp;T</code>」 ，还得转换网址内的 <code>&amp;</code> 符号，如果你要链接到：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://images.google.com/images?num=30&amp;q=larry+bird</span><br></pre></td></tr></tbody></table></figure>
+<pre><code>http://images.google.com/images?num=30&amp;q=larry+bird
+</code></pre>
 <p>你必须要把网址转成：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://images.google.com/images?num=30&amp;amp;q=larry+bird</span><br></pre></td></tr></tbody></table></figure>
+<pre><code>http://images.google.com/images?num=30&amp;amp;q=larry+bird
+</code></pre>
 <p>才能放到链接标签的 <code>href</code> 属性里。不用说也知道这很容易忘记，这也可能是 HTML 标准检查所检查到的错误中，数量最多的。</p>
 <p>Markdown 允许你直接使用这些符号，它帮你自动转义字符。如果你使用 <code>&amp;</code> 符号的作为 HTML 实体的一部分，那么它不会被转换，而在其它情况下，它则会被转换成 <code>&amp;amp;</code>。所以你如果要在文件中插入一个著作权的符号，你可以这样写：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&amp;copy;</span><br></pre></td></tr></tbody></table></figure>
-<p>渲染效果如下：<br>©</p>
+<pre><code>&amp;copy;
+</code></pre>
+<p>渲染效果如下：<br>
+©</p>
 <p>Markdown 将不会对这段文字做修改，但是如果你这样写：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AT&amp;T</span><br></pre></td></tr></tbody></table></figure>
+<pre><code>AT&amp;T
+</code></pre>
 <p>Markdown 就会将它转为：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AT&amp;amp;T</span><br></pre></td></tr></tbody></table></figure>
+<pre><code>AT&amp;amp;T
+</code></pre>
 <p>类似的状况也会发生在 <code>&lt;</code> 符号上，因为 Markdown 支持 行内 HTML ，如果你使用 <code>&lt;</code> 符号作为 HTML 标签的分隔符，那 Markdown 也不会对它做任何转换，但是如果你是写：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4 &lt; 5</span><br></pre></td></tr></tbody></table></figure>
+<pre><code>4 &lt; 5
+</code></pre>
 <p>Markdown 将会把它转换为：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4 &amp;lt; 5</span><br></pre></td></tr></tbody></table></figure>
+<pre><code>4 &amp;lt; 5
+</code></pre>
 <p>需要特别注意的是，在 Markdown 的块级元素和内联元素中， <code>&lt;</code> 和 <code>&amp;</code> 两个符号都会被自动转换成 HTML 实体，这项特性让你可以很容易地用 Markdown 写 HTML。（在 HTML 语法中，你要手动把所有的 <code>&lt;</code> 和 <code>&amp;</code> 都转换为 HTML 实体。）</p>
 
                 
@@ -840,9 +850,11 @@
                     <div class="summary block-with-text">
                         
                             前言
+
 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除
 
-Markdown 内嵌HTML标签对于 Markdown 涵盖范围之外的标签，都可以直接在文件里面用 HTML
+Markdown 内嵌HTML标签
+对于 Markdown 涵盖范围之外的标签，都可以直接在文件里面用 HT
                         
                     </div>
                     <div class="publish-info">
@@ -896,9 +908,11 @@ Markdown 内嵌HTML标签对于 Markdown 涵盖范围之外的标签，都可以
                     <div class="summary block-with-text">
                         
                             前言
+
 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除
 
-Markdown 图片语法要添加图像，请使用感叹号 (!), 然后在方括号增加替代文本，图片链接放在圆括号里，
+Markdown 图片语法
+要添加图像，请使用感叹号 (!), 然后在方括号增加替代文本，图片链接放在圆括号
                         
                     </div>
                     <div class="publish-info">

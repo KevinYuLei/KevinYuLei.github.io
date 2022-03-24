@@ -497,14 +497,19 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+                <h2 id="前言-13">前言</h2>
+<blockquote>
 <p>本文转自<a target="_blank" rel="noopener" href="https://markdown.com.cn/">Markdown官方教程</a>, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除</p>
 </blockquote>
-<h1 id="Markdown-表格"><a href="#Markdown-表格" class="headerlink" title="Markdown 表格"></a>Markdown 表格</h1><p>要添加表，请使用三个或多个连字符（—-）创建每列的标题，并使用管道（|）分隔每列。您可以选择在表的任一端添加管道。</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| Syntax      | Description |</span><br><span class="line">| ----------- | ----------- |</span><br><span class="line">| Header      | Title       |</span><br><span class="line">| Paragraph   | Text        |</span><br></pre></td></tr></tbody></table></figure>
+<h1>Markdown 表格</h1>
+<p>要添加表，请使用三个或多个连字符（—）创建每列的标题，并使用管道（|）分隔每列。您可以选择在表的任一端添加管道。</p>
+<pre><code>| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
+</code></pre>
 <span id="more"></span>
 <p>呈现的输出如下所示：</p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -523,11 +528,13 @@
 </tr>
 </tbody>
 </table>
-</div>
 <p>单元格宽度可以变化，如下所示。呈现的输出将看起来相同。</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| Syntax | Description |</span><br><span class="line">| --- | ----------- |</span><br><span class="line">| Header | Title |</span><br><span class="line">| Paragraph | Text |</span><br></pre></td></tr></tbody></table></figure>
+<pre><code>| Syntax | Description |
+| --- | ----------- |
+| Header | Title |
+| Paragraph | Text |
+</code></pre>
 <p>呈现的输出如下所示：跟上方表格相同</p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -546,12 +553,15 @@
 </tr>
 </tbody>
 </table>
-</div>
 <p>Tip: 使用连字符和管道创建表可能很麻烦。为了加快该过程，请尝试使用<a target="_blank" rel="noopener" href="https://www.tablesgenerator.com/markdown_tables">Markdown Tables Generator</a>。使用图形界面构建表，然后将生成的Markdown格式的文本复制到文件中。</p>
-<h2 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h2><p>您可以通过在标题行中的连字符的左侧，右侧或两侧添加冒号（:），将列中的文本对齐到左侧，右侧或中心。</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| Syntax      | Description | Test Text     |</span><br><span class="line">| :---        |    :----:   |          ---: |</span><br><span class="line">| Header      | Title       | Here's this   |</span><br><span class="line">| Paragraph   | Text        | And more      |</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="对齐">对齐</h2>
+<p>您可以通过在标题行中的连字符的左侧，右侧或两侧添加冒号（:），将列中的文本对齐到左侧，右侧或中心。</p>
+<pre><code>| Syntax      | Description | Test Text     |
+| :---        |    :----:   |          ---: |
+| Header      | Title       | Here's this   |
+| Paragraph   | Text        | And more      |
+</code></pre>
 <p>呈现的输出如下所示：</p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -573,13 +583,17 @@
 </tr>
 </tbody>
 </table>
-</div>
-<h2 id="格式化表格中的文字"><a href="#格式化表格中的文字" class="headerlink" title="格式化表格中的文字"></a>格式化表格中的文字</h2><p>您可以在表格中设置文本格式。例如，您可以添加链接，代码（仅反引号（<code>` </code>）中的单词或短语，而不是代码块）和强调。</p>
+<h2 id="格式化表格中的文字">格式化表格中的文字</h2>
+<p>您可以在表格中设置文本格式。例如，您可以添加链接，代码（仅反引号（<code>`</code>）中的单词或短语，而不是代码块）和强调。</p>
 <p>您不能添加标题，块引用，列表，水平规则，图像或HTML标签。</p>
-<h2 id="在表中转义管道字符"><a href="#在表中转义管道字符" class="headerlink" title="在表中转义管道字符"></a>在表中转义管道字符</h2><p>您可以使用表格的HTML字符代码（<code>&amp;#124;</code>）或者用反斜线（\）在表中显示竖线（<code>|</code>）字符。</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|Syntax|</span><br><span class="line">|---|</span><br><span class="line">|&amp;#124;|</span><br><span class="line">|\| |</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="在表中转义管道字符">在表中转义管道字符</h2>
+<p>您可以使用表格的HTML字符代码（<code>&amp;#124;</code>）或者用反斜线（\）在表中显示竖线（<code>|</code>）字符。</p>
+<pre><code>|Syntax|
+|---|
+|&amp;#124;|
+|\| |
+</code></pre>
 <p>呈现的输出如下所示：</p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -591,11 +605,10 @@
 <td>|</td>
 </tr>
 <tr>
-<td>\</td>
+<td>|</td>
 </tr>
 </tbody>
 </table>
-</div>
 
                 
             </div>
@@ -848,9 +861,11 @@
                     <div class="summary block-with-text">
                         
                             前言
+
 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除
 
-Markdown 围栏代码块Markdown基本语法允许您通过将行缩进四个空格或一个制表符来创建代码块。如果发
+Markdown 围栏代码块
+Markdown基本语法允许您通过将行缩进四个空格或一个制表符来创建代码块。如
                         
                     </div>
                     <div class="publish-info">
@@ -904,9 +919,11 @@ Markdown 围栏代码块Markdown基本语法允许您通过将行缩进四个空
                     <div class="summary block-with-text">
                         
                             前言
+
 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除
 
-Markdown 内嵌HTML标签对于 Markdown 涵盖范围之外的标签，都可以直接在文件里面用 HTML
+Markdown 内嵌HTML标签
+对于 Markdown 涵盖范围之外的标签，都可以直接在文件里面用 HT
                         
                     </div>
                     <div class="publish-info">

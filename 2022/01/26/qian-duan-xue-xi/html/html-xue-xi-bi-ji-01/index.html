@@ -497,7 +497,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="HTML学习笔记-Part01-HTML标签（上）"><a href="#HTML学习笔记-Part01-HTML标签（上）" class="headerlink" title="HTML学习笔记 Part01-HTML标签（上）"></a>HTML学习笔记 Part01-HTML标签（上）</h1><p><strong>目录</strong></p>
+                <h1>HTML学习笔记 Part01-HTML标签（上）</h1>
+<p><strong>目录</strong></p>
 <ol>
 <li>HTML语法规范</li>
 <li>HTML基本结构标签</li>
@@ -506,21 +507,35 @@
 <li>HTML中的注释和特殊字符</li>
 </ol>
 <span id="more"></span>
-<h2 id="1-HTML语法规范"><a href="#1-HTML语法规范" class="headerlink" title="1. HTML语法规范"></a>1. HTML语法规范</h2><p>略</p>
-<h2 id="2-HTML基本结构标签"><a href="#2-HTML基本结构标签" class="headerlink" title="2. HTML基本结构标签"></a>2. HTML基本结构标签</h2><p>略</p>
-<h2 id="3-网页开发工具"><a href="#3-网页开发工具" class="headerlink" title="3. 网页开发工具"></a>3. 网页开发工具</h2><h3 id="VSCode工具生成骨架标签新增代码"><a href="#VSCode工具生成骨架标签新增代码" class="headerlink" title="VSCode工具生成骨架标签新增代码"></a>VSCode工具生成骨架标签新增代码</h3><ol>
-<li>&lt;!DOCTYPE&gt;标签</li>
+<h2 id="1-HTML语法规范">1. HTML语法规范</h2>
+<p>略</p>
+<h2 id="2-HTML基本结构标签">2. HTML基本结构标签</h2>
+<p>略</p>
+<h2 id="3-网页开发工具">3. 网页开发工具</h2>
+<h3 id="VSCode工具生成骨架标签新增代码">VSCode工具生成骨架标签新增代码</h3>
+<ol>
+<li>
+标签
+</li>
 <li>lang语言</li>
-<li>charset字符集<h3 id="3-1-文档类型声明标签"><a href="#3-1-文档类型声明标签" class="headerlink" title="3.1 文档类型声明标签"></a>3.1 文档类型声明标签</h3>&lt;!DOCTYPE&gt;文档声明类型，作用就是告诉浏览器使用哪种HTML版本来显示网页</li>
+<li>charset字符集</li>
 </ol>
-<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<h3 id="3-1-文档类型声明标签">3.1 文档类型声明标签</h3>
+文档声明类型，作用就是告诉浏览器使用哪种HTML版本来显示网页
+<pre class=" language-language-html"><code class="language-language-html"><!DOCTYPE html>
+</code></pre>
 <p><strong>这句代码的意思是：当前页面采取的是HTML5版本来显示网页</strong></p>
 <p><strong>注意：</strong></p>
 <ol>
-<li>&lt;!DOCTYPE&gt;声明位于文档中的最前面的位置，处于&lt; html &gt;标签之前</li>
-<li>&lt;!DOCTYPE&gt;不是一个HTML标签，它就是文档类型声明标签</li>
+<li>
+声明位于文档中的最前面的位置，处于&lt; html &gt;标签之前
+</li>
+<li>
+不是一个HTML标签，它就是文档类型声明标签
+</li>
 </ol>
-<h3 id="3-2-lang语言种类"><a href="#3-2-lang语言种类" class="headerlink" title="3.2 lang语言种类"></a>3.2 lang语言种类</h3><p><code>&lt;html lang="zh-CN"&gt;</code></p>
+<h3 id="3-2-lang语言种类">3.2 lang语言种类</h3>
+<p><code>&lt;html lang="zh-CN"&gt;</code></p>
 <ol>
 <li>en定义语言为英语</li>
 <li>zh-CN定义语言为中文</li>
@@ -528,51 +543,64 @@
 <p>简单来说，定义为en就是英文网页，定义为zh-CN就是中文网页</p>
 <p>其实对于文档显示来说，定义成en的文档也可以显示中文，定义成zh-CN的文档也可以显示英文</p>
 <p>这个属性对于浏览器和搜索引擎（百度、谷歌等）还是有作用的</p>
-<h3 id="3-3-字符集"><a href="#3-3-字符集" class="headerlink" title="3.3 字符集"></a>3.3 字符集</h3><p>字符集（Character set）是多个字符的集合，以便于计算机能够识别和存储各种文字。</p>
+<h3 id="3-3-字符集">3.3 字符集</h3>
+<p>字符集（Character set）是多个字符的集合，以便于计算机能够识别和存储各种文字。</p>
 <p>在<code>&lt;head&gt;</code>标签内，可以通过<code>&lt;meta&gt;</code>标签的<code>charset</code>属性来规定HTML文档应该使用哪种字符编码。</p>
-<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<pre class=" language-language-html"><code class="language-language-html"><meta charset="UTF-8">
+</code></pre>
 <p>charset常用的值有：GB2312（简体中文）、BIG5（繁体中文）、GBK（简繁体中文）和UTF-8，其中UTF-8也被成为万国码，其中包含了全世界所有国家需要用到的字符。</p>
-<p><strong>注意：</strong> 上面语法是必须要写的代码，否则可能引起乱码的情况。一般情况下，统一使用”UTF-8”编码，尽量统一写成标准的”UTF-8”，不要写成”utf8”或”UTF8”。</p>
-<h3 id="3-4-总结"><a href="#3-4-总结" class="headerlink" title="3.4 总结"></a>3.4 总结</h3><ol>
+<p><strong>注意：</strong> 上面语法是必须要写的代码，否则可能引起乱码的情况。一般情况下，统一使用"UTF-8"编码，尽量统一写成标准的"UTF-8"，不要写成"utf8"或"UTF8"。</p>
+<h3 id="3-4-总结">3.4 总结</h3>
+<ol>
 <li>以上三个代码VSCode自动生成，基本不需要我们重写。</li>
 <li>&lt; !DOCTYPE html &gt; 文档类型声明标签，告诉浏览器这个页面采取html5版本来显示页面。</li>
-<li>&lt; html lang=”en” &gt; 告诉浏览器或者搜索引擎这是一个英文网站，本页面采取英文来显示。</li>
-<li>&lt; meta charset=”UTF-8” &gt; 必须写。采取UTF-8来保存文字，如果不写就会乱码，具体原理后面分析。</li>
+<li>&lt; html lang=“en” &gt; 告诉浏览器或者搜索引擎这是一个英文网站，本页面采取英文来显示。</li>
+<li>&lt; meta charset=“UTF-8” &gt; 必须写。采取UTF-8来保存文字，如果不写就会乱码，具体原理后面分析。</li>
 </ol>
-<h2 id="4-HTML常用标签"><a href="#4-HTML常用标签" class="headerlink" title="4. HTML常用标签"></a>4. HTML常用标签</h2><h3 id="4-1-标签语义"><a href="#4-1-标签语义" class="headerlink" title="4.1 标签语义"></a>4.1 标签语义</h3><p>学习标签是有技巧的，重点是记住每个标签的语义。简单理解就是指标签的含义，即这个标签是用来干嘛的。</p>
+<h2 id="4-HTML常用标签">4. HTML常用标签</h2>
+<h3 id="4-1-标签语义">4.1 标签语义</h3>
+<p>学习标签是有技巧的，重点是记住每个标签的语义。简单理解就是指标签的含义，即这个标签是用来干嘛的。</p>
 <p><strong>根据标签的语义，在合适的地方给一个最为合理的标签，可以让页面结构更清晰。</strong></p>
 <ul>
 <li>标题标签</li>
 <li>段落标签</li>
 <li>……</li>
 </ul>
-<h3 id="4-2-标题标签-（重要）"><a href="#4-2-标题标签-（重要）" class="headerlink" title="4.2 标题标签\ - \ （重要）"></a>4.2 标题标签\<h1\> - \<h6\> （重要）</h6\></h1\></h3><p>为了使网页更具有语义化，我们经常会在页面中用到标题标签。HTML提供了6个等级的网页标题，即\<h1\> - \<h6\></h6\></h1\></p>
-<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>我是一级标题<span class="tag">&lt;<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-<p>单词head的缩写，意为头部、标题。<br><strong>标签语义：</strong> 作为标题使用，并且依据重要性递减。</p>
-<p><strong>特点：</strong> </p>
+<h3 id="4-2-标题标签-h1-h6-（重要）">4.2 标题标签&lt;h1&gt; - &lt;h6&gt; （重要）</h3>
+<p>为了使网页更具有语义化，我们经常会在页面中用到标题标签。HTML提供了6个等级的网页标题，即&lt;h1&gt; - &lt;h6&gt;</p>
+<pre class=" language-language-html"><code class="language-language-html"><h1>我是一级标题<h1>
+</code></pre>
+<p>单词head的缩写，意为头部、标题。<br>
+<strong>标签语义：</strong> 作为标题使用，并且依据重要性递减。</p>
+<p><strong>特点：</strong></p>
 <ol>
 <li>加了标题的文字会变的加粗，字号也会依次变大。</li>
 <li>一个标题独占一行</li>
 </ol>
-<h3 id="4-3-段落和换行标签（重要）"><a href="#4-3-段落和换行标签（重要）" class="headerlink" title="4.3 段落和换行标签（重要）"></a>4.3 段落和换行标签（重要）</h3><p>在网页中，要把文字有条理地显示出来，就需要将这些文字分段显示。在HTML标签中，\<p\>标签用于定义段落，它可以将整个网页分为若干个段落。</p\></p>
-<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>我是一个段落标签<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-<p>单词paragraph的缩写，意为段落。<br>标签语义：可以把HTML文档分割为若干段落。</p>
+<h3 id="4-3-段落和换行标签（重要）">4.3 段落和换行标签（重要）</h3>
+<p>在网页中，要把文字有条理地显示出来，就需要将这些文字分段显示。在HTML标签中，&lt;p&gt;标签用于定义段落，它可以将整个网页分为若干个段落。</p>
+<pre class=" language-language-html"><code class="language-language-html"><p>我是一个段落标签</p>
+</code></pre>
+<p>单词paragraph的缩写，意为段落。<br>
+标签语义：可以把HTML文档分割为若干段落。</p>
 <p><strong>特点：</strong></p>
 <ol>
 <li>文本在一个段落中会根据浏览器窗口的大小自动换行。</li>
 <li>段落和段落之间保有空隙。</li>
 </ol>
 <p>在HTML中，一个段落中的文字会从左到右依次排列，知道浏览器窗口的右端，然后才自动换行。如果希望某段文本强制换行显示，就需要使用换行标签<code>&lt;br /&gt;</code></p>
-<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-<p>单词break的缩写，意为打断，换行。<br><strong>标签语义：</strong> 强制换行。</p>
+<pre class=" language-language-html"><code class="language-language-html"><br />
+</code></pre>
+<p>单词break的缩写，意为打断，换行。<br>
+<strong>标签语义：</strong> 强制换行。</p>
 <p><strong>特点：</strong></p>
 <ol>
 <li>&lt; br /&gt; 是个单标签。</li>
 <li>&lt; br /&gt; 标签只是简单地开始新的一行，跟段落不一样，段落之间会插入一些垂直的间距。</li>
 </ol>
-<h3 id="4-4-文本格式化标签"><a href="#4-4-文本格式化标签" class="headerlink" title="4.4 文本格式化标签"></a>4.4 文本格式化标签</h3><p>在网页中， 有时需要为文字设置<strong>粗体</strong>，<em>斜体</em>或<u>下划线</u>等效果，这是就需要用到HTML中的文本格式化标签，使文字以特殊的方式显示。</p>
+<h3 id="4-4-文本格式化标签">4.4 文本格式化标签</h3>
+<p>在网页中， 有时需要为文字设置<strong>粗体</strong>，<em>斜体</em>或<u>下划线</u>等效果，这是就需要用到HTML中的文本格式化标签，使文字以特殊的方式显示。</p>
 <p><strong>标签语义：</strong> 突出重要性，比普通文字重要</p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -604,21 +632,27 @@
 </tr>
 </tbody>
 </table>
-</div>
 <p>重点记住 <strong>加粗</strong> 和 <em>倾斜</em> 。</p>
-<h3 id="4-5-和-标签"><a href="#4-5-和-标签" class="headerlink" title="4.5 \和\标签"></a>4.5 \<div\>和\<span\>标签</span\></div\></h3><p>\<div\>和\<span\>是没有语义的，它们就是一个盒子，用来装内容的。</span\></div\></p>
-<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span> 这是头部 <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span> 今日价格 <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-<p>div是division的缩写，表示分割、分区。<br>span意为跨度、跨距。</p>
+<h3 id="4-5-div-和-span-标签">4.5 &lt;div&gt;和&lt;span&gt;标签</h3>
+<p>&lt;div&gt;和&lt;span&gt;是没有语义的，它们就是一个盒子，用来装内容的。</p>
+<pre class=" language-language-html"><code class="language-language-html"><div> 这是头部 </div>
+<span> 今日价格 </span>
+</code></pre>
+<p>div是division的缩写，表示分割、分区。<br>
+span意为跨度、跨距。</p>
 <p><strong>特点：</strong></p>
 <ol>
 <li>&lt; div &gt; 标签用来布局，但是现在一行只能放一个&lt; div &gt;。=&gt;大盒子</li>
 <li>&lt; span &gt; 标签用来布局，一行上可以多个&lt; span &gt;。=&gt;小盒子</li>
 </ol>
-<h3 id="4-6-图像标签和路径（重点）"><a href="#4-6-图像标签和路径（重点）" class="headerlink" title="4.6 图像标签和路径（重点）"></a>4.6 图像标签和路径（重点）</h3><h4 id="4-6-1-图像标签"><a href="#4-6-1-图像标签" class="headerlink" title="4.6.1 图像标签"></a>4.6.1 图像标签</h4><p>在HTML标签中，\<img\>标签用于定义HTML页面中的图像。</img\></p>
-<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"图像URL"</span> /&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-<p>单词image的缩写，意为图像。<br>src是\<img>标签的<strong>必须属性</strong> ，它用于指定图像文件的路径和文件名。</p>
+<h3 id="4-6-图像标签和路径（重点）">4.6 图像标签和路径（重点）</h3>
+<h4 id="4-6-1-图像标签">4.6.1 图像标签</h4>
+<p>在HTML标签中，&lt;img&gt;标签用于定义HTML页面中的图像。</p>
+<pre class=" language-language-html"><code class="language-language-html"><img src="图像URL" />
+</code></pre>
+<p>单词image的缩写，意为图像。<br>
+src是&lt;img&gt;标签的<strong>必须属性</strong> ，它用于指定图像文件的路径和文件名。</p>
 <p>图像标签的属性：</p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -660,20 +694,21 @@
 </tr>
 </tbody>
 </table>
-</div>
 <p>图像标签属性注意点：</p>
 <ol>
 <li>图像标签可以拥有多个属性，必须写在标签名的后面。</li>
 <li>属性之间不分先后顺序，标签名与属性、属性与属性之间均以空格分开。</li>
-<li>属性均采取键值对的格式，即<code>key="value"</code>的格式，属性=”属性值”。</li>
+<li>属性均采取键值对的格式，即<code>key="value"</code>的格式，属性=“属性值”。</li>
 </ol>
 <p><strong>重要掌握点：</strong></p>
 <ul>
 <li>[ ] 请说出 图像标签中 哪个属性是必须要写的？</li>
 <li>[ ] 请说出 图像标签中 alt 和 title 属性的区别？</li>
 </ul>
-<h4 id="4-6-2-路径的前期铺垫知识"><a href="#4-6-2-路径的前期铺垫知识" class="headerlink" title="4.6.2 路径的前期铺垫知识"></a>4.6.2 路径的前期铺垫知识</h4><ol>
-<li>目录文件夹和根目录<ul>
+<h4 id="4-6-2-路径的前期铺垫知识">4.6.2 路径的前期铺垫知识</h4>
+<ol>
+<li>目录文件夹和根目录
+<ul>
 <li>实际工作中，我们的文件不能随便乱放，否则用起来很难快速地找到他们，因此我们需要一个文件夹来管理他们。</li>
 <li><strong>目录文件夹：</strong> 就是普通文件夹，里面只不过存放了我们做页面所需要的相关素材，比如html文件，图片等。</li>
 <li><strong>根目录：</strong> 打开目录文件夹的第一次就是根目录。</li>
@@ -681,7 +716,8 @@
 </li>
 <li>VSCode打开目录文件夹</li>
 </ol>
-<h4 id="4-6-3-路径"><a href="#4-6-3-路径" class="headerlink" title="4.6.3 路径"></a>4.6.3 路径</h4><p>页面中的图片非常多，通常我们会新建一个文件夹来存放这些图片文件（images），这是再查找图像，就需要采用”路径”的方式来指定图像文件的位置。</p>
+<h4 id="4-6-3-路径">4.6.3 路径</h4>
+<p>页面中的图片非常多，通常我们会新建一个文件夹来存放这些图片文件（images），这是再查找图像，就需要采用"路径"的方式来指定图像文件的位置。</p>
 <p>路径可以分为：</p>
 <ol>
 <li>相对路径</li>
@@ -689,7 +725,6 @@
 </ol>
 <p><strong>相对路径：</strong> 以引用文件所在位置为参考基础，而建立出的目录路径。</p>
 <p>这里简单来说，图片相对于HTML页面的位置。</p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -702,29 +737,30 @@
 <tr>
 <td>同一级路径</td>
 <td></td>
-<td>图像文件位于HTML文件同一级，如 \<img scr="baidu.gif"></td>
+<td>图像文件位于HTML文件同一级，如 &lt;img scr=“baidu.gif” /&gt;</td>
 </tr>
 <tr>
 <td>下一级路径</td>
 <td>/</td>
-<td>图像文件位于HTML文件下一级，如 \<img src="/2022/01/26/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/HTML/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B001/baidu.gif"></td>
+<td>图像文件位于HTML文件下一级，如 &lt;img src=“images/baidu.gif” /&gt;</td>
 </tr>
 <tr>
 <td>上一级路径</td>
 <td>/</td>
-<td>图像文件位于HTML文件上一级，如 \<img src="/2022/01/26/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/HTML/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B001/baidu.gif"></td>
+<td>图像文件位于HTML文件上一级，如 &lt;img src=“…/baidu.gif” /&gt;</td>
 </tr>
 </tbody>
 </table>
-</div>
 <p>相对路径是代码所在的这个文件出发，去寻找目标文件的，而我们这里所说的上一级、下一级、同一级就是图片相对于HTML页面的位置。</p>
 <p><strong>绝对路径：</strong> 是指目录下的绝对位置，直接到达目标位置，通常是从盘符开始的路径。</p>
-<p>例如：”D:\web\img\logo.gif” 或完整的网络地址: “<a target="_blank" rel="noopener" href="http://www.itcast.cn/2018czgw/images/logo2.png&quot;。">http://www.itcast.cn/2018czgw/images/logo2.png"。</a></p>
-<h3 id="4-7-超链接标签（重点）"><a href="#4-7-超链接标签（重点）" class="headerlink" title="4.7 超链接标签（重点）"></a>4.7 超链接标签（重点）</h3><p>在HTML标签中，\<a>标签用于定义超链接，作用是从一个页面链接到另一个页面。</a></p>
-<h4 id="4-7-1-链接的语法格式"><a href="#4-7-1-链接的语法格式" class="headerlink" title="4.7.1 链接的语法格式"></a>4.7.1 链接的语法格式</h4><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"跳转目标"</span> <span class="attr">target</span>=<span class="string">"目标窗口的弹出方式"</span>&gt;</span> 文本或图片 <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<p>例如：“D:\web\img\logo.gif” 或完整的网络地址: “<a target="_blank" rel="noopener" href="http://www.itcast.cn/2018czgw/images/logo2.png">http://www.itcast.cn/2018czgw/images/logo2.png</a>”。</p>
+<h3 id="4-7-超链接标签（重点）">4.7 超链接标签（重点）</h3>
+<p>在HTML标签中，&lt;a&gt;标签用于定义超链接，作用是从一个页面链接到另一个页面。</p>
+<h4 id="4-7-1-链接的语法格式">4.7.1 链接的语法格式</h4>
+<pre class=" language-language-html"><code class="language-language-html"><a href="跳转目标" target="目标窗口的弹出方式"> 文本或图片 </a>
+</code></pre>
 <p>单词anchor的缩写，意为：锚。</p>
 <p>两个属性的作用如下：</p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -743,25 +779,30 @@
 </tr>
 </tbody>
 </table>
-</div>
-<h4 id="4-7-2-链接分类"><a href="#4-7-2-链接分类" class="headerlink" title="4.7.2 链接分类"></a>4.7.2 链接分类</h4><ol>
+<h4 id="4-7-2-链接分类">4.7.2 链接分类</h4>
+<ol>
 <li>外部链接：常以<code>http://</code>开头。例如<code>&lt;a href="http://www.baidu.com"&gt;百度&lt;/a&gt;</code></li>
 <li>内部链接：网站内部页面之间的相互链接。直接链接内部页面名称即可，例如<code>&lt;a href="index.html"&gt;首页&lt;/a&gt;</code></li>
 <li>空链接：如果当时没有确定链接目标时，可以暂时引用空链接。<code>&lt;a href="#"&gt;首页&lt;/a&gt;</code></li>
 <li>下载链接：如果href里面地址是一个文件或者压缩包，会下载这个文件。</li>
 <li>网页元素链接：在网页中的各种网页元素中，如文本、图像、表格、音频、视频等都可以添加超链接。</li>
-<li>锚点链接：点击链接，可以快速定位到页面中的某个位置。<ul>
+<li>锚点链接：点击链接，可以快速定位到页面中的某个位置。
+<ul>
 <li>在链接文本的href属性中，设置属性值为 <strong>#名字</strong> 的形式，如：<code>&lt;a href="#two"&gt;第2集&lt;/a&gt;</code></li>
 <li>找到目标位置标签，里面添加一个 <strong>id属性=刚才的名字是</strong> ，如：<code>&lt;h3 id=two&gt;第2集介绍&lt;/h3&gt;</code></li>
 </ul>
 </li>
 </ol>
-<h2 id="5-HTML中的注释和特殊字符"><a href="#5-HTML中的注释和特殊字符" class="headerlink" title="5. HTML中的注释和特殊字符"></a>5. HTML中的注释和特殊字符</h2><h3 id="5-1-注释"><a href="#5-1-注释" class="headerlink" title="5.1 注释"></a>5.1 注释</h3><p>如果需要在HTML文档中添加一些便于阅读和理解但又不需要显示在页面中的注释文字，就需要使用注释标签。</p>
+<h2 id="5-HTML中的注释和特殊字符">5. HTML中的注释和特殊字符</h2>
+<h3 id="5-1-注释">5.1 注释</h3>
+<p>如果需要在HTML文档中添加一些便于阅读和理解但又不需要显示在页面中的注释文字，就需要使用注释标签。</p>
 <p>HTML中的注释以<code>&lt;!--</code>开头，以<code>--&gt;</code>结束。</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 注释语句 --&gt;   快捷键：Ctrl+ /</span><br></pre></td></tr></tbody></table></figure>
-<p>注释标签里面的内容是给程序员看的，这个代码是不执行不显示到页面中的。<br>添加注释是为了更好地解释代码的功能，便于相关开发人员理解和阅读代码，程序是不会执行注释内容的。</p>
-<h3 id="5-2-特殊字符"><a href="#5-2-特殊字符" class="headerlink" title="5.2 特殊字符"></a>5.2 特殊字符</h3><p>在HTML页面中，一些特殊的符号很难或者不方便直接使用，此时我们就可以使用下面的字符来替代。</p>
-<div class="table-container">
+<pre><code>&lt;!-- 注释语句 --&gt;   快捷键：Ctrl+ /
+</code></pre>
+<p>注释标签里面的内容是给程序员看的，这个代码是不执行不显示到页面中的。<br>
+添加注释是为了更好地解释代码的功能，便于相关开发人员理解和阅读代码，程序是不会执行注释内容的。</p>
+<h3 id="5-2-特殊字符">5.2 特殊字符</h3>
+<p>在HTML页面中，一些特殊的符号很难或者不方便直接使用，此时我们就可以使用下面的字符来替代。</p>
 <table>
 <thead>
 <tr>
@@ -774,71 +815,70 @@
 <tr>
 <td>&nbsp;</td>
 <td>空格符</td>
-<td>\&nbsp;</td>
+<td>&amp;nbsp;</td>
 </tr>
 <tr>
 <td>&lt;</td>
 <td>小于号</td>
-<td>\&lt;</td>
+<td>&amp;lt;</td>
 </tr>
 <tr>
 <td>&gt;</td>
 <td>大于号</td>
-<td>\&gt;</td>
+<td>&amp;gt;</td>
 </tr>
 <tr>
 <td>&amp;</td>
 <td>和号</td>
-<td>\&amp;</td>
+<td>&amp;amp;</td>
 </tr>
 <tr>
 <td>¥</td>
 <td>人民币</td>
-<td>\¥</td>
+<td>&amp;yen;</td>
 </tr>
 <tr>
 <td>©</td>
 <td>版权</td>
-<td>\©</td>
+<td>&amp;copy;</td>
 </tr>
 <tr>
 <td>®</td>
 <td>注册商标</td>
-<td>\®</td>
+<td>&amp;reg;</td>
 </tr>
 <tr>
 <td>°</td>
 <td>摄氏度</td>
-<td>\°</td>
+<td>&amp;deg;</td>
 </tr>
 <tr>
 <td>±</td>
 <td>正负号</td>
-<td>\±</td>
+<td>&amp;plusmn;</td>
 </tr>
 <tr>
 <td>×</td>
 <td>乘号</td>
-<td>\×</td>
+<td>&amp;times;</td>
 </tr>
 <tr>
 <td>÷</td>
 <td>除号</td>
-<td>\÷</td>
+<td>&amp;divide;</td>
 </tr>
 <tr>
 <td>²</td>
 <td>平方2/上标2</td>
-<td>\²</td>
+<td>&amp;sup2;</td>
 </tr>
 <tr>
 <td>³</td>
 <td>立方3/上标3</td>
-<td>\³</td>
+<td>&amp;sup3;</td>
 </tr>
 </tbody>
 </table>
-</div>
 <p><strong>重点记住：</strong> 空格、大于号、小于号这三个，其余使用较少，如果需要则回头查询即可。</p>
 
                 
@@ -1091,7 +1131,8 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            HTML学习笔记 Part02-HTML标签（下）目录
+                            HTML学习笔记 Part02-HTML标签（下）
+目录
 
 表格标签
 列表标签
@@ -1152,9 +1193,11 @@
                     <div class="summary block-with-text">
                         
                             前言
+
 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除
 
-Markdown 自动网址链接许多Markdown处理器会自动将URL转换为链接。这意味着如果您输入http:
+Markdown 自动网址链接
+许多Markdown处理器会自动将URL转换为链接。这意味着如果您输入htt
                         
                     </div>
                     <div class="publish-info">

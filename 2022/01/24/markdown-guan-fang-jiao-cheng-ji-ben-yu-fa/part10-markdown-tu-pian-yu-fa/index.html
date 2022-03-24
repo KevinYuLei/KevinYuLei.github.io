@@ -497,44 +497,125 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+                <h2 id="前言-10">前言</h2>
+<blockquote>
 <p>本文转自<a target="_blank" rel="noopener" href="https://markdown.com.cn/">Markdown官方教程</a>, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除</p>
 </blockquote>
-<h1 id="Markdown-图片语法"><a href="#Markdown-图片语法" class="headerlink" title="Markdown 图片语法"></a>Markdown 图片语法</h1><p>要添加图像，请使用感叹号 (!), 然后在方括号增加替代文本，图片链接放在圆括号里，括号里的链接后可以增加一个可选的图片标题文本。</p>
+<h1>Markdown 图片语法</h1>
+<p>要添加图像，请使用感叹号 (!), 然后在方括号增加替代文本，图片链接放在圆括号里，括号里的链接后可以增加一个可选的图片标题文本。</p>
 <p>插入图片Markdown语法代码：<code>![图片alt](图片链接 "图片title")。</code></p>
 <p>对应的HTML代码：<code>&lt;img src="图片链接" alt="图片alt" title="图片title"&gt;</code></p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![这是图片](Part10-Markdown图片语法/philly-magic-garden.jpg "Magic Gardens")</span><br></pre></td></tr></tbody></table></figure>
+<pre><code>![这是图片](Part10-Markdown图片语法/philly-magic-garden.jpg "Magic Gardens")
+</code></pre>
 <span id="more"></span>
-<p>渲染效果如下：<br><img src="/2022/01/24/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Part10-Markdown%E5%9B%BE%E7%89%87%E8%AF%AD%E6%B3%95/philly-magic-garden.jpg" alt="这是图片" title="Magic Gardens"></p>
-<h2 id="链接图片"><a href="#链接图片" class="headerlink" title="链接图片"></a>链接图片</h2><p>给图片增加链接，请将图像的Markdown 括在方括号中，然后将链接添加在圆括号中。</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[![沙漠中的岩石图片](Part10-Markdown图片语法/shiprock.jpg "Shiprock")](https://markdown.com.cn)</span><br></pre></td></tr></tbody></table></figure>
-<p><a target="_blank" rel="noopener" href="https://markdown.com.cn"><img src="/2022/01/24/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Part10-Markdown%E5%9B%BE%E7%89%87%E8%AF%AD%E6%B3%95/shiprock.jpg" alt="沙漠中的岩石图片" title="Shiprock"></a></p>
-<h2 id="图片预览正常，站内无法显示问题解决"><a href="#图片预览正常，站内无法显示问题解决" class="headerlink" title="图片预览正常，站内无法显示问题解决"></a>图片预览正常，站内无法显示问题解决</h2><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>markdown文件中，插入图片的方式为 <code>![](文件路径)</code> ，此时markdown文件可以正常显示图片。<br>但是一上传到博客上，便不能正常显示。</p>
-<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><ol>
-<li><p>改 hexo 目录下的 .config.yml 文件，将 <code>post_asset_folder: false</code> 修改为 <code>post_asset_folder: true</code>。</p>
+<p>渲染效果如下：<br>
+<img src="/2022/01/24/markdown-guan-fang-jiao-cheng-ji-ben-yu-fa/part10-markdown-tu-pian-yu-fa/philly-magic-garden.jpg" alt="这是图片" title="Magic Gardens"></p>
+<h2 id="链接图片">链接图片</h2>
+<p>给图片增加链接，请将图像的Markdown 括在方括号中，然后将链接添加在圆括号中。</p>
+<pre><code>[![沙漠中的岩石图片](Part10-Markdown图片语法/shiprock.jpg "Shiprock")](https://markdown.com.cn)
+</code></pre>
+<p><a target="_blank" rel="noopener" href="https://markdown.com.cn"><img src="/2022/01/24/markdown-guan-fang-jiao-cheng-ji-ben-yu-fa/part10-markdown-tu-pian-yu-fa/shiprock.jpg" alt="沙漠中的岩石图片" title="Shiprock"></a></p>
+<h2 id="图片预览正常，站内无法显示问题解决">图片预览正常，站内无法显示问题解决</h2>
+<h3 id="问题描述">问题描述</h3>
+<p>markdown文件中，插入图片的方式为 <code>![](文件路径)</code> ，此时markdown文件可以正常显示图片。<br>
+但是一上传到博客上，便不能正常显示。</p>
+<h3 id="解决方法">解决方法</h3>
+<ol>
+<li>
+<p>改 hexo 目录下的 .config.yml 文件，将 <code>post_asset_folder: false</code> 修改为 <code>post_asset_folder: true</code>。</p>
 </li>
-<li><p>安装一个图片路径转换的插件。在hexo文件夹下打开 Git bush。输入</p>
+<li>
+<p>安装一个图片路径转换的插件。在hexo文件夹下打开 Git bush。输入</p>
 </li>
 </ol>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https://github.com/7ym0n/hexo-asset-image --save</span><br></pre></td></tr></tbody></table></figure>
+<pre><code>npm install https://github.com/7ym0n/hexo-asset-image --save
+</code></pre>
 <p><strong>注意</strong>：这是经过修改的插件代码，网上流传的另一份代码 <code>npm install https://github.com/CodeFalling/hexo-asset-image --save</code> 并不能使用。</p>
 <p>如果你之前安装了这个错误的插件，请将 <code>/node_modules/hexo-asset-image/index.js</code>这个文件替换成下面的代码：</p>
-<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"><span class="keyword">var</span> cheerio = <span class="built_in">require</span>(<span class="string">'cheerio'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getPosition</span>(<span class="params">str, m, i</span>) </span>{</span><br><span class="line"><span class="keyword">return</span> str.split(m, i).join(m).length;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> version = <span class="built_in">String</span>(hexo.version).split(<span class="string">'.'</span>);</span><br><span class="line">hexo.extend.filter.register(<span class="string">'after_post_render'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>{</span><br><span class="line"><span class="keyword">var</span> config = hexo.config;</span><br><span class="line"><span class="keyword">if</span>(config.post_asset_folder){</span><br><span class="line">    <span class="keyword">var</span> link = data.permalink;</span><br><span class="line"><span class="keyword">if</span>(version.length &gt; <span class="number">0</span> &amp;&amp; <span class="built_in">Number</span>(version[<span class="number">0</span>]) == <span class="number">3</span>)</span><br><span class="line">    <span class="keyword">var</span> beginPos = getPosition(link, <span class="string">'/'</span>, <span class="number">1</span>) + <span class="number">1</span>;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="keyword">var</span> beginPos = getPosition(link, <span class="string">'/'</span>, <span class="number">3</span>) + <span class="number">1</span>;</span><br><span class="line"><span class="comment">// In hexo 3.1.1, the permalink of "about" page is like ".../about/index.html".</span></span><br><span class="line"><span class="keyword">var</span> endPos = link.lastIndexOf(<span class="string">'/'</span>) + <span class="number">1</span>;</span><br><span class="line">link = link.substring(beginPos, endPos);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> toprocess = [<span class="string">'excerpt'</span>, <span class="string">'more'</span>, <span class="string">'content'</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; toprocess.length; i++){</span><br><span class="line">    <span class="keyword">var</span> key = toprocess[i];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> $ = cheerio.load(data[key], {</span><br><span class="line">    <span class="attr">ignoreWhitespace</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">xmlMode</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">lowerCaseTags</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">decodeEntities</span>: <span class="literal">false</span></span><br><span class="line">    });</span><br><span class="line"></span><br><span class="line">    $(<span class="string">'img'</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</span><br><span class="line">    <span class="keyword">if</span> ($(<span class="built_in">this</span>).attr(<span class="string">'src'</span>)){</span><br><span class="line">        <span class="comment">// For windows style path, we replace '\' to '/'.</span></span><br><span class="line">        <span class="keyword">var</span> src = $(<span class="built_in">this</span>).attr(<span class="string">'src'</span>).replace(<span class="string">'\\'</span>, <span class="string">'/'</span>);</span><br><span class="line">        <span class="keyword">if</span>(!<span class="regexp">/http[s]*.*|\/\/.*/</span>.test(src) &amp;&amp;</span><br><span class="line">            !<span class="regexp">/^\s*\//</span>.test(src)) {</span><br><span class="line">            <span class="comment">// For "about" page, the first part of "src" can't be removed.</span></span><br><span class="line">            <span class="comment">// In addition, to support multi-level local directory.</span></span><br><span class="line">            <span class="keyword">var</span> linkArray = link.split(<span class="string">'/'</span>).filter(<span class="function"><span class="keyword">function</span>(<span class="params">elem</span>)</span>{</span><br><span class="line">            <span class="keyword">return</span> elem != <span class="string">''</span>;</span><br><span class="line">            });</span><br><span class="line">            <span class="keyword">var</span> srcArray = src.split(<span class="string">'/'</span>).filter(<span class="function"><span class="keyword">function</span>(<span class="params">elem</span>)</span>{</span><br><span class="line">            <span class="keyword">return</span> elem != <span class="string">''</span> &amp;&amp; elem != <span class="string">'.'</span>;</span><br><span class="line">            });</span><br><span class="line">            <span class="keyword">if</span>(srcArray.length &gt; <span class="number">1</span>)</span><br><span class="line">            srcArray.shift();</span><br><span class="line">            src = srcArray.join(<span class="string">'/'</span>);</span><br><span class="line">            $(<span class="built_in">this</span>).attr(<span class="string">'src'</span>, config.root + link + src);</span><br><span class="line">            <span class="built_in">console</span>.info&amp;&amp;<span class="built_in">console</span>.info(<span class="string">"update link as:--&gt;"</span>+config.root + link + src);</span><br><span class="line">        }</span><br><span class="line">    }<span class="keyword">else</span>{</span><br><span class="line">        <span class="built_in">console</span>.info&amp;&amp;<span class="built_in">console</span>.info(<span class="string">"no src attr, skipped..."</span>);</span><br><span class="line">        <span class="built_in">console</span>.info&amp;&amp;<span class="built_in">console</span>.info($(<span class="built_in">this</span>));</span><br><span class="line">    }</span><br><span class="line">    });</span><br><span class="line">    data[key] = $.html();</span><br><span class="line">}</span><br><span class="line">}</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+<pre class=" language-language-js"><code class="language-language-js">'use strict';
+var cheerio = require('cheerio');
+
+// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string
+function getPosition(str, m, i) {
+return str.split(m, i).join(m).length;
+}
+
+var version = String(hexo.version).split('.');
+hexo.extend.filter.register('after_post_render', function(data){
+var config = hexo.config;
+if(config.post_asset_folder){
+    var link = data.permalink;
+if(version.length > 0 && Number(version[0]) == 3)
+    var beginPos = getPosition(link, '/', 1) + 1;
+else
+    var beginPos = getPosition(link, '/', 3) + 1;
+// In hexo 3.1.1, the permalink of "about" page is like ".../about/index.html".
+var endPos = link.lastIndexOf('/') + 1;
+link = link.substring(beginPos, endPos);
+
+var toprocess = ['excerpt', 'more', 'content'];
+for(var i = 0; i < toprocess.length; i++){
+    var key = toprocess[i];
+
+    var $ = cheerio.load(data[key], {
+    ignoreWhitespace: false,
+    xmlMode: false,
+    lowerCaseTags: false,
+    decodeEntities: false
+    });
+
+    $('img').each(function(){
+    if ($(this).attr('src')){
+        // For windows style path, we replace '\' to '/'.
+        var src = $(this).attr('src').replace('\\', '/');
+        if(!/http[s]*.*|\/\/.*/.test(src) &&
+            !/^\s*\//.test(src)) {
+            // For "about" page, the first part of "src" can't be removed.
+            // In addition, to support multi-level local directory.
+            var linkArray = link.split('/').filter(function(elem){
+            return elem != '';
+            });
+            var srcArray = src.split('/').filter(function(elem){
+            return elem != '' && elem != '.';
+            });
+            if(srcArray.length > 1)
+            srcArray.shift();
+            src = srcArray.join('/');
+            $(this).attr('src', config.root + link + src);
+            console.info&&console.info("update link as:-->"+config.root + link + src);
+        }
+    }else{
+        console.info&&console.info("no src attr, skipped...");
+        console.info&&console.info($(this));
+    }
+    });
+    data[key] = $.html();
+}
+}
+});
+</code></pre>
+<ol start="3">
+<li>
+<p>安装完上述插件后，当我们创建新文章时 <code>hexo new post "new article"</code> ，就自动在 <code>new article.md</code> 文件的同目录下创建一个同名的文件夹，这里就是文件夹 <code>new article</code> 。我们把在 <code>new article.md</code> 使用的图片放入该文件夹中。</p>
+</li>
+<li>
+<p>这里我们给出两种办法来引用图片。</p>
 <ol>
-<li><p>安装完上述插件后，当我们创建新文章时 <code>hexo new post "new article"</code> ，就自动在 <code>new article.md</code> 文件的同目录下创建一个同名的文件夹，这里就是文件夹 <code>new article</code> 。我们把在 <code>new article.md</code> 使用的图片放入该文件夹中。</p>
+<li>
+<p>直接使用代码 <code>![](hexo.png)</code> （虽然没有写文件夹的名字，但是可以的），<code>hexo.png</code> 是我们存在 <code>new article</code> 文件夹内的图片。这时你会发现markdown预览中无法显示这张图片，但是当你将博客上传到网站时，网站上是可以正常显示的。</p>
 </li>
-<li><p>这里我们给出两种办法来引用图片。</p>
-<ol>
-<li><p>直接使用代码 <code>![](hexo.png)</code> （虽然没有写文件夹的名字，但是可以的），<code>hexo.png</code> 是我们存在 <code>new article</code> 文件夹内的图片。这时你会发现markdown预览中无法显示这张图片，但是当你将博客上传到网站时，网站上是可以正常显示的。</p>
+<li>
+<p>使用代码 <code>![](new article/hexo.png)</code>不仅可以本地预览，上传到网站也可以正常显示。</p>
 </li>
-<li><p>使用代码 <code>![](new article/hexo.png)</code>不仅可以本地预览，上传到网站也可以正常显示。</p>
-</li>
-<li><p>本地无法预览也是件很不舒服的事情，其实我们还可以另外创建一个文件夹 <code>pictures</code> ，里面专门存放所有文章的图片，代码 <code>![](pictures/hexo.png)</code> 不仅可以本地预览，上传到网站也可以正常显示。</p>
+<li>
+<p>本地无法预览也是件很不舒服的事情，其实我们还可以另外创建一个文件夹 <code>pictures</code> ，里面专门存放所有文章的图片，代码 <code>![](pictures/hexo.png)</code> 不仅可以本地预览，上传到网站也可以正常显示。</p>
 </li>
 </ol>
 </li>
 </ol>
-<p><strong>注意</strong>： 不管采取哪种办法，都要创建一个和md文件同名的文件夹，里面放上需要的图片。<br>如果 <strong>2和3</strong> 中代码无法实现网站上的正常显示，那就使用 <strong>1</strong> 中的代码。<br>因为 <strong>2和3</strong> 中代码我无法保证每个人都成功。</p>
+<p><strong>注意</strong>： 不管采取哪种办法，都要创建一个和md文件同名的文件夹，里面放上需要的图片。<br>
+如果 <strong>2和3</strong> 中代码无法实现网站上的正常显示，那就使用 <strong>1</strong> 中的代码。<br>
+因为 <strong>2和3</strong> 中代码我无法保证每个人都成功。</p>
 
                 
             </div>
@@ -787,9 +868,11 @@
                     <div class="summary block-with-text">
                         
                             前言
+
 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除
 
-Markdown 转义字符语法要显示原本用于格式化 Markdown 文档的字符，请在字符前面添加反斜杠字符 
+Markdown 转义字符语法
+要显示原本用于格式化 Markdown 文档的字符，请在字符前面添加反斜杠字
                         
                     </div>
                     <div class="publish-info">
@@ -843,10 +926,12 @@ Markdown 转义字符语法要显示原本用于格式化 Markdown 文档的字�
                     <div class="summary block-with-text">
                         
                             前言
+
 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除
 
-Markdown 链接语法链接文本放在中括号内，链接地址放在后面的括号中，链接title可选。
-超链接Mark
+Markdown 链接语法
+链接文本放在中括号内，链接地址放在后面的括号中，链接title可选。
+超链接Ma
                         
                     </div>
                     <div class="publish-info">

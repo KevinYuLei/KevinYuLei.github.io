@@ -493,31 +493,30 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="JavaScript学习笔记-Part01"><a href="#JavaScript学习笔记-Part01" class="headerlink" title="JavaScript学习笔记 Part01"></a>JavaScript学习笔记 Part01</h1><style>
+                <h1>JavaScript学习笔记 Part01</h1>
+<style>
     .red {
         color: red;
     }
 </style>
-
-
-<p><strong>目录</strong><br><a href="#title01">1. DOM简介</a><br><a href="#title02">2. 获取元素</a><br><a href="#title03">3. 事件基础</a><br><a href="#title04">4. 操作元素</a><br><a href="#title05">5. 节点操作</a></p>
+<p><strong>目录</strong><br>
+<a href="#title01">1. DOM简介</a><br>
+<a href="#title02">2. 获取元素</a><br>
+<a href="#title03">3. 事件基础</a><br>
+<a href="#title04">4. 操作元素</a><br>
+<a href="#title05">5. 节点操作</a></p>
 <span id="more"></span>
 <h2 id="title01">1. DOM简介</h2>
-
 <h3>1.1 什么是DOM</h3>
-
 <p><span class="red">文档对象模型（Document Object Model，简称DOM）</span>，是W3C组织推荐的处理可拓展标记语言（HTML或者XML）的标准编程接口</p>
 <p>W3C已经定义了一系列的DOM接口，通过这些DOM接口可以改变网页的内容、结构和样式</p>
 <h3>1.2 DOM树</h3>
-
 <p><strong>文档：</strong>一个页面就是一个文档，DOM中使用document表示</p>
 <p><strong>元素：</strong>页面中所有的标签都是元素，DOM中使用element表示</p>
 <p><strong>节点：</strong>网页中的所有内容都是节点（标签、属性、文本、注释等），DOM中使用node表示</p>
 <p>DOM把以上内容都看作是对象</p>
 <h2 id="title02">2. 获取元素</h2>
-
 <h3>2.1 如何获取页面元素</h3>
-
 <p>DOM在我们实际开发中主要用来操作文素</p>
 <p>获取页面中的元素的方式：</p>
 <ul>
@@ -527,15 +526,19 @@
 <li>特殊元素获取</li>
 </ul>
 <h3>2.2 根据ID获取</h3>
-
 <p>使用getElementById()方法可以获取带有ID的元素对象</p>
-<p>语法：<br></p><figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> element = <span class="built_in">document</span>.getElementById(id);</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>语法：</p>
+<pre class=" language-language-js"><code class="language-language-js">var element = document.getElementById(id);
+</code></pre>
 <h3>2.3 根据标签名获取</h3>
-
 <p>使用getElementByTagName()方法可以返回带有指定标签名的<span class="red">对象的集合</span></p>
-<p>语法：<br></p><figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> elements = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'id名'</span>);</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>语法：</p>
+<pre class=" language-language-js"><code class="language-language-js">var elements = document.getElementsByTagName('id名');
+</code></pre>
 <p>还可以获取某个元素（父元素）内部所有指定标签名的子元素</p>
-<p>语法：<br></p><figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">element.getElementsByTagName(<span class="string">'标签名'</span>);</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>语法：</p>
+<pre class=" language-language-js"><code class="language-language-js">element.getElementsByTagName('标签名');
+</code></pre>
 <p>注意：</p>
 <ol>
 <li>因为得到的是一个对象的集合，所以想要操作里面的元素需要遍历</li>
@@ -543,44 +546,59 @@
 <li>父元素必须是<span class="red">单个对象（必须指明是哪一个元素对象）</span>。获取的时候不包括父元素自己</li>
 </ol>
 <h3>2.4 通过HTML5新增的方法获取</h3>
-
 <ol>
 <li>通过类名获取元素，返回元素集合</li>
 </ol>
-<p>语法：<br></p><figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementsByClassName(<span class="string">'类名'</span>);</span><br></pre></td></tr></tbody></table></figure><p></p>
-<ol>
+<p>语法：</p>
+<pre class=" language-language-js"><code class="language-language-js">document.getElementsByClassName('类名');
+</code></pre>
+<ol start="2">
 <li>根据指定选择器返回<span class="red">第一个元素对象</span></li>
 </ol>
-<p>语法：<br></p><figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">'选择器'</span>);</span><br></pre></td></tr></tbody></table></figure><p></p>
-<ol>
+<p>语法：</p>
+<pre class=" language-language-js"><code class="language-language-js">document.querySelector('选择器');
+</code></pre>
+<ol start="3">
 <li>根据指定选择器返回所有元素对象的集合</li>
 </ol>
-<p>语法：<br></p><figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.querySelectorAll(<span class="string">'选择器'</span>);</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>语法：</p>
+<pre class=" language-language-js"><code class="language-language-js">document.querySelectorAll('选择器');
+</code></pre>
 <h3>2.5 获取特殊元素（body、html）</h3>
-
 <ol>
 <li>获取body元素</li>
 </ol>
-<p>语法：<br></p><figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> bodyEle = <span class="built_in">document</span>.body;</span><br></pre></td></tr></tbody></table></figure><p></p>
-<ol>
+<p>语法：</p>
+<pre class=" language-language-js"><code class="language-language-js">var bodyEle = document.body;
+</code></pre>
+<ol start="2">
 <li>获取html元素</li>
 </ol>
-<p>语法：<br></p><figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> htmlEle = <span class="built_in">document</span>.documentElement;</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>语法：</p>
+<pre class=" language-language-js"><code class="language-language-js">var htmlEle = document.documentElement;
+</code></pre>
 <h2 id="title03">3. 事件基础</h2>
-
 <h3>3.1 事件概述</h3>
-
 <p>JavaScript使我们有能力创建动态页面，而事件是可以被JavaScript侦测到的行为</p>
 <p>简单理解：触发——相应机制</p>
 <p>网页中的每个元素都可以产生某些可以触发JavaScript的事件，例如，我们可以在用户点击某按钮时产生一个事件，然后去执行某些操作</p>
 <h3>3.2 事件三要素</h3>
-
 <ol>
 <li>事件源：事件被触发的对象</li>
 <li>事件类型：如何触发事件，如：鼠标点击、鼠标经过、键盘按下</li>
 <li>事件处理程序：通过函数赋值的方式完成</li>
 </ol>
-<p>示例代码如下：<br></p><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btn"</span>&gt;</span>唐伯虎<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">'btn'</span>);</span></span><br><span class="line"><span class="javascript">        btn.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</span></span><br><span class="line"><span class="javascript">            alert(<span class="string">'点秋香'</span>);</span></span><br><span class="line"><span class="javascript">        }</span></span><br><span class="line"><span class="javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>示例代码如下：</p>
+<pre class=" language-language-html"><code class="language-language-html"><body>
+    <button id="btn">唐伯虎</button>
+    <script>
+        var btn = document.getElementById('btn');
+        btn.onclick = function () {
+            alert('点秋香');
+        }
+    </script>
+</body>
+</code></pre>
 <p>显示效果如下：</p>
 
     <button id="btn">唐伯虎</button>
@@ -591,10 +609,7 @@
         }
     </script>
 
-
-
 <h3>3.3 执行事件的步骤</h3>
-
 <ol>
 <li>获取事件源</li>
 <li>注册事件（绑定事件）</li>
@@ -612,18 +627,68 @@
     <tr><td>onmouseup</td><td>鼠标弹起触发</td></tr>
     <tr><td>onmousedown</td><td>鼠标按下触发</td></tr>
 </tbody></table>
-
 <h2 id="title04">4. 操作元素</h2>
-
 <p>JavaScript的DOM操作可以改变网页内容、结构和样式，我们可以利用DOM操作元素来改变元素里面的内容、属性等。注意以下都是属性</p>
 <h3>4.1 改变元素内容</h3>
-
-<p>语法：<br></p><figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">element.innerText</span><br></pre></td></tr></tbody></table></figure><br>从起始位置到终止位置的内容，但它去除html标签，同时空格和换行也会去掉<p></p>
-<p>语法：<br></p><figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">element.innerHTML <span class="comment">//常用，标准语法</span></span><br></pre></td></tr></tbody></table></figure><br>起始位置到终止位置的全部内容，包括html标签，同时保留空格和换行<p></p>
-<p>示例代码如下：<br></p><figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* CSS */</span></span><br><span class="line">&lt;style&gt;</span><br><span class="line">    <span class="selector-class">.exampleOf4-1</span> &gt; <span class="selector-tag">div</span>, <span class="selector-class">.exampleOf4-1</span> &gt; <span class="selector-tag">p</span> {</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">        <span class="attribute">line-height</span>: <span class="number">30px</span>;</span><br><span class="line">        <span class="attribute">margin-top</span>: <span class="number">10px</span>;</span><br><span class="line">        <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">        <span class="attribute">background-color</span>: pink</span><br><span class="line">    }</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></tbody></table></figure><br><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- HTML --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"exampleOf4-1"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"btnOf4-1"</span>&gt;</span>显示当前系统事件<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"divOf4-1"</span>&gt;</span>某个时间<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"pOf4-1"</span>&gt;</span>123<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">        <span class="function"><span class="keyword">function</span> <span class="title">getDate</span>(<span class="params"></span>) </span>{</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> date=<span class="keyword">new</span> <span class="built_in">Date</span>();</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> year=date.getFullYear();</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> month=date.getMonth()+<span class="number">1</span>;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> dates=date.getDate();</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> arr=[<span class="string">'星期日'</span>, <span class="string">'星期一'</span>, <span class="string">'星期二'</span>, <span class="string">'星期三'</span>, <span class="string">'星期四'</span>, <span class="string">'星期五'</span>, <span class="string">'星期六'</span>];</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> day=date.getDay();</span></span><br><span class="line"><span class="javascript">            <span class="keyword">return</span> <span class="string">'今天是'</span>+year+<span class="string">'年'</span>+month+<span class="string">'月'</span>+dates+<span class="string">'日'</span>+<span class="string">'，'</span>+arr[day];</span></span><br><span class="line"><span class="javascript">        }</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> btn=<span class="built_in">document</span>.querySelector(<span class="string">'.btnOf4-1'</span>);</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> div=<span class="built_in">document</span>.querySelector(<span class="string">'.divOf4-1'</span>);</span></span><br><span class="line"><span class="javascript">        btn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{</span></span><br><span class="line"><span class="javascript">            div.innerText = getDate();</span></span><br><span class="line"><span class="javascript">        }</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> p=<span class="built_in">document</span>.querySelector(<span class="string">'.pOf4-1'</span>);</span></span><br><span class="line"><span class="javascript">        p.innerText=getDate();</span></span><br><span class="line"><span class="javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>语法：</p>
+<pre class=" language-language-js"><code class="language-language-js">element.innerText
+</code></pre>
+<p>从起始位置到终止位置的内容，但它去除html标签，同时空格和换行也会去掉</p>
+<p>语法：</p>
+<pre class=" language-language-js"><code class="language-language-js">element.innerHTML //常用，标准语法
+</code></pre>
+<p>起始位置到终止位置的全部内容，包括html标签，同时保留空格和换行</p>
+<p>示例代码如下：</p>
+<pre class=" language-language-css"><code class="language-language-css">/* CSS */
+<style>
+    .exampleOf4-1 > div, .exampleOf4-1 > p {
+        width: 300px;
+        height: 30px;
+        line-height: 30px;
+        margin-top: 10px;
+        color: #fff;
+        background-color: pink
+    }
+</style>
+</code></pre>
+<pre class=" language-language-html"><code class="language-language-html"><!-- HTML -->
+<body>
+    <div class="exampleOf4-1">
+        <button class="btnOf4-1">显示当前系统事件</button>
+        <div class="divOf4-1">某个时间</div>
+        <p class="pOf4-1">123</p>
+    </div>
+    <script>
+        function getDate() {
+            var date=new Date();
+            var year=date.getFullYear();
+            var month=date.getMonth()+1;
+            var dates=date.getDate();
+            var arr=['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+            var day=date.getDay();
+            return '今天是'+year+'年'+month+'月'+dates+'日'+'，'+arr[day];
+        }
+        var btn=document.querySelector('.btnOf4-1');
+        var div=document.querySelector('.divOf4-1');
+        btn.onclick = function() {
+            div.innerText = getDate();
+        }
+        var p=document.querySelector('.pOf4-1');
+        p.innerText=getDate();
+    </script>
+</body>
+</code></pre>
 <p>显示效果如下：</p>
-<p><style><br>    .exampleOf4-1 &gt; div, .exampleOf4-1 &gt; p {<br>        width: 300px;<br>        height: 30px;<br>        line-height: 30px;<br>        margin-top: 10px;<br>        color: #fff;<br>        background-color: pink<br>    }
-</style></p>
+<style>
+    .exampleOf4-1 > div, .exampleOf4-1 > p {
+        width: 300px;
+        height: 30px;
+        line-height: 30px;
+        margin-top: 10px;
+        color: #fff;
+        background-color: pink
+    }
+</style>
 
     <div class="exampleOf4-1">
         <button class="btnOf4-1">显示当前系统事件</button>
@@ -649,22 +714,47 @@
         p.innerText=getDate();
     </script>
 
-
 <h3>4.2 常用元素的属性操作</h3>
-
 <ol>
 <li>innerText、innterHTML改变元素内容</li>
 <li>src、href</li>
 <li>id、alt、title</li>
 </ol>
-<p>示例代码如下：<br></p><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- HTML --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"exampleOf4-2"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btn1OfExample4-2"</span>&gt;</span>刘德华<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btn2OfExample4-2"</span>&gt;</span>张学友<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"JS学习Part01/01.jpg"</span> <span class="attr">alt</span>=<span class="string">"刘德华"</span> <span class="attr">id</span>=<span class="string">"imgOfExample4-2"</span> <span class="attr">title</span>=<span class="string">"刘德华"</span> <span class="attr">style</span>=<span class="string">"width: 400px;"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">        <span class="comment">//1. 获取元素</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> btn1=<span class="built_in">document</span>.getElementById(<span class="string">'btn1OfExample4-2'</span>);</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> btn2=<span class="built_in">document</span>.getElementById(<span class="string">'btn2OfExample4-2'</span>);</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> img=<span class="built_in">document</span>.getElementById(<span class="string">'imgOfExample4-2'</span>);</span></span><br><span class="line"><span class="javascript">        <span class="comment">//2. 注册事件</span></span></span><br><span class="line"><span class="javascript">        btn1.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{</span></span><br><span class="line"><span class="javascript">            img.src=<span class="string">'JS学习Part01/01.jpg'</span>;</span></span><br><span class="line"><span class="javascript">            img.alt=<span class="string">'刘德华'</span>;</span></span><br><span class="line"><span class="javascript">            img.title=<span class="string">'刘德华'</span>;</span></span><br><span class="line"><span class="javascript">        }</span></span><br><span class="line"><span class="javascript">        btn2.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{</span></span><br><span class="line"><span class="javascript">            img.src=<span class="string">'JS学习Part01/02.png'</span>;</span></span><br><span class="line"><span class="javascript">            img.alt=<span class="string">'张学友'</span>;</span></span><br><span class="line"><span class="javascript">            img.title=<span class="string">'张学友'</span>;</span></span><br><span class="line"><span class="javascript">        }</span></span><br><span class="line"><span class="javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>示例代码如下：</p>
+<pre class=" language-language-html"><code class="language-language-html"><!-- HTML -->
+<body>
+    <div class="exampleOf4-2">
+        <button id="btn1OfExample4-2">刘德华</button>
+        <button id="btn2OfExample4-2">张学友</button>
+        <br>
+        <img src="JS学习Part01/01.jpg" alt="刘德华" id="imgOfExample4-2" title="刘德华" style="width: 400px;">
+    </div>
+    <script>
+        //1. 获取元素
+        var btn1=document.getElementById('btn1OfExample4-2');
+        var btn2=document.getElementById('btn2OfExample4-2');
+        var img=document.getElementById('imgOfExample4-2');
+        //2. 注册事件
+        btn1.onclick = function() {
+            img.src='JS学习Part01/01.jpg';
+            img.alt='刘德华';
+            img.title='刘德华';
+        }
+        btn2.onclick = function() {
+            img.src='JS学习Part01/02.png';
+            img.alt='张学友';
+            img.title='张学友';
+        }
+    </script>
+</body>
+</code></pre>
 <p>显示效果如下：(本代码在md文件中更改src属性后出错)</p>
 
     <div class="exampleOf4-2">
         <button id="btn1OfExample4-2">刘德华</button>
         <button id="btn2OfExample4-2">张学友</button>
         <br>
-        <img src="/2022/03/16/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/JavaScript/JS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0Part01/01.jpg" alt="刘德华" id="imgOfExample4-2" title="刘德华" style="width: 400px;">
+        <img src="/2022/03/16/qian-duan-xue-xi/javascript/js-xue-xi-bi-ji-part01/01.jpg" alt="刘德华" id="imgOfExample4-2" title="刘德华" style="width: 400px;">
     </div>
     <script>
         //1. 获取元素
@@ -684,11 +774,12 @@
         }
     </script>
 
-
-<p><br><br><strong>案例：分时显示不同图片，显示不同问候语</strong></p>
+<br>
+<strong>案例：分时显示不同图片，显示不同问候语</strong>
 <p><strong>要求：</strong></p>
 <ul>
-<li>根据不同时间，页面显示不同图片，同时显示不同的问候语<ul>
+<li>根据不同时间，页面显示不同图片，同时显示不同的问候语
+<ul>
 <li>如果上午时间打开页面，显示上午好，显示上午的图片</li>
 <li>如果下午时间打开页面，显示下午好，显示下午的图片</li>
 <li>如果晚上时间打开页面，显示晚上好，显示晚上的图片</li>
@@ -948,8 +1039,11 @@
                     <div class="summary block-with-text">
                         
                             CSS学习笔记 Part05
-
-目录1. 定位2. 综合案例3. 网页布局总结4. 元素的显示与隐藏
+目录
+1. 定位
+2. 综合案例
+3. 网页布局总结
+4. 元素的显示与隐藏
                         
                     </div>
                     <div class="publish-info">
@@ -1002,7 +1096,13 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            CSS学习笔记 Part04目录1. 浮动2. 常见网页布局3. 清除浮动4. PS切图5. 学成在线案例
+                            CSS学习笔记 Part04
+目录
+1. 浮动
+2. 常见网页布局
+3. 清除浮动
+4. PS切图
+5. 学成在线案例
                         
                     </div>
                     <div class="publish-info">

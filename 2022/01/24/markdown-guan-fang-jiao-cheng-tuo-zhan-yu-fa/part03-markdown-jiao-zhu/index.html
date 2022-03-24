@@ -497,28 +497,38 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+                <h2 id="前言-15">前言</h2>
+<blockquote>
 <p>本文转自<a target="_blank" rel="noopener" href="https://markdown.com.cn/">Markdown官方教程</a>, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除</p>
 </blockquote>
-<h1 id="Markdown-脚注"><a href="#Markdown-脚注" class="headerlink" title="Markdown 脚注"></a>Markdown 脚注</h1><p>脚注使您可以添加注释和参考，而不会使文档正文混乱。当您创建脚注时，带有脚注的上标数字会出现在您添加脚注参考的位置。读者可以单击链接以跳至页面底部的脚注内容。</p>
-<p>要创建脚注参考，请在方括号（<sup><a href="#fn_1" id="reffn_1">1</a></sup>）内添加插入符号和标识符。标识符可以是数字或单词，但不能包含空格或制表符。标识符仅将脚注参考与脚注本身相关联-在输出中，脚注按顺序编号。</p>
-<p>在括号内使用另一个插入符号和数字添加脚注，并用冒号和文本（<sup><a href="#fn_1" id="reffn_1">1</a></sup>: My footnote.）。您不必在文档末尾添加脚注。您可以将它们放在除列表，块引号和表之类的其他元素之外的任何位置。</p>
+<h1>Markdown 脚注</h1>
+<p>脚注使您可以添加注释和参考，而不会使文档正文混乱。当您创建脚注时，带有脚注的上标数字会出现在您添加脚注参考的位置。读者可以单击链接以跳至页面底部的脚注内容。</p>
+<p>要创建脚注参考，请在方括号（[^1]）内添加插入符号和标识符。标识符可以是数字或单词，但不能包含空格或制表符。标识符仅将脚注参考与脚注本身相关联-在输出中，脚注按顺序编号。</p>
+<p>在括号内使用另一个插入符号和数字添加脚注，并用冒号和文本（[^1]: My footnote.）。您不必在文档末尾添加脚注。您可以将它们放在除列表，块引号和表之类的其他元素之外的任何位置。</p>
 <span id="more"></span>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Here's a simple footnote,[^1] and here's a longer one.[^bignote]</span><br><span class="line"></span><br><span class="line">[^1]: This is the first footnote.</span><br><span class="line"></span><br><span class="line">[^bignote]: Here's one with multiple paragraphs and code.</span><br><span class="line"></span><br><span class="line">    Indent paragraphs to include them in the footnote.</span><br><span class="line"></span><br><span class="line">    `{ my code }`</span><br><span class="line"></span><br><span class="line">    Add as many paragraphs as you like.</span><br></pre></td></tr></tbody></table></figure>
+<pre><code>Here's a simple footnote,[^1] and here's a longer one.[^bignote]
+
+[^1]: This is the first footnote.
+
+[^bignote]: Here's one with multiple paragraphs and code.
+
+    Indent paragraphs to include them in the footnote.
+
+    `{ my code }`
+
+    Add as many paragraphs as you like.
+</code></pre>
 <p>呈现的输出如下所示：</p>
-<p>Here’s a simple footnote,<sup><a href="#fn_1" id="reffn_1">1</a></sup> and here’s a longer one.<sup><a href="#fn_bignote" id="reffn_bignote">bignote</a></sup></p>
-<blockquote id="fn_1">
-<sup>1</sup>. This is the first footnote.<a href="#reffn_1" title="Jump back to footnote [1] in the text."> ↩</a>
-</blockquote>
-<blockquote id="fn_bignote">
-<sup>bignote</sup>. Here’s one with multiple paragraphs and code.<a href="#reffn_bignote" title="Jump back to footnote [bignote] in the text."> ↩</a>
-</blockquote>
+<p>Here’s a simple footnote,[^1] and here’s a longer one.[^bignote]</p>
+<p>[^1]: This is the first footnote.</p>
+<p>[^bignote]: Here’s one with multiple paragraphs and code.</p>
 <pre><code>Indent paragraphs to include them in the footnote.
 
 `{ my code }`
 
 Add as many paragraphs as you like.
 </code></pre>
+
                 
             </div>
             <hr/>
@@ -770,9 +780,11 @@ Add as many paragraphs as you like.
                     <div class="summary block-with-text">
                         
                             前言
+
 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除
 
-Markdown 标题编号许多Markdown处理器支持标题的自定义ID - 一些Markdown处理器会自动
+Markdown 标题编号
+许多Markdown处理器支持标题的自定义ID - 一些Markdown处理器会
                         
                     </div>
                     <div class="publish-info">
@@ -826,9 +838,11 @@ Markdown 标题编号许多Markdown处理器支持标题的自定义ID - 一些M
                     <div class="summary block-with-text">
                         
                             前言
+
 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除
 
-Markdown 围栏代码块Markdown基本语法允许您通过将行缩进四个空格或一个制表符来创建代码块。如果发
+Markdown 围栏代码块
+Markdown基本语法允许您通过将行缩进四个空格或一个制表符来创建代码块。如
                         
                     </div>
                     <div class="publish-info">
