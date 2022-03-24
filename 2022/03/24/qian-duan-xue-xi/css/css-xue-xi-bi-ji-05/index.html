@@ -506,7 +506,8 @@
 <span id="more"></span>
 <style>
     .red {
-        color: red;
+        /* color: red; */
+        font-weight: 700;
     }
 </style>
 <h2 id="title01">1. 定位</h2>
@@ -730,15 +731,7 @@
 <p>注意：如果一个盒子既有left属性也有right属性，默认执行left，同理，对top默认。</p>
 <h3>2.2 案例代码</h3>
 <p>案例代码如下：</p>
-<pre class=" language-language-html"><code class="language-language-html"><!DOCTYPE html>
-<html lang="zh-cn">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>淘宝轮播图做法</title>
-</head>
-<style>
+<pre class=" language-language-html"><code class="language-language-html"><style>
     * {
         margin: 0;
         padding: 0;
@@ -819,7 +812,6 @@
         </ul>
     </div>
 </body>
-</html>
 </code></pre>
 <h2 id="title03">3. 网页布局总结</h2>
 <p>通过盒子模型，清楚知道大部分html标签是盒子</p>
@@ -885,14 +877,7 @@
 <p>但是如果有定位的盒子，请慎用overflow: hidden;因为它会隐藏多余的部分</p>
 <h3>案例：土豆网鼠标经过显示遮罩</h3>
 <p>案例代码如下：</p>
-<pre class=" language-language-html"><code class="language-language-html"><!DOCTYPE html>
-<html lang="zh-cn">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>仿土豆网显示隐藏遮罩案例</title>
-</head>
+<pre class=" language-language-html"><code class="language-language-html">
 <style>
     * {
         margin: 0;
@@ -929,7 +914,6 @@
         <img src="images/02.jfif" alt="">
     </div>
 </body>
-</html>
 </code></pre>
 
                 
@@ -1243,11 +1227,6 @@
                     <div class="summary block-with-text">
                         
                             JavaScript学习笔记 Part01
-
-    .red {
-        color: red;
-    }
-
 目录
 1. DOM简介
 2. 获取元素
