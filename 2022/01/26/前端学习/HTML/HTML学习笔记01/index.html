@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/128x128.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/16x16.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/32x32.ico">
+  <link rel="mask-icon" href="/images/logo2.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"kevinyulei.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="HTML学习笔记 Part01-HTML标签（上）目录  HTML语法规范 HTML基本结构标签 网页开发工具 HTML常用标签 HTML中的注释和特殊字符">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML学习笔记Part01">
+<meta property="og:url" content="https://kevinyulei.github.io/2022/01/26/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/HTML/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B001/index.html">
+<meta property="og:site_name" content="雨泪丶的博客">
+<meta property="og:description" content="HTML学习笔记 Part01-HTML标签（上）目录  HTML语法规范 HTML基本结构标签 网页开发工具 HTML常用标签 HTML中的注释和特殊字符">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://kevinyulei.github.io/2022/01/26/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/HTML/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B001/baidu.gif">
+<meta property="og:image" content="https://kevinyulei.github.io/2022/01/26/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/HTML/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B001/baidu.gif">
+<meta property="article:published_time" content="2022-01-26T07:30:00.000Z">
+<meta property="article:modified_time" content="2022-03-24T03:52:34.839Z">
+<meta property="article:author" content="雨泪丶">
+<meta property="article:tag" content="HTML">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kevinyulei.github.io/2022/01/26/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/HTML/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B001/baidu.gif">
+
+<link rel="canonical" href="https://kevinyulei.github.io/2022/01/26/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/HTML/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B001/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>HTML学习笔记Part01 | 雨泪丶的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end -->
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">雨泪丶的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">自我成长的记录</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/2022/01/20/About-me/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">7</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">11</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">32</span></a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://kevinyulei.github.io/2022/01/26/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/HTML/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B001/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/01.jpg">
+      <meta itemprop="name" content="雨泪丶">
+      <meta itemprop="description" content="一位普通建筑生的心血来潮">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="雨泪丶的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          HTML学习笔记Part01
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-01-26 15:30:00" itemprop="dateCreated datePublished" datetime="2022-01-26T15:30:00+08:00">2022-01-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-03-24 11:52:34" itemprop="dateModified" datetime="2022-03-24T11:52:34+08:00">2022-03-24</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Web/HTML/" itemprop="url" rel="index"><span itemprop="name">HTML</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="HTML学习笔记-Part01-HTML标签（上）"><a href="#HTML学习笔记-Part01-HTML标签（上）" class="headerlink" title="HTML学习笔记 Part01-HTML标签（上）"></a>HTML学习笔记 Part01-HTML标签（上）</h1><p><strong>目录</strong></p>
+<ol>
+<li>HTML语法规范</li>
+<li>HTML基本结构标签</li>
+<li>网页开发工具</li>
+<li>HTML常用标签</li>
+<li>HTML中的注释和特殊字符</li>
+</ol>
+<span id="more"></span>
+<h2 id="1-HTML语法规范"><a href="#1-HTML语法规范" class="headerlink" title="1. HTML语法规范"></a>1. HTML语法规范</h2><p>略</p>
+<h2 id="2-HTML基本结构标签"><a href="#2-HTML基本结构标签" class="headerlink" title="2. HTML基本结构标签"></a>2. HTML基本结构标签</h2><p>略</p>
+<h2 id="3-网页开发工具"><a href="#3-网页开发工具" class="headerlink" title="3. 网页开发工具"></a>3. 网页开发工具</h2><h3 id="VSCode工具生成骨架标签新增代码"><a href="#VSCode工具生成骨架标签新增代码" class="headerlink" title="VSCode工具生成骨架标签新增代码"></a>VSCode工具生成骨架标签新增代码</h3><ol>
+<li>&lt;!DOCTYPE&gt;标签</li>
+<li>lang语言</li>
+<li>charset字符集<h3 id="3-1-文档类型声明标签"><a href="#3-1-文档类型声明标签" class="headerlink" title="3.1 文档类型声明标签"></a>3.1 文档类型声明标签</h3>&lt;!DOCTYPE&gt;文档声明类型，作用就是告诉浏览器使用哪种HTML版本来显示网页</li>
+</ol>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<p><strong>这句代码的意思是：当前页面采取的是HTML5版本来显示网页</strong></p>
+<p><strong>注意：</strong></p>
+<ol>
+<li>&lt;!DOCTYPE&gt;声明位于文档中的最前面的位置，处于&lt; html &gt;标签之前</li>
+<li>&lt;!DOCTYPE&gt;不是一个HTML标签，它就是文档类型声明标签</li>
+</ol>
+<h3 id="3-2-lang语言种类"><a href="#3-2-lang语言种类" class="headerlink" title="3.2 lang语言种类"></a>3.2 lang语言种类</h3><p><code>&lt;html lang="zh-CN"&gt;</code></p>
+<ol>
+<li>en定义语言为英语</li>
+<li>zh-CN定义语言为中文</li>
+</ol>
+<p>简单来说，定义为en就是英文网页，定义为zh-CN就是中文网页</p>
+<p>其实对于文档显示来说，定义成en的文档也可以显示中文，定义成zh-CN的文档也可以显示英文</p>
+<p>这个属性对于浏览器和搜索引擎（百度、谷歌等）还是有作用的</p>
+<h3 id="3-3-字符集"><a href="#3-3-字符集" class="headerlink" title="3.3 字符集"></a>3.3 字符集</h3><p>字符集（Character set）是多个字符的集合，以便于计算机能够识别和存储各种文字。</p>
+<p>在<code>&lt;head&gt;</code>标签内，可以通过<code>&lt;meta&gt;</code>标签的<code>charset</code>属性来规定HTML文档应该使用哪种字符编码。</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<p>charset常用的值有：GB2312（简体中文）、BIG5（繁体中文）、GBK（简繁体中文）和UTF-8，其中UTF-8也被成为万国码，其中包含了全世界所有国家需要用到的字符。</p>
+<p><strong>注意：</strong> 上面语法是必须要写的代码，否则可能引起乱码的情况。一般情况下，统一使用”UTF-8”编码，尽量统一写成标准的”UTF-8”，不要写成”utf8”或”UTF8”。</p>
+<h3 id="3-4-总结"><a href="#3-4-总结" class="headerlink" title="3.4 总结"></a>3.4 总结</h3><ol>
+<li>以上三个代码VSCode自动生成，基本不需要我们重写。</li>
+<li>&lt; !DOCTYPE html &gt; 文档类型声明标签，告诉浏览器这个页面采取html5版本来显示页面。</li>
+<li>&lt; html lang=”en” &gt; 告诉浏览器或者搜索引擎这是一个英文网站，本页面采取英文来显示。</li>
+<li>&lt; meta charset=”UTF-8” &gt; 必须写。采取UTF-8来保存文字，如果不写就会乱码，具体原理后面分析。</li>
+</ol>
+<h2 id="4-HTML常用标签"><a href="#4-HTML常用标签" class="headerlink" title="4. HTML常用标签"></a>4. HTML常用标签</h2><h3 id="4-1-标签语义"><a href="#4-1-标签语义" class="headerlink" title="4.1 标签语义"></a>4.1 标签语义</h3><p>学习标签是有技巧的，重点是记住每个标签的语义。简单理解就是指标签的含义，即这个标签是用来干嘛的。</p>
+<p><strong>根据标签的语义，在合适的地方给一个最为合理的标签，可以让页面结构更清晰。</strong></p>
+<ul>
+<li>标题标签</li>
+<li>段落标签</li>
+<li>……</li>
+</ul>
+<h3 id="4-2-标题标签-（重要）"><a href="#4-2-标题标签-（重要）" class="headerlink" title="4.2 标题标签\ - \ （重要）"></a>4.2 标题标签\<h1\> - \<h6\> （重要）</h6\></h1\></h3><p>为了使网页更具有语义化，我们经常会在页面中用到标题标签。HTML提供了6个等级的网页标题，即\<h1\> - \<h6\></h6\></h1\></p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>我是一级标题<span class="tag">&lt;<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<p>单词head的缩写，意为头部、标题。<br><strong>标签语义：</strong> 作为标题使用，并且依据重要性递减。</p>
+<p><strong>特点：</strong> </p>
+<ol>
+<li>加了标题的文字会变的加粗，字号也会依次变大。</li>
+<li>一个标题独占一行</li>
+</ol>
+<h3 id="4-3-段落和换行标签（重要）"><a href="#4-3-段落和换行标签（重要）" class="headerlink" title="4.3 段落和换行标签（重要）"></a>4.3 段落和换行标签（重要）</h3><p>在网页中，要把文字有条理地显示出来，就需要将这些文字分段显示。在HTML标签中，\<p\>标签用于定义段落，它可以将整个网页分为若干个段落。</p\></p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>我是一个段落标签<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<p>单词paragraph的缩写，意为段落。<br>标签语义：可以把HTML文档分割为若干段落。</p>
+<p><strong>特点：</strong></p>
+<ol>
+<li>文本在一个段落中会根据浏览器窗口的大小自动换行。</li>
+<li>段落和段落之间保有空隙。</li>
+</ol>
+<p>在HTML中，一个段落中的文字会从左到右依次排列，知道浏览器窗口的右端，然后才自动换行。如果希望某段文本强制换行显示，就需要使用换行标签<code>&lt;br /&gt;</code></p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<p>单词break的缩写，意为打断，换行。<br><strong>标签语义：</strong> 强制换行。</p>
+<p><strong>特点：</strong></p>
+<ol>
+<li>&lt; br /&gt; 是个单标签。</li>
+<li>&lt; br /&gt; 标签只是简单地开始新的一行，跟段落不一样，段落之间会插入一些垂直的间距。</li>
+</ol>
+<h3 id="4-4-文本格式化标签"><a href="#4-4-文本格式化标签" class="headerlink" title="4.4 文本格式化标签"></a>4.4 文本格式化标签</h3><p>在网页中， 有时需要为文字设置<strong>粗体</strong>，<em>斜体</em>或<u>下划线</u>等效果，这是就需要用到HTML中的文本格式化标签，使文字以特殊的方式显示。</p>
+<p><strong>标签语义：</strong> 突出重要性，比普通文字重要</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>语义</th>
+<th>标签</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>加粗</td>
+<td><code>&lt;strong&gt;&lt;/strong&gt;</code>或者<code>&lt;b&gt;&lt;/b&gt;</code></td>
+<td>更推荐使用<code>&lt;strong&gt;</code>标签加粗，语义更强烈</td>
+</tr>
+<tr>
+<td>倾斜</td>
+<td><code>&lt;em&gt;&lt;/em&gt;</code>或者<code>&lt;i&gt;&lt;/i&gt;</code></td>
+<td>更推荐使用<code>&lt;em&gt;</code>标签加粗，语义更强烈</td>
+</tr>
+<tr>
+<td>删除线</td>
+<td><code>&lt;del&gt;&lt;/del&gt;</code>或者<code>&lt;s&gt;&lt;/s&gt;</code></td>
+<td>更推荐使用<code>&lt;del&gt;</code>标签加粗，语义更强烈</td>
+</tr>
+<tr>
+<td>下划线</td>
+<td><code>&lt;ins&gt;&lt;/ins&gt;</code>或者<code>&lt;u&gt;&lt;/u&gt;</code></td>
+<td>更推荐使用<code>&lt;ins&gt;</code>标签加粗，语义更强烈</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>重点记住 <strong>加粗</strong> 和 <em>倾斜</em> 。</p>
+<h3 id="4-5-和-标签"><a href="#4-5-和-标签" class="headerlink" title="4.5 \和\标签"></a>4.5 \<div\>和\<span\>标签</span\></div\></h3><p>\<div\>和\<span\>是没有语义的，它们就是一个盒子，用来装内容的。</span\></div\></p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span> 这是头部 <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span> 今日价格 <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<p>div是division的缩写，表示分割、分区。<br>span意为跨度、跨距。</p>
+<p><strong>特点：</strong></p>
+<ol>
+<li>&lt; div &gt; 标签用来布局，但是现在一行只能放一个&lt; div &gt;。=&gt;大盒子</li>
+<li>&lt; span &gt; 标签用来布局，一行上可以多个&lt; span &gt;。=&gt;小盒子</li>
+</ol>
+<h3 id="4-6-图像标签和路径（重点）"><a href="#4-6-图像标签和路径（重点）" class="headerlink" title="4.6 图像标签和路径（重点）"></a>4.6 图像标签和路径（重点）</h3><h4 id="4-6-1-图像标签"><a href="#4-6-1-图像标签" class="headerlink" title="4.6.1 图像标签"></a>4.6.1 图像标签</h4><p>在HTML标签中，\<img\>标签用于定义HTML页面中的图像。</img\></p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"图像URL"</span> /&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<p>单词image的缩写，意为图像。<br>src是\<img>标签的<strong>必须属性</strong> ，它用于指定图像文件的路径和文件名。</p>
+<p>图像标签的属性：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>src</td>
+<td>图片路径</td>
+<td>必须属性</td>
+</tr>
+<tr>
+<td>alt</td>
+<td>文本</td>
+<td>替换文本。图像不能显示时展示的文字</td>
+</tr>
+<tr>
+<td>title</td>
+<td>文本</td>
+<td>提示文本。鼠标放到图像上时，显示的文字</td>
+</tr>
+<tr>
+<td>width</td>
+<td>像素</td>
+<td>设置图像的宽度</td>
+</tr>
+<tr>
+<td>height</td>
+<td>像素</td>
+<td>设置图像的高度</td>
+</tr>
+<tr>
+<td>border</td>
+<td>像素</td>
+<td>设置图像的边框粗细</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>图像标签属性注意点：</p>
+<ol>
+<li>图像标签可以拥有多个属性，必须写在标签名的后面。</li>
+<li>属性之间不分先后顺序，标签名与属性、属性与属性之间均以空格分开。</li>
+<li>属性均采取键值对的格式，即<code>key="value"</code>的格式，属性=”属性值”。</li>
+</ol>
+<p><strong>重要掌握点：</strong></p>
+<ul>
+<li>[ ] 请说出 图像标签中 哪个属性是必须要写的？</li>
+<li>[ ] 请说出 图像标签中 alt 和 title 属性的区别？</li>
+</ul>
+<h4 id="4-6-2-路径的前期铺垫知识"><a href="#4-6-2-路径的前期铺垫知识" class="headerlink" title="4.6.2 路径的前期铺垫知识"></a>4.6.2 路径的前期铺垫知识</h4><ol>
+<li>目录文件夹和根目录<ul>
+<li>实际工作中，我们的文件不能随便乱放，否则用起来很难快速地找到他们，因此我们需要一个文件夹来管理他们。</li>
+<li><strong>目录文件夹：</strong> 就是普通文件夹，里面只不过存放了我们做页面所需要的相关素材，比如html文件，图片等。</li>
+<li><strong>根目录：</strong> 打开目录文件夹的第一次就是根目录。</li>
+</ul>
+</li>
+<li>VSCode打开目录文件夹</li>
+</ol>
+<h4 id="4-6-3-路径"><a href="#4-6-3-路径" class="headerlink" title="4.6.3 路径"></a>4.6.3 路径</h4><p>页面中的图片非常多，通常我们会新建一个文件夹来存放这些图片文件（images），这是再查找图像，就需要采用”路径”的方式来指定图像文件的位置。</p>
+<p>路径可以分为：</p>
+<ol>
+<li>相对路径</li>
+<li>绝对路径</li>
+</ol>
+<p><strong>相对路径：</strong> 以引用文件所在位置为参考基础，而建立出的目录路径。</p>
+<p>这里简单来说，图片相对于HTML页面的位置。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>相对路径分类</th>
+<th>符号</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>同一级路径</td>
+<td></td>
+<td>图像文件位于HTML文件同一级，如 \<img scr="baidu.gif"></td>
+</tr>
+<tr>
+<td>下一级路径</td>
+<td>/</td>
+<td>图像文件位于HTML文件下一级，如 \<img src="/2022/01/26/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/HTML/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B001/baidu.gif"></td>
+</tr>
+<tr>
+<td>上一级路径</td>
+<td>/</td>
+<td>图像文件位于HTML文件上一级，如 \<img src="/2022/01/26/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/HTML/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B001/baidu.gif"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>相对路径是代码所在的这个文件出发，去寻找目标文件的，而我们这里所说的上一级、下一级、同一级就是图片相对于HTML页面的位置。</p>
+<p><strong>绝对路径：</strong> 是指目录下的绝对位置，直接到达目标位置，通常是从盘符开始的路径。</p>
+<p>例如：”D:\web\img\logo.gif” 或完整的网络地址: “<a target="_blank" rel="noopener" href="http://www.itcast.cn/2018czgw/images/logo2.png&quot;。">http://www.itcast.cn/2018czgw/images/logo2.png"。</a></p>
+<h3 id="4-7-超链接标签（重点）"><a href="#4-7-超链接标签（重点）" class="headerlink" title="4.7 超链接标签（重点）"></a>4.7 超链接标签（重点）</h3><p>在HTML标签中，\<a>标签用于定义超链接，作用是从一个页面链接到另一个页面。</a></p>
+<h4 id="4-7-1-链接的语法格式"><a href="#4-7-1-链接的语法格式" class="headerlink" title="4.7.1 链接的语法格式"></a>4.7.1 链接的语法格式</h4><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"跳转目标"</span> <span class="attr">target</span>=<span class="string">"目标窗口的弹出方式"</span>&gt;</span> 文本或图片 <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<p>单词anchor的缩写，意为：锚。</p>
+<p>两个属性的作用如下：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>href</td>
+<td>用于指定链接目标的url地址，<strong>（必须属性）</strong> 当为标签应用href属性是，它就具有了超链接的功能</td>
+</tr>
+<tr>
+<td>target</td>
+<td>用于指定链接页面的打开方式，其中_self为默认值，_blank为在新窗口中打开方式</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="4-7-2-链接分类"><a href="#4-7-2-链接分类" class="headerlink" title="4.7.2 链接分类"></a>4.7.2 链接分类</h4><ol>
+<li>外部链接：常以<code>http://</code>开头。例如<code>&lt;a href="http://www.baidu.com"&gt;百度&lt;/a&gt;</code></li>
+<li>内部链接：网站内部页面之间的相互链接。直接链接内部页面名称即可，例如<code>&lt;a href="index.html"&gt;首页&lt;/a&gt;</code></li>
+<li>空链接：如果当时没有确定链接目标时，可以暂时引用空链接。<code>&lt;a href="#"&gt;首页&lt;/a&gt;</code></li>
+<li>下载链接：如果href里面地址是一个文件或者压缩包，会下载这个文件。</li>
+<li>网页元素链接：在网页中的各种网页元素中，如文本、图像、表格、音频、视频等都可以添加超链接。</li>
+<li>锚点链接：点击链接，可以快速定位到页面中的某个位置。<ul>
+<li>在链接文本的href属性中，设置属性值为 <strong>#名字</strong> 的形式，如：<code>&lt;a href="#two"&gt;第2集&lt;/a&gt;</code></li>
+<li>找到目标位置标签，里面添加一个 <strong>id属性=刚才的名字是</strong> ，如：<code>&lt;h3 id=two&gt;第2集介绍&lt;/h3&gt;</code></li>
+</ul>
+</li>
+</ol>
+<h2 id="5-HTML中的注释和特殊字符"><a href="#5-HTML中的注释和特殊字符" class="headerlink" title="5. HTML中的注释和特殊字符"></a>5. HTML中的注释和特殊字符</h2><h3 id="5-1-注释"><a href="#5-1-注释" class="headerlink" title="5.1 注释"></a>5.1 注释</h3><p>如果需要在HTML文档中添加一些便于阅读和理解但又不需要显示在页面中的注释文字，就需要使用注释标签。</p>
+<p>HTML中的注释以<code>&lt;!--</code>开头，以<code>--&gt;</code>结束。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 注释语句 --&gt;   快捷键：Ctrl+ /</span><br></pre></td></tr></tbody></table></figure>
+<p>注释标签里面的内容是给程序员看的，这个代码是不执行不显示到页面中的。<br>添加注释是为了更好地解释代码的功能，便于相关开发人员理解和阅读代码，程序是不会执行注释内容的。</p>
+<h3 id="5-2-特殊字符"><a href="#5-2-特殊字符" class="headerlink" title="5.2 特殊字符"></a>5.2 特殊字符</h3><p>在HTML页面中，一些特殊的符号很难或者不方便直接使用，此时我们就可以使用下面的字符来替代。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>特殊字符</th>
+<th>描述</th>
+<th>字符的代码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&nbsp;</td>
+<td>空格符</td>
+<td>\&nbsp;</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>小于号</td>
+<td>\&lt;</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>大于号</td>
+<td>\&gt;</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>和号</td>
+<td>\&amp;</td>
+</tr>
+<tr>
+<td>¥</td>
+<td>人民币</td>
+<td>\¥</td>
+</tr>
+<tr>
+<td>©</td>
+<td>版权</td>
+<td>\©</td>
+</tr>
+<tr>
+<td>®</td>
+<td>注册商标</td>
+<td>\®</td>
+</tr>
+<tr>
+<td>°</td>
+<td>摄氏度</td>
+<td>\°</td>
+</tr>
+<tr>
+<td>±</td>
+<td>正负号</td>
+<td>\±</td>
+</tr>
+<tr>
+<td>×</td>
+<td>乘号</td>
+<td>\×</td>
+</tr>
+<tr>
+<td>÷</td>
+<td>除号</td>
+<td>\÷</td>
+</tr>
+<tr>
+<td>²</td>
+<td>平方2/上标2</td>
+<td>\²</td>
+</tr>
+<tr>
+<td>³</td>
+<td>立方3/上标3</td>
+<td>\³</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>重点记住：</strong> 空格、大于号、小于号这三个，其余使用较少，如果需要则回头查询即可。</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>雨泪丶
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://kevinyulei.github.io/2022/01/26/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/HTML/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B001/" title="HTML学习笔记Part01">https://kevinyulei.github.io/2022/01/26/前端学习/HTML/HTML学习笔记01/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/HTML/" rel="tag"># HTML</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/01/25/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B-%E6%8B%93%E5%B1%95%E8%AF%AD%E6%B3%95/Part09-Markdown%E8%87%AA%E5%8A%A8%E7%BD%91%E5%9D%80%E9%93%BE%E6%8E%A5/" rel="prev" title="Part09-Markdown自动网址链接">
+      <i class="fa fa-chevron-left"></i> Part09-Markdown自动网址链接
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/01/27/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/HTML/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B002/" rel="next" title="HTML学习笔记Part02">
+      HTML学习笔记Part02 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-Part01-HTML%E6%A0%87%E7%AD%BE%EF%BC%88%E4%B8%8A%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">HTML学习笔记 Part01-HTML标签（上）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-HTML%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83"><span class="nav-number">1.1.</span> <span class="nav-text">1. HTML语法规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-HTML%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84%E6%A0%87%E7%AD%BE"><span class="nav-number">1.2.</span> <span class="nav-text">2. HTML基本结构标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7"><span class="nav-number">1.3.</span> <span class="nav-text">3. 网页开发工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#VSCode%E5%B7%A5%E5%85%B7%E7%94%9F%E6%88%90%E9%AA%A8%E6%9E%B6%E6%A0%87%E7%AD%BE%E6%96%B0%E5%A2%9E%E4%BB%A3%E7%A0%81"><span class="nav-number">1.3.1.</span> <span class="nav-text">VSCode工具生成骨架标签新增代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E6%96%87%E6%A1%A3%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E%E6%A0%87%E7%AD%BE"><span class="nav-number">1.3.2.</span> <span class="nav-text">3.1 文档类型声明标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-lang%E8%AF%AD%E8%A8%80%E7%A7%8D%E7%B1%BB"><span class="nav-number">1.3.3.</span> <span class="nav-text">3.2 lang语言种类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-%E5%AD%97%E7%AC%A6%E9%9B%86"><span class="nav-number">1.3.4.</span> <span class="nav-text">3.3 字符集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-%E6%80%BB%E7%BB%93"><span class="nav-number">1.3.5.</span> <span class="nav-text">3.4 总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-HTML%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE"><span class="nav-number">1.4.</span> <span class="nav-text">4. HTML常用标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-%E6%A0%87%E7%AD%BE%E8%AF%AD%E4%B9%89"><span class="nav-number">1.4.1.</span> <span class="nav-text">4.1 标签语义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-%E6%A0%87%E9%A2%98%E6%A0%87%E7%AD%BE-%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89"><span class="nav-number">1.4.2.</span> <span class="nav-text">4.2 标题标签\ - \ （重要）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-%E6%AE%B5%E8%90%BD%E5%92%8C%E6%8D%A2%E8%A1%8C%E6%A0%87%E7%AD%BE%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89"><span class="nav-number">1.4.3.</span> <span class="nav-text">4.3 段落和换行标签（重要）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-%E6%96%87%E6%9C%AC%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A0%87%E7%AD%BE"><span class="nav-number">1.4.4.</span> <span class="nav-text">4.4 文本格式化标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-%E5%92%8C-%E6%A0%87%E7%AD%BE"><span class="nav-number">1.4.5.</span> <span class="nav-text">4.5 \和\标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-%E5%9B%BE%E5%83%8F%E6%A0%87%E7%AD%BE%E5%92%8C%E8%B7%AF%E5%BE%84%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89"><span class="nav-number">1.4.6.</span> <span class="nav-text">4.6 图像标签和路径（重点）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-6-1-%E5%9B%BE%E5%83%8F%E6%A0%87%E7%AD%BE"><span class="nav-number">1.4.6.1.</span> <span class="nav-text">4.6.1 图像标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-6-2-%E8%B7%AF%E5%BE%84%E7%9A%84%E5%89%8D%E6%9C%9F%E9%93%BA%E5%9E%AB%E7%9F%A5%E8%AF%86"><span class="nav-number">1.4.6.2.</span> <span class="nav-text">4.6.2 路径的前期铺垫知识</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-6-3-%E8%B7%AF%E5%BE%84"><span class="nav-number">1.4.6.3.</span> <span class="nav-text">4.6.3 路径</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-7-%E8%B6%85%E9%93%BE%E6%8E%A5%E6%A0%87%E7%AD%BE%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89"><span class="nav-number">1.4.7.</span> <span class="nav-text">4.7 超链接标签（重点）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-7-1-%E9%93%BE%E6%8E%A5%E7%9A%84%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.4.7.1.</span> <span class="nav-text">4.7.1 链接的语法格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-7-2-%E9%93%BE%E6%8E%A5%E5%88%86%E7%B1%BB"><span class="nav-number">1.4.7.2.</span> <span class="nav-text">4.7.2 链接分类</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-HTML%E4%B8%AD%E7%9A%84%E6%B3%A8%E9%87%8A%E5%92%8C%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"><span class="nav-number">1.5.</span> <span class="nav-text">5. HTML中的注释和特殊字符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-%E6%B3%A8%E9%87%8A"><span class="nav-number">1.5.1.</span> <span class="nav-text">5.1 注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"><span class="nav-number">1.5.2.</span> <span class="nav-text">5.2 特殊字符</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="雨泪丶"
+      src="/images/01.jpg">
+  <p class="site-author-name" itemprop="name">雨泪丶</p>
+  <div class="site-description" itemprop="description">一位普通建筑生的心血来潮</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">32</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:xtw79020207@163.com" title="E-Mail → mailto:xtw79020207@163.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://message/?uin=2818897318&Site=&Menu=yes" title="qq → tencent:&#x2F;&#x2F;message&#x2F;?uin&#x3D;2818897318&amp;Site&#x3D;&amp;Menu&#x3D;yes" rel="noopener" target="_blank"><i class="fab fa-qq fa-fw"></i>qq</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/15377986563" title="VX → 15377986563"><i class="fab fa-wechat fa-fw"></i>VX</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/6577873" title="Bili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;6577873" rel="noopener" target="_blank"><i class="fab fa-television fa-fw"></i>Bili</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">雨泪丶</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
