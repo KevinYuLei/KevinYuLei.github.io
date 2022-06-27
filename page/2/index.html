@@ -1,1417 +1,462 @@
-<!DOCTYPE HTML>
-<html lang="zh-CN">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>雨泪丶 - 雨泪丶的学习记录</title><meta name="keywords" content="建筑 学习记录"><meta name="author" content="雨泪丶"><meta name="copyright" content="雨泪丶"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一位普通建筑生的心血来潮">
+<meta property="og:type" content="website">
+<meta property="og:title" content="雨泪丶">
+<meta property="og:url" content="https://kevinyulei.github.io/page/2/index.html">
+<meta property="og:site_name" content="雨泪丶">
+<meta property="og:description" content="一位普通建筑生的心血来潮">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:author" content="雨泪丶">
+<meta property="article:tag" content="建筑 学习记录">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://kevinyulei.github.io/page/2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '雨泪丶',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-06-27 14:30:06'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-<head>
-    <meta charset="utf-8">
-    <meta name="keywords" content="建筑 学习记录">
-    <meta name="description" content="一位普通建筑生的心血来潮">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="renderer" content="webkit|ie-stand|ie-comp">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
 
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
 
-    <title>雨泪丶</title>
-    <link rel="icon" type="image/png" href="/favicon02.png">
-
-    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
-    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/matery.css">
-    <link rel="stylesheet" type="text/css" href="/css/my.css">
-
-    <script src="/libs/jquery/jquery.min.js"></script>
-
-<!-- hexo injector head_end start -->
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
 <!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
-
-
-
-   <style>
-    body{
-       background-image: url(https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg);
-       background-repeat:no-repeat;
-       background-size:cover;
-       background-attachment:fixed;
-    }
-</style>
-
-
-
-<body>
-    <header class="navbar-fixed">
-    <nav id="headNav" class="bg-color nav-transparent">
-        <div id="navContainer" class="nav-wrapper container">
-            <div class="brand-logo">
-                <a href="/" class="waves-effect waves-light">
-                    
-                    <img src="/medias/logo02.png" class="logo-img" alt="LOGO">
-                    
-                    <span class="logo-span">雨泪丶</span>
-                </a>
-            </div>
-            
-
-<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
-<ul class="right nav-menu">
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/" class="waves-effect waves-light">
-      
-      <i class="fas fa-home" style="zoom: 0.6;"></i>
-      
-      <span>首页</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/tags" class="waves-effect waves-light">
-      
-      <i class="fas fa-tags" style="zoom: 0.6;"></i>
-      
-      <span>标签</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/categories" class="waves-effect waves-light">
-      
-      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
-      
-      <span>分类</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/archives" class="waves-effect waves-light">
-      
-      <i class="fas fa-archive" style="zoom: 0.6;"></i>
-      
-      <span>归档</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/about" class="waves-effect waves-light">
-      
-      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
-      
-      <span>关于</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/contact" class="waves-effect waves-light">
-      
-      <i class="fas fa-comments" style="zoom: 0.6;"></i>
-      
-      <span>留言板</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/friends" class="waves-effect waves-light">
-      
-      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
-      
-      <span>友情链接</span>
-    </a>
-    
-  </li>
-  
-  <li>
-    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
-    </a>
-  </li>
-</ul>
-
-
-<div id="mobile-nav" class="side-nav sidenav">
-
-    <div class="mobile-head bg-color">
-        
-        <img src="/medias/logo02.png" class="logo-img circle responsive-img">
-        
-        <div class="logo-name">雨泪丶</div>
-        <div class="logo-desc">
-            
-            一位普通建筑生的心血来潮
-            
-        </div>
-    </div>
-
-    
-
-    <ul class="menu-list mobile-menu-list">
-        
-        <li class="m-nav-item">
-	  
-		<a href="/" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-home"></i>
-			
-			首页
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/tags" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-tags"></i>
-			
-			标签
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/categories" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-bookmark"></i>
-			
-			分类
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/archives" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-archive"></i>
-			
-			归档
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/about" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-user-circle"></i>
-			
-			关于
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/contact" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-comments"></i>
-			
-			留言板
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/friends" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-address-book"></i>
-			
-			友情链接
-		</a>
-          
-        </li>
-        
-        
-        <li><div class="divider"></div></li>
-        <li>
-            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
-                <i class="fab fa-github-square fa-fw"></i>Fork Me
-            </a>
-        </li>
-        
-    </ul>
-</div>
-
-
-        </div>
-
-        
-            <style>
-    .nav-transparent .github-corner {
-        display: none !important;
-    }
-
-    .github-corner {
-        position: absolute;
-        z-index: 10;
-        top: 0;
-        right: 0;
-        border: 0;
-        transform: scale(1.1);
-    }
-
-    .github-corner svg {
-        color: #0f9d58;
-        fill: #fff;
-        height: 64px;
-        width: 64px;
-    }
-
-    .github-corner:hover .octo-arm {
-        animation: a 0.56s ease-in-out;
-    }
-
-    .github-corner .octo-arm {
-        animation: none;
-    }
-
-    @keyframes a {
-        0%,
-        to {
-            transform: rotate(0);
-        }
-        20%,
-        60% {
-            transform: rotate(-25deg);
-        }
-        40%,
-        80% {
-            transform: rotate(10deg);
-        }
-    }
-</style>
-
-<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
-   data-tooltip="Fork Me" data-position="left" data-delay="50">
-    <svg viewBox="0 0 250 250" aria-hidden="true">
-        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
-        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
-              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
-        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
-              fill="currentColor" class="octo-body"></path>
-    </svg>
-</a>
-        
-    </nav>
-
-</header>
-
-    
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                雨泪丶的学习记录
-                
-            </div>
-
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: ['欢迎访问西交大建筑系一位小萌新的个人博客','Never really desperate, only the lost of the soul'],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
-
-
-    </div>
-</div>
-
-
-<main class="content">
-
-    
-
-    
-
-    <!-- 所有文章卡片 -->
-    <article id="articles" class="container articles">
-        <div class="row article-row">
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/01/25/markdown-guan-fang-jiao-cheng-tuo-zhan-yu-fa/part07-markdown-ren-wu-lie-biao-yu-fa/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Part07-Markdown任务列表语法">
-                            
-                            <span class="card-title">Part07-Markdown任务列表语法</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                前言
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">雨泪丶</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">雨泪丶</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/01/25/markdown-guan-fang-jiao-cheng-tuo-zhan-yu-fa/part07-markdown-ren-wu-lie-biao-yu-fa/" title="Part07-Markdown任务列表语法">Part07-Markdown任务列表语法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-25T06:30:00.000Z" title="发表于 2022-01-25 14:30:00">2022-01-25</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/">Markdown官方教程</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/%E6%8B%93%E5%B1%95%E8%AF%AD%E6%B3%95/">拓展语法</a></span></div><div class="content">前言
 
 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除
 
 Markdown 任务列表语法
-任务列表使您可以创建带有复选框的项目列表。在支持任务列表的Markdown应
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-25
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/" class="post-category">
-                                    Markdown官方教程
-                                </a>
-                                
-                                <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/%E6%8B%93%E5%B1%95%E8%AF%AD%E6%B3%95/" class="post-category">
-                                    拓展语法
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
+任务列表使您可以创建带有复选框的项目列表。在支持任务列表的Markdown应用程序中，复选框将显示在内容旁边。要创建任务列表，请在任务列表项之前添加破折号-和方括号[ ]，并在[ ]前面加上空格。要选择一个复选框，请在方括号[x]之间添加 x 。
 
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Markdown/">
-                            <span class="chip bg-color">Markdown</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/01/25/markdown-guan-fang-jiao-cheng-tuo-zhan-yu-fa/part06-markdown-shan-chu-xian/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Part06-Markdown删除线">
-                            
-                            <span class="card-title">Part06-Markdown删除线</span>
-                        </div>
-                    </a>
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
 
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                前言
+呈现的输出如下所示：
+
+[x] Write the press release
+[ ] Update the website
+[ ] Contact the media
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/01/25/markdown-guan-fang-jiao-cheng-tuo-zhan-yu-fa/part06-markdown-shan-chu-xian/" title="Part06-Markdown删除线">Part06-Markdown删除线</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-25T06:22:00.000Z" title="发表于 2022-01-25 14:22:00">2022-01-25</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/">Markdown官方教程</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/%E6%8B%93%E5%B1%95%E8%AF%AD%E6%B3%95/">拓展语法</a></span></div><div class="content">前言
 
 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除
 
 Markdown 删除线
-您可以通过在单词中心放置一条水平线来删除单词。结果看起来像这样。此功能使您可以指示
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-25
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/" class="post-category">
-                                    Markdown官方教程
-                                </a>
-                                
-                                <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/%E6%8B%93%E5%B1%95%E8%AF%AD%E6%B3%95/" class="post-category">
-                                    拓展语法
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
+您可以通过在单词中心放置一条水平线来删除单词。结果看起来像这样。此功能使您可以指示某些单词是一个错误，要从文档中删除。若要删除单词，请在单词前后使用两个波浪号~~。
+~~世界是平坦的。~~ 我们现在知道世界是圆的。
 
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Markdown/">
-                            <span class="chip bg-color">Markdown</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/01/25/markdown-guan-fang-jiao-cheng-tuo-zhan-yu-fa/part05-markdown-ding-yi-lie-biao/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="Part05-Markdown定义列表">
-                            
-                            <span class="card-title">Part05-Markdown定义列表</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                前言
+呈现的输出如下所示：
+世界是平坦的。 我们现在知道世界是圆的。
+</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/01/25/markdown-guan-fang-jiao-cheng-tuo-zhan-yu-fa/part05-markdown-ding-yi-lie-biao/" title="Part05-Markdown定义列表">Part05-Markdown定义列表</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-25T06:08:00.000Z" title="发表于 2022-01-25 14:08:00">2022-01-25</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/">Markdown官方教程</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/%E6%8B%93%E5%B1%95%E8%AF%AD%E6%B3%95/">拓展语法</a></span></div><div class="content">前言
 
 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除
 
 Markdown 定义列表
-一些Markdown处理器允许您创建术语及其对应定义的定义列表。要创建定义列表，
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-25
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/" class="post-category">
-                                    Markdown官方教程
-                                </a>
-                                
-                                <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/%E6%8B%93%E5%B1%95%E8%AF%AD%E6%B3%95/" class="post-category">
-                                    拓展语法
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
+一些Markdown处理器允许您创建术语及其对应定义的定义列表。要创建定义列表，请在第一行上键入术语。在下一行，键入一个冒号，后跟一个空格和定义。
+First Term
+: This is the definition of the first term.
 
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Markdown/">
-                            <span class="chip bg-color">Markdown</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/01/24/markdown-guan-fang-jiao-cheng-tuo-zhan-yu-fa/part04-markdown-biao-ti-bian-hao/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Part04-Markdown标题编号">
-                            
-                            <span class="card-title">Part04-Markdown标题编号</span>
-                        </div>
-                    </a>
+Second Term
+: This is one definition of the second term.
+: This is another definition of the second term.
 
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                前言
+
+
+  First Term
+  This is the definition of the first term.
+  Second Term
+  This is one definition of the second term. 
+  This is another definition of the second term.
+
+
+呈现的输出如下所示：
+Fi ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/01/24/markdown-guan-fang-jiao-cheng-tuo-zhan-yu-fa/part04-markdown-biao-ti-bian-hao/" title="Part04-Markdown标题编号">Part04-Markdown标题编号</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-24T08:33:00.000Z" title="发表于 2022-01-24 16:33:00">2022-01-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/">Markdown官方教程</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/%E6%8B%93%E5%B1%95%E8%AF%AD%E6%B3%95/">拓展语法</a></span></div><div class="content">前言
 
 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除
 
 Markdown 标题编号
-许多Markdown处理器支持标题的自定义ID - 一些Markdown处理器会
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-24
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/" class="post-category">
-                                    Markdown官方教程
-                                </a>
-                                
-                                <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/%E6%8B%93%E5%B1%95%E8%AF%AD%E6%B3%95/" class="post-category">
-                                    拓展语法
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
+许多Markdown处理器支持标题的自定义ID - 一些Markdown处理器会自动添加它们。添加自定义ID允许您直接链接到标题并使用CSS对其进行修改。要添加自定义标题ID，请在与标题相同的行上用大括号括起该自定义ID。
+### My Great Heading custom-id
 
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Markdown/">
-                            <span class="chip bg-color">Markdown</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/01/24/markdown-guan-fang-jiao-cheng-tuo-zhan-yu-fa/part03-markdown-jiao-zhu/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="Part03-Markdown脚注">
-                            
-                            <span class="card-title">Part03-Markdown脚注</span>
-                        </div>
-                    </a>
 
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                前言
+HTML看起来像这样：
+My Great Heading
+
+呈现的输出如下所示：
+My Great Heading custom-id
+链接到标题ID (#headid)
+通过创建带有数字符号（#）和自定义标题ID的[标准链接]((/basic-syntax/links.html)，可以链接到文件中具有自定义ID的标题。
+
+
+
+Markdown
+HTML
+预览效果
+
+
+
+
+[Heading IDs](#heading-ids)
+&lt;a href="#heading-ids"&gt;Heading IDs&lt;/a&gt;
+[Heading ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/01/24/markdown-guan-fang-jiao-cheng-tuo-zhan-yu-fa/part03-markdown-jiao-zhu/" title="Part03-Markdown脚注">Part03-Markdown脚注</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-24T08:23:00.000Z" title="发表于 2022-01-24 16:23:00">2022-01-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/">Markdown官方教程</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/%E6%8B%93%E5%B1%95%E8%AF%AD%E6%B3%95/">拓展语法</a></span></div><div class="content">前言
 
 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除
 
 Markdown 脚注
-脚注使您可以添加注释和参考，而不会使文档正文混乱。当您创建脚注时，带有脚注的上标数字
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-24
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/" class="post-category">
-                                    Markdown官方教程
-                                </a>
-                                
-                                <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/%E6%8B%93%E5%B1%95%E8%AF%AD%E6%B3%95/" class="post-category">
-                                    拓展语法
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
+脚注使您可以添加注释和参考，而不会使文档正文混乱。当您创建脚注时，带有脚注的上标数字会出现在您添加脚注参考的位置。读者可以单击链接以跳至页面底部的脚注内容。
+要创建脚注参考，请在方括号（[^1]）内添加插入符号和标识符。标识符可以是数字或单词，但不能包含空格或制表符。标识符仅将脚注参考与脚注本身相关联-在输出中，脚注按顺序编号。
+在括号内使用另一个插入符号和数字添加脚注，并用冒号和文本（[^1]: My footnote.）。您不必在文档末尾添加脚注。您可以将它们放在除列表，块引号和表之类的其他元素之外的任何位置。
 
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Markdown/">
-                            <span class="chip bg-color">Markdown</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/01/24/markdown-guan-fang-jiao-cheng-tuo-zhan-yu-fa/part02-markdown-wei-lan-dai-ma-kuai/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Part02-Markdown围栏代码块">
-                            
-                            <span class="card-title">Part02-Markdown围栏代码块</span>
-                        </div>
-                    </a>
+Here's a simple footnote,[^1] and here's a longer one.[^bignote]
 
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                前言
+[^1]: This is the first footnote.
+
+[^bignote]: Here's one with multiple paragraphs and code.
+
+ ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/01/24/markdown-guan-fang-jiao-cheng-tuo-zhan-yu-fa/part02-markdown-wei-lan-dai-ma-kuai/" title="Part02-Markdown围栏代码块">Part02-Markdown围栏代码块</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-24T08:14:00.000Z" title="发表于 2022-01-24 16:14:00">2022-01-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/">Markdown官方教程</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/%E6%8B%93%E5%B1%95%E8%AF%AD%E6%B3%95/">拓展语法</a></span></div><div class="content">前言
 
 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除
 
 Markdown 围栏代码块
-Markdown基本语法允许您通过将行缩进四个空格或一个制表符来创建代码块。如
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-24
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/" class="post-category">
-                                    Markdown官方教程
-                                </a>
-                                
-                                <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/%E6%8B%93%E5%B1%95%E8%AF%AD%E6%B3%95/" class="post-category">
-                                    拓展语法
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
+Markdown基本语法允许您通过将行缩进四个空格或一个制表符来创建代码块。如果发现不方便，请尝试使用受保护的代码块。根据Markdown处理器或编辑器的不同，您将在代码块之前和之后的行上使用三个反引号（```）或三个波浪号（~~~）。
 
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Markdown/">
-                            <span class="chip bg-color">Markdown</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/01/24/markdown-guan-fang-jiao-cheng-tuo-zhan-yu-fa/part01-markdown-biao-ge/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Part01-Markdown表格">
-                            
-                            <span class="card-title">Part01-Markdown表格</span>
-                        </div>
-                    </a>
+```
+{
+　“firstName”: “John”,
+　“lastName”: “Smith”,
+　“age”: 25
+}
+```
+呈现的输出如下所示：
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
 
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                前言
+语法高亮
+许多Markdown处理器都支持受围栏代码块的语法突出显示。使用此功能，您可以为编写代码的任何语言添加颜色突出显示。要添加语法突出显示，请在受防护的代码块之前的反引号旁边指定一种语言。
+```json
+{
+　“firstName”: “John”,
+　“lastName”: “Smith”,
+　“age” ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/01/24/markdown-guan-fang-jiao-cheng-tuo-zhan-yu-fa/part01-markdown-biao-ge/" title="Part01-Markdown表格">Part01-Markdown表格</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-24T07:58:00.000Z" title="发表于 2022-01-24 15:58:00">2022-01-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/">Markdown官方教程</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/%E6%8B%93%E5%B1%95%E8%AF%AD%E6%B3%95/">拓展语法</a></span></div><div class="content">前言
 
 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除
 
 Markdown 表格
-要添加表，请使用三个或多个连字符（—）创建每列的标题，并使用管道（|）分隔每列。您可
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-24
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/" class="post-category">
-                                    Markdown官方教程
-                                </a>
-                                
-                                <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/%E6%8B%93%E5%B1%95%E8%AF%AD%E6%B3%95/" class="post-category">
-                                    拓展语法
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
+要添加表，请使用三个或多个连字符（—）创建每列的标题，并使用管道（|）分隔每列。您可以选择在表的任一端添加管道。
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
 
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Markdown/">
-                            <span class="chip bg-color">Markdown</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/01/24/markdown-guan-fang-jiao-cheng-ji-ben-yu-fa/part12-markdown-nei-qian-html-biao-qian/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Part12-Markdown内嵌HTML标签">
-                            
-                            <span class="card-title">Part12-Markdown内嵌HTML标签</span>
-                        </div>
-                    </a>
 
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                前言
+呈现的输出如下所示：
+
+
+
+Syntax
+Description
+
+
+
+
+Header
+Title
+
+
+Paragraph
+Text
+
+
+
+单元格宽度可以变化，如下所示。呈现的输出将看起来相同。
+| Syntax | Description |
+| --- | ----------- |
+| Header | Title |
+| Paragraph | Text |
+
+呈现的输出如下所示：跟上方表格相同
+
+
+
+Syntax
+Description
+
+
+
+
+Header
+Title
+ ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/01/24/markdown-guan-fang-jiao-cheng-ji-ben-yu-fa/part12-markdown-nei-qian-html-biao-qian/" title="Part12-Markdown内嵌HTML标签">Part12-Markdown内嵌HTML标签</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-24T07:28:00.000Z" title="发表于 2022-01-24 15:28:00">2022-01-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/">Markdown官方教程</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">基本语法</a></span></div><div class="content">前言
 
 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除
 
 Markdown 内嵌HTML标签
-对于 Markdown 涵盖范围之外的标签，都可以直接在文件里面用 HT
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-24
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/" class="post-category">
-                                    Markdown官方教程
-                                </a>
-                                
-                                <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="post-category">
-                                    基本语法
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
+对于 Markdown 涵盖范围之外的标签，都可以直接在文件里面用 HTML 本身。如需使用 HTML，不需要额外标注这是 HTML 或是 Markdown，只需 HTML 标签添加到 Markdown 文本中即可。
+行级內联标签
+HTML 的行级內联标签如 &lt;span&gt;、&lt;cite&gt;、&lt;del&gt; 不受限制，可以在 Markdown 的段落、列表或是标题里任意使用。依照个人习惯，甚至可以不用 Markdown 格式，而采用 HTML 标签来格式化。例如：如果比较喜欢 HTML 的 &lt;a&gt; 或 &lt;img&gt; 标签，可以直接使用这些标签，而不用 Markdown 提供的链接或是图片语法。当你需要更改元素的属性时（例如为文本指定颜色或更改图像的宽度），使用 HTML 标签更方便些。
 
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Markdown/">
-                            <span class="chip bg-color">Markdown</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/01/24/markdown-guan-fang-jiao-cheng-ji-ben-yu-fa/part11-markdown-zhuan-yi-zi-fu-yu-fa/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Part11-Markdown转义字符语法">
-                            
-                            <span class="card-title">Part11-Markdown转义字符语法</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                前言
+HTML 行级內联标签和区块标签不同，在內联标签的范围内， Markdown 的语法是 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/01/24/markdown-guan-fang-jiao-cheng-ji-ben-yu-fa/part11-markdown-zhuan-yi-zi-fu-yu-fa/" title="Part11-Markdown转义字符语法">Part11-Markdown转义字符语法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-24T07:21:00.000Z" title="发表于 2022-01-24 15:21:00">2022-01-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/">Markdown官方教程</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">基本语法</a></span></div><div class="content">前言
 
 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除
 
 Markdown 转义字符语法
-要显示原本用于格式化 Markdown 文档的字符，请在字符前面添加反斜杠字
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-24
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/" class="post-category">
-                                    Markdown官方教程
-                                </a>
-                                
-                                <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="post-category">
-                                    基本语法
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
+要显示原本用于格式化 Markdown 文档的字符，请在字符前面添加反斜杠字符 \ 。
+\* Without the backslash, this would be a bullet in an unordered list.
 
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Markdown/">
-                            <span class="chip bg-color">Markdown</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/01/24/markdown-guan-fang-jiao-cheng-ji-ben-yu-fa/part10-markdown-tu-pian-yu-fa/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Part10-Markdown图片语法">
-                            
-                            <span class="card-title">Part10-Markdown图片语法</span>
-                        </div>
-                    </a>
+* Without the backslash, this would be a bullet in an unordered list.
 
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                前言
+可做转义的字符
+以下列出的字符都可以通过使用反斜杠字符从而达到转义目的。
+
+
+
+Character
+Name
+
+
+
+
+\
+backslash
+
+
+`
+backtick(see also escaping backticks in code)
+
+
+*
+asterisk
+
+
+_
+underscore
+
+
+{ }
+curly braces
+
+
+[ ]
+brackets
+
+
+( )
+parentheses
+
+
+#
+pound sign
+
+
++
+plus sign
+
+ ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/01/24/markdown-guan-fang-jiao-cheng-ji-ben-yu-fa/part10-markdown-tu-pian-yu-fa/" title="Part10-Markdown图片语法">Part10-Markdown图片语法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-24T06:46:00.000Z" title="发表于 2022-01-24 14:46:00">2022-01-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/">Markdown官方教程</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">基本语法</a></span></div><div class="content">前言
 
 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除
 
 Markdown 图片语法
-要添加图像，请使用感叹号 (!), 然后在方括号增加替代文本，图片链接放在圆括号
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-24
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/" class="post-category">
-                                    Markdown官方教程
-                                </a>
-                                
-                                <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="post-category">
-                                    基本语法
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
+要添加图像，请使用感叹号 (!), 然后在方括号增加替代文本，图片链接放在圆括号里，括号里的链接后可以增加一个可选的图片标题文本。
+插入图片Markdown语法代码：![图片alt](图片链接 "图片title")。
+对应的HTML代码：&lt;img src="图片链接" alt="图片alt" title="图片title"&gt;
+![这是图片](Part10-Markdown图片语法/philly-magic-garden.jpg "Magic Gardens")
 
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Markdown/">
-                            <span class="chip bg-color">Markdown</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/01/24/markdown-guan-fang-jiao-cheng-ji-ben-yu-fa/part09-markdown-lian-jie-yu-fa/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Part09-Markdown链接语法">
-                            
-                            <span class="card-title">Part09-Markdown链接语法</span>
-                        </div>
-                    </a>
 
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                前言
+渲染效果如下：
+
+链接图片
+给图片增加链接，请将图像的Markdown 括在方括号中，然后将链接添加在圆括号中。
+[![沙漠中的岩石图片](Part10-Markdown图片语法/shiprock.jpg "Shiprock")](https://markdown.com.cn)
+
+
+图片预览正常，站内无法显示问题解决
+问题描述
+markdown文件中，插 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/01/24/markdown-guan-fang-jiao-cheng-ji-ben-yu-fa/part09-markdown-lian-jie-yu-fa/" title="Part09-Markdown链接语法">Part09-Markdown链接语法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-24T05:59:00.000Z" title="发表于 2022-01-24 13:59:00">2022-01-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/">Markdown官方教程</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">基本语法</a></span></div><div class="content">前言
 
 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除
 
 Markdown 链接语法
 链接文本放在中括号内，链接地址放在后面的括号中，链接title可选。
-超链接Ma
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-24
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/" class="post-category">
-                                    Markdown官方教程
-                                </a>
-                                
-                                <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="post-category">
-                                    基本语法
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
+超链接Markdown语法代码：[超链接显示名](超链接地址 “超链接title”)
+对应的HTML代码：&lt;a href=“超链接地址” title=“超链接title”&gt;超链接显示名&lt;/a&gt;
+这是一个链接 [Markdown语法](https://markdown.com.cn)。
 
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Markdown/">
-                            <span class="chip bg-color">Markdown</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/01/24/markdown-guan-fang-jiao-cheng-ji-ben-yu-fa/part08-markdown-fen-ge-xian-yu-fa/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Part08-Markdown分隔线语法">
-                            
-                            <span class="card-title">Part08-Markdown分隔线语法</span>
-                        </div>
-                    </a>
 
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                前言
+渲染效果如下：
+这是一个链接 Markdown语法。
+给链接增加 Title
+链接title是当鼠标悬停在链接上时会出现的文字，这个title是可选的，它放在圆括号中链接地址后面，跟链接地址之间以空格分隔。
+这是一个链接 [Markdown语法](https://markdown.com.cn "最好的markdown教程")。
+
+渲染效果如下：
+这是一个链接 Markdown语法。
+网址和Email地址
+使用尖括号可以很方便地把URL或者email地 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/01/24/markdown-guan-fang-jiao-cheng-ji-ben-yu-fa/part08-markdown-fen-ge-xian-yu-fa/" title="Part08-Markdown分隔线语法">Part08-Markdown分隔线语法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-24T05:45:00.000Z" title="发表于 2022-01-24 13:45:00">2022-01-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/">Markdown官方教程</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">基本语法</a></span></div><div class="content">前言
 
 本文转自Markdown官方教程, 本人仅用于练习Markdown语法, 无其他商业等用途, 若有侵权, 请联系作者删除
 
 Markdown 分隔线语法
-要创建分隔线，请在单独一行上使用三个或多个星号 (***)、破折号 (—) 或
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-24
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/" class="post-category">
-                                    Markdown官方教程
-                                </a>
-                                
-                                <a href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="post-category">
-                                    基本语法
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
+要创建分隔线，请在单独一行上使用三个或多个星号 (***)、破折号 (—) 或下划线 (___) ，并且不能包含其他内容。
+***
 
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Markdown/">
-                            <span class="chip bg-color">Markdown</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
+---
+
+_________________
+
+
+以上三个分隔线的渲染效果看起来都一样：
+
+分隔线（Horizontal Rule）用法最佳实践
+为了兼容性，请在分隔线的前后均添加空白行。
+
+
+
+✔Do this
+❌Don’t do this
+
+
+
+
+Try to put a blank line before…—…and after a horizontal rule.
+Without blank lines, this would be a heading.—Don’t do this!
+
+
+
+</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#content-inner">3</a><a class="extend next" rel="next" href="/page/3/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">雨泪丶</div><div class="author-info__description">一位普通建筑生的心血来潮</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><div class="content"><a class="title" href="/2022/03/24/qian-duan-xue-xi/css/css-xue-xi-bi-ji-05/" title="CSS学习笔记Part05">CSS学习笔记Part05</a><time datetime="2022-03-24T04:00:00.000Z" title="发表于 2022-03-24 12:00:00">2022-03-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/03/16/qian-duan-xue-xi/javascript/js-xue-xi-bi-ji-01/" title="JavaScript学习笔记Part01"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JavaScript学习笔记Part01"/></a><div class="content"><a class="title" href="/2022/03/16/qian-duan-xue-xi/javascript/js-xue-xi-bi-ji-01/" title="JavaScript学习笔记Part01">JavaScript学习笔记Part01</a><time datetime="2022-03-16T13:30:00.000Z" title="发表于 2022-03-16 21:30:00">2022-03-16</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2022/03/13/qian-duan-xue-xi/css/css-xue-xi-bi-ji-04/" title="CSS学习笔记Part04">CSS学习笔记Part04</a><time datetime="2022-03-13T13:30:00.000Z" title="发表于 2022-03-13 21:30:00">2022-03-13</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2022/02/28/csharpforgh/csharpforgh01/" title="基于CSharp的GH插件开发Part1">基于CSharp的GH插件开发Part1</a><time datetime="2022-02-28T06:30:00.000Z" title="发表于 2022-02-28 14:30:00">2022-02-28</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2022/02/23/jian-zhu-xue-xi/jian-zhu-jie-gou/2022-nian-jian-zhu-jie-gou-shi-ti-a/" title="西安交通大学2021-2022学年建筑结构与选型试题（A）">西安交通大学2021-2022学年建筑结构与选型试题（A）</a><time datetime="2022-02-23T09:26:00.000Z" title="发表于 2022-02-23 17:26:00">2022-02-23</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a>
             </div>
-            
-        </div>
-    </article>
-
-</main>
-
-
-<div class="container paging">
-    <div class="row">
-        <div class="col s6 m4 l4">
-            
-            <a href="/"
-               class="left btn-floating btn-large waves-effect waves-light bg-color">
-                <i class="fas fa-angle-left"></i>
-            </a>
-            
-        </div>
-        <div class="page-info col m4 l4 hide-on-small-only">
-            <div class="center-align b-text-gray">2 / 3</div>
-        </div>
-        <div class="col s6 m4 l4">
-            
-            <a href="/page/3/"
-               class="right btn-floating btn-large waves-effect waves-light bg-color">
-                <i class="fas fa-angle-right"></i>
-            </a>
-            
-        </div>
-    </div>
-</div>
-
-
-
-
-    <footer class="page-footer bg-color">
-    
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="503838841"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.7'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
-    
-    <div class="container row center-align" style="margin-bottom: 15px !important;">
-        <div class="col s12 m8 l8 copy-right">
-            Copyright&nbsp;&copy;
-            
-                <span id="year">2022</span>
-            
-            <span id="year">2022</span>
-            <a href="/about" target="_blank">雨泪丶</a>
-            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
-            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
-            <br>
-            
-            
-            
-            
-            
-            
-            <span id="busuanzi_container_site_pv">
-                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
-                    class="white-color"></span>&nbsp;次
-            </span>
-            
-            
-            <span id="busuanzi_container_site_uv">
-                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
-                    class="white-color"></span>&nbsp;人
-            </span>
-            
-            <br>
-            
-            <span id="sitetime">载入运行时间...</span>
-            <script>
-                function siteTime() {
-                    var seconds = 1000;
-                    var minutes = seconds * 60;
-                    var hours = minutes * 60;
-                    var days = hours * 24;
-                    var years = days * 365;
-                    var today = new Date();
-                    var startYear = "2022";
-                    var startMonth = "1";
-                    var startDate = "21";
-                    var startHour = "0";
-                    var startMinute = "0";
-                    var startSecond = "0";
-                    var todayYear = today.getFullYear();
-                    var todayMonth = today.getMonth() + 1;
-                    var todayDate = today.getDate();
-                    var todayHour = today.getHours();
-                    var todayMinute = today.getMinutes();
-                    var todaySecond = today.getSeconds();
-                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
-                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-                    var diff = t2 - t1;
-                    var diffYears = Math.floor(diff / years);
-                    var diffDays = Math.floor((diff / days) - diffYears * 365);
-                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
-                        minutes);
-                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
-                        diffMinutes * minutes) / seconds);
-                    if (startYear == todayYear) {
-                        document.getElementById("year").innerHTML = todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
-                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-                    } else {
-                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
-                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-                    }
-                }
-                setInterval(siteTime, 1000);
-            </script>
-            
-            <br>
-            
-        </div>
-        <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a>
-
-
-
-    <a href="mailto:xtw79020207@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fas fa-envelope-open"></i>
-    </a>
-
-
-
-
-
-
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2818897318" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2818897318" data-position="top" data-delay="50">
-        <i class="fab fa-qq"></i>
-    </a>
-
-
-
-
-
-
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
-
-</div>
-    </div>
-</footer>
-
-<div class="progress-bar"></div>
-
-
-    <!-- 搜索遮罩框 -->
-<div id="searchModal" class="modal">
-    <div class="modal-content">
-        <div class="search-header">
-            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
-            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
-                   class="search-input">
-        </div>
-        <div id="searchResult"></div>
-    </div>
-</div>
-
-<script type="text/javascript">
-$(function () {
-    var searchFunc = function (path, search_id, content_id) {
-        'use strict';
-        $.ajax({
-            url: path,
-            dataType: "xml",
-            success: function (xmlResponse) {
-                // get the contents from search data
-                var datas = $("entry", xmlResponse).map(function () {
-                    return {
-                        title: $("title", this).text(),
-                        content: $("content", this).text(),
-                        url: $("url", this).text()
-                    };
-                }).get();
-                var $input = document.getElementById(search_id);
-                var $resultContent = document.getElementById(content_id);
-                $input.addEventListener('input', function () {
-                    var str = '<ul class=\"search-result-list\">';
-                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-                    $resultContent.innerHTML = "";
-                    if (this.value.trim().length <= 0) {
-                        return;
-                    }
-                    // perform local searching
-                    datas.forEach(function (data) {
-                        var isMatch = true;
-                        var data_title = data.title.trim().toLowerCase();
-                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
-                        var data_url = data.url;
-                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
-                        var index_title = -1;
-                        var index_content = -1;
-                        var first_occur = -1;
-                        // only match artiles with not empty titles and contents
-                        if (data_title !== '' && data_content !== '') {
-                            keywords.forEach(function (keyword, i) {
-                                index_title = data_title.indexOf(keyword);
-                                index_content = data_content.indexOf(keyword);
-                                if (index_title < 0 && index_content < 0) {
-                                    isMatch = false;
-                                } else {
-                                    if (index_content < 0) {
-                                        index_content = 0;
-                                    }
-                                    if (i === 0) {
-                                        first_occur = index_content;
-                                    }
-                                }
-                            });
-                        }
-                        // show search results
-                        if (isMatch) {
-                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
-                            var content = data.content.trim().replace(/<[^>]+>/g, "");
-                            if (first_occur >= 0) {
-                                // cut out 100 characters
-                                var start = first_occur - 20;
-                                var end = first_occur + 80;
-                                if (start < 0) {
-                                    start = 0;
-                                }
-                                if (start === 0) {
-                                    end = 100;
-                                }
-                                if (end > content.length) {
-                                    end = content.length;
-                                }
-                                var match_content = content.substr(start, end);
-                                // highlight all keywords
-                                keywords.forEach(function (keyword) {
-                                    var regS = new RegExp(keyword, "gi");
-                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
-                                });
-
-                                str += "<p class=\"search-result\">" + match_content + "...</p>"
-                            }
-                            str += "</li>";
-                        }
-                    });
-                    str += "</ul>";
-                    $resultContent.innerHTML = str;
-                });
-            }
-        });
-    };
-
-    searchFunc('/search.xml', 'searchInput', 'searchResult');
-});
-</script>
-
-    <!-- 回到顶部按钮 -->
-<div id="backTop" class="top-scroll">
-    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-</div>
-
-
-    <script src="/libs/materialize/materialize.min.js"></script>
-    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="/libs/aos/aos.js"></script>
-    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="/js/matery.js"></script>
-
-    <!-- Baidu Analytics -->
-
-    <!-- Baidu Push -->
-
-<script>
-    (function () {
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        } else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-</script>
-
-    
-    <script src="/libs/others/clicklove.js" async="async"></script>
-    
-    
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
-    
-
-    
-
-    
-
-	
-    
-
-    
-
-    
-
-    
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
-    
-
-</body>
-
-</html>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Grasshopper/"><span class="card-category-list-name">Grasshopper</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Grasshopper/C-For-Gh/"><span class="card-category-list-name">C#_For_Gh</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/JavaScript/"><span class="card-category-list-name">JavaScript</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/"><span class="card-category-list-name">Markdown官方教程</span><span class="card-category-list-count">21</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"><span class="card-category-list-name">基本语法</span><span class="card-category-list-count">12</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Markdown%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B/%E6%8B%93%E5%B1%95%E8%AF%AD%E6%B3%95/"><span class="card-category-list-name">拓展语法</span><span class="card-category-list-count">9</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Web/"><span class="card-category-list-name">Web</span><span class="card-category-list-count">7</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Web/CSS/"><span class="card-category-list-name">CSS</span><span class="card-category-list-count">5</span></a></li></ul></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/CSS/" style="font-size: 1.37em; color: #99a4b2">CSS</a> <a href="/tags/Grasshopper/" style="font-size: 1.1em; color: #999">Grasshopper</a> <a href="/tags/HTML/" style="font-size: 1.23em; color: #999ea6">HTML</a> <a href="/tags/JavaScript/" style="font-size: 1.1em; color: #999">JavaScript</a> <a href="/tags/Markdown/" style="font-size: 1.5em; color: #99a9bf">Markdown</a> <a href="/tags/%E5%BB%BA%E7%AD%91%E7%BB%93%E6%9E%84/" style="font-size: 1.1em; color: #999">建筑结构</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/03/"><span class="card-archive-list-date">三月 2022</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/02/"><span class="card-archive-list-date">二月 2022</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/01/"><span class="card-archive-list-date">一月 2022</span><span class="card-archive-list-count">25</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">31</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-06-27T06:30:06.354Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 雨泪丶</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

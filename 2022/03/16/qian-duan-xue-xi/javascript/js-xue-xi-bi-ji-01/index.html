@@ -1,0 +1,463 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>JavaScript学习笔记Part01 | 雨泪丶</title><meta name="keywords" content="JavaScript"><meta name="author" content="雨泪丶"><meta name="copyright" content="雨泪丶"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="JavaScript 学习笔记 Part01 目录 1. DOM 简介 2. 获取元素 3. 事件基础 4. 操作元素 5. 节点操作">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript学习笔记Part01">
+<meta property="og:url" content="https://kevinyulei.github.io/2022/03/16/qian-duan-xue-xi/javascript/js-xue-xi-bi-ji-01/index.html">
+<meta property="og:site_name" content="雨泪丶">
+<meta property="og:description" content="JavaScript 学习笔记 Part01 目录 1. DOM 简介 2. 获取元素 3. 事件基础 4. 操作元素 5. 节点操作">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+<meta property="article:published_time" content="2022-03-16T13:30:00.000Z">
+<meta property="article:modified_time" content="2022-03-25T09:29:51.462Z">
+<meta property="article:author" content="雨泪丶">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://kevinyulei.github.io/2022/03/16/qian-duan-xue-xi/javascript/js-xue-xi-bi-ji-01/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'JavaScript学习笔记Part01',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-03-25 17:29:51'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">雨泪丶</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">JavaScript学习笔记Part01</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-03-16T13:30:00.000Z" title="发表于 2022-03-16 21:30:00">2022-03-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-03-25T09:29:51.462Z" title="更新于 2022-03-25 17:29:51">2022-03-25</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/JavaScript/">JavaScript</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="JavaScript学习笔记Part01"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1>JavaScript 学习笔记 Part01</h1>
+<p><strong>目录</strong><br>
+<a href="#title01">1. DOM 简介</a><br>
+<a href="#title02">2. 获取元素</a><br>
+<a href="#title03">3. 事件基础</a><br>
+<a href="#title04">4. 操作元素</a><br>
+<a href="#title05">5. 节点操作</a></p>
+<span id="more"></span>
+<style>
+    .red {
+        /* color: red; */
+        font-weight: 700;
+    }
+</style>
+<h2 id="title01">1. DOM简介</h2>
+<h3>1.1 什么是DOM</h3>
+<p><span class="red">文档对象模型（Document Object Model，简称 DOM）</span>，是 W3C 组织推荐的处理可拓展标记语言（HTML 或者 XML）的标准编程接口</p>
+<p>W3C 已经定义了一系列的 DOM 接口，通过这些 DOM 接口可以改变网页的内容、结构和样式</p>
+<h3>1.2 DOM树</h3>
+<p><strong>文档：</strong>一个页面就是一个文档，DOM 中使用 document 表示</p>
+<p><strong>元素：</strong>页面中所有的标签都是元素，DOM 中使用 element 表示</p>
+<p><strong>节点：</strong>网页中的所有内容都是节点（标签、属性、文本、注释等），DOM 中使用 node 表示</p>
+<p>DOM 把以上内容都看作是对象</p>
+<h2 id="title02">2. 获取元素</h2>
+<h3>2.1 如何获取页面元素</h3>
+<p>DOM 在我们实际开发中主要用来操作文素</p>
+<p>获取页面中的元素的方式：</p>
+<ul>
+<li>根据 ID 获取</li>
+<li>根据标签名获取</li>
+<li>通过 HTML5 新增的方法获取</li>
+<li>特殊元素获取</li>
+</ul>
+<h3>2.2 根据ID获取</h3>
+<p>使用 getElementById()方法可以获取带有 ID 的元素对象</p>
+<p>语法：</p>
+<pre class=" language-language-js"><code class="language-language-js">var element = document.getElementById(id);
+</code></pre>
+<h3>2.3 根据标签名获取</h3>
+<p>使用 getElementByTagName()方法可以返回带有指定标签名的<span class="red">对象的集合</span></p>
+<p>语法：</p>
+<pre class=" language-language-js"><code class="language-language-js">var elements = document.getElementsByTagName("id名");
+</code></pre>
+<p>还可以获取某个元素（父元素）内部所有指定标签名的子元素</p>
+<p>语法：</p>
+<pre class=" language-language-js"><code class="language-language-js">element.getElementsByTagName("标签名");
+</code></pre>
+<p>注意：</p>
+<ol>
+<li>因为得到的是一个对象的集合，所以想要操作里面的元素需要遍历</li>
+<li>得到元素对象是动态的</li>
+<li>父元素必须是<span class="red">单个对象（必须指明是哪一个元素对象）</span>。获取的时候不包括父元素自己</li>
+</ol>
+<h3>2.4 通过HTML5新增的方法获取</h3>
+<ol>
+<li>通过类名获取元素，返回元素集合</li>
+</ol>
+<p>语法：</p>
+<pre class=" language-language-js"><code class="language-language-js">document.getElementsByClassName("类名");
+</code></pre>
+<ol start="2">
+<li>根据指定选择器返回<span class="red">第一个元素对象</span></li>
+</ol>
+<p>语法：</p>
+<pre class=" language-language-js"><code class="language-language-js">document.querySelector("选择器");
+</code></pre>
+<ol start="3">
+<li>根据指定选择器返回所有元素对象的集合</li>
+</ol>
+<p>语法：</p>
+<pre class=" language-language-js"><code class="language-language-js">document.querySelectorAll("选择器");
+</code></pre>
+<h3>2.5 获取特殊元素（body、html）</h3>
+<ol>
+<li>获取 body 元素</li>
+</ol>
+<p>语法：</p>
+<pre class=" language-language-js"><code class="language-language-js">var bodyEle = document.body;
+</code></pre>
+<ol start="2">
+<li>获取 html 元素</li>
+</ol>
+<p>语法：</p>
+<pre class=" language-language-js"><code class="language-language-js">var htmlEle = document.documentElement;
+</code></pre>
+<h2 id="title03">3. 事件基础</h2>
+<h3>3.1 事件概述</h3>
+<p>JavaScript 使我们有能力创建动态页面，而事件是可以被 JavaScript 侦测到的行为</p>
+<p>简单理解：触发——相应机制</p>
+<p>网页中的每个元素都可以产生某些可以触发 JavaScript 的事件，例如，我们可以在用户点击某按钮时产生一个事件，然后去执行某些操作</p>
+<h3>3.2 事件三要素</h3>
+<ol>
+<li>事件源：事件被触发的对象</li>
+<li>事件类型：如何触发事件，如：鼠标点击、鼠标经过、键盘按下</li>
+<li>事件处理程序：通过函数赋值的方式完成</li>
+</ol>
+<p>示例代码如下：</p>
+<pre class=" language-language-html"><code class="language-language-html"><body>
+  <button id="btn">唐伯虎</button>
+  <script>
+    var btn = document.getElementById("btn");
+    btn.onclick = function () {
+      alert("点秋香");
+    };
+  </script>
+</body>
+</code></pre>
+<p>显示效果如下：</p>
+
+    <button id="btn">唐伯虎</button>
+    <script>
+        var btn = document.getElementById('btn');
+        btn.onclick = function () {
+            alert('点秋香');
+        }
+    </script>
+
+<h3>3.3 执行事件的步骤</h3>
+<ol>
+<li>获取事件源</li>
+<li>注册事件（绑定事件）</li>
+<li>添加事件处理程序（采取函数赋值形式）</li>
+</ol>
+<p>常见的鼠标事件：</p>
+<table>
+    <tbody><tr><th>鼠标事件</th><th>触发条件</th></tr>
+    <tr><td>onclick</td><td>鼠标点击左键触发</td></tr>
+    <tr><td>onmouseover</td><td>鼠标经过触发</td></tr>
+    <tr><td>onmouseout</td><td>鼠标离开触发</td></tr>
+    <tr><td>onfocus</td><td>获得鼠标焦点触发</td></tr>
+    <tr><td>onblur</td><td>失去鼠标焦点触发</td></tr>
+    <tr><td>onmousemove</td><td>鼠标移动触发</td></tr>
+    <tr><td>onmouseup</td><td>鼠标弹起触发</td></tr>
+    <tr><td>onmousedown</td><td>鼠标按下触发</td></tr>
+</tbody></table>
+<h2 id="title04">4. 操作元素</h2>
+<p>JavaScript 的 DOM 操作可以改变网页内容、结构和样式，我们可以利用 DOM 操作元素来改变元素里面的内容、属性等。注意以下都是属性</p>
+<h3>4.1 改变元素内容</h3>
+<p>语法：</p>
+<pre class=" language-language-js"><code class="language-language-js">element.innerText;
+</code></pre>
+<p>从起始位置到终止位置的内容，但它去除 html 标签，同时空格和换行也会去掉</p>
+<p>语法：</p>
+<pre class=" language-language-js"><code class="language-language-js">element.innerHTML; //常用，标准语法
+</code></pre>
+<p>起始位置到终止位置的全部内容，包括 html 标签，同时保留空格和换行</p>
+<p>示例代码如下：</p>
+<pre class=" language-language-css"><code class="language-language-css">/* CSS */
+<style>
+    .exampleOf4-1 > div, .exampleOf4-1 > p {
+        width: 300px;
+        height: 30px;
+        line-height: 30px;
+        margin-top: 10px;
+        color: #fff;
+        background-color: pink
+    }
+</style>
+</code></pre>
+<pre class=" language-language-html"><code class="language-language-html"><!-- HTML -->
+<body>
+  <div class="exampleOf4-1">
+    <button class="btnOf4-1">显示当前系统事件</button>
+    <div class="divOf4-1">某个时间</div>
+    <p class="pOf4-1">123</p>
+  </div>
+  <script>
+    function getDate() {
+      var date = new Date();
+      var year = date.getFullYear();
+      var month = date.getMonth() + 1;
+      var dates = date.getDate();
+      var arr = [
+        "星期日",
+        "星期一",
+        "星期二",
+        "星期三",
+        "星期四",
+        "星期五",
+        "星期六",
+      ];
+      var day = date.getDay();
+      return (
+        "今天是" + year + "年" + month + "月" + dates + "日" + "，" + arr[day]
+      );
+    }
+    var btn = document.querySelector(".btnOf4-1");
+    var div = document.querySelector(".divOf4-1");
+    btn.onclick = function () {
+      div.innerText = getDate();
+    };
+    var p = document.querySelector(".pOf4-1");
+    p.innerText = getDate();
+  </script>
+</body>
+</code></pre>
+<p>显示效果如下：</p>
+<style>
+    .exampleOf4-1 > div, .exampleOf4-1 > p {
+        width: 300px;
+        height: 30px;
+        line-height: 30px;
+        margin-top: 10px;
+        color: #fff;
+        background-color: pink
+    }
+</style>
+
+    <div class="exampleOf4-1">
+        <button class="btnOf4-1">显示当前系统事件</button>
+        <div class="divOf4-1">某个时间</div>
+        <p class="pOf4-1">123</p>
+    </div>
+    <script>
+        function getDate() {
+            var date=new Date();
+            var year=date.getFullYear();
+            var month=date.getMonth()+1;
+            var dates=date.getDate();
+            var arr=['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+            var day=date.getDay();
+            return '今天是'+year+'年'+month+'月'+dates+'日'+'，'+arr[day];
+        }
+        var btn=document.querySelector('.btnOf4-1');
+        var div=document.querySelector('.divOf4-1');
+        btn.onclick = function() {
+            div.innerText = getDate();
+        }
+        var p=document.querySelector('.pOf4-1');
+        p.innerText=getDate();
+    </script>
+
+<h3>4.2 常用元素的属性操作</h3>
+<ol>
+<li>innerText、innterHTML 改变元素内容</li>
+<li>src、href</li>
+<li>id、alt、title</li>
+</ol>
+<p>示例代码如下：</p>
+<pre class=" language-language-html"><code class="language-language-html"><!-- HTML -->
+<body>
+  <div class="exampleOf4-2">
+    <button id="btn1OfExample4-2">刘德华</button>
+    <button id="btn2OfExample4-2">张学友</button>
+    <br />
+    <img
+      src="JS学习笔记01/01.jpg"
+      alt="刘德华"
+      id="imgOfExample4-2"
+      title="刘德华"
+      style="width: 400px;"
+    />
+  </div>
+  <script>
+    //1. 获取元素
+    var btn1 = document.getElementById("btn1OfExample4-2");
+    var btn2 = document.getElementById("btn2OfExample4-2");
+    var img = document.getElementById("imgOfExample4-2");
+    //2. 注册事件
+    btn1.onclick = function () {
+      img.src = "JS学习笔记01/01.jpg";
+      img.alt = "刘德华";
+      img.title = "刘德华";
+    };
+    btn2.onclick = function () {
+      img.src = "JS学习笔记01/02.png";
+      img.alt = "张学友";
+      img.title = "张学友";
+    };
+  </script>
+</body>
+</code></pre>
+<p>显示效果如下：(本代码在 md 文件中更改 src 属性后出错)</p>
+
+    <div class="exampleOf4-2">
+        <button id="btn1OfExample4-2">刘德华</button>
+        <button id="btn2OfExample4-2">张学友</button>
+        <br>
+        <img src="/2022/03/16/qian-duan-xue-xi/javascript/js-xue-xi-bi-ji-01/01.jpg" alt="刘德华" id="imgOfExample4-2" title="刘德华" style="width: 400px;">
+    </div>
+    <script>
+        //1. 获取元素
+        var btn1=document.getElementById('btn1OfExample4-2');
+        var btn2=document.getElementById('btn2OfExample4-2');
+        var img=document.getElementById('imgOfExample4-2');
+        //2. 注册事件
+        btn1.onclick = function() {
+            img.src='JS学习笔记01/01.jpg';
+            img.alt='刘德华';
+            img.title='刘德华';
+        }
+        btn2.onclick = function() {
+            img.src='JS学习笔记01/02.png';
+            img.alt='张学友';
+            img.title='张学友';
+        }
+    </script>
+
+<br>
+<strong>案例：分时显示不同图片，显示不同问候语</strong>
+<p><strong>要求：</strong></p>
+<ul>
+<li>根据不同时间，页面显示不同图片，同时显示不同的问候语
+<ul>
+<li>如果上午时间打开页面，显示上午好，显示上午的图片</li>
+<li>如果下午时间打开页面，显示下午好，显示下午的图片</li>
+<li>如果晚上时间打开页面，显示晚上好，显示晚上的图片</li>
+</ul>
+</li>
+</ul>
+<p><strong>分析:</strong></p>
+<h2 id="title05">5. 节点操作</h2>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://kevinyulei.github.io">雨泪丶</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://kevinyulei.github.io/2022/03/16/qian-duan-xue-xi/javascript/js-xue-xi-bi-ji-01/">https://kevinyulei.github.io/2022/03/16/qian-duan-xue-xi/javascript/js-xue-xi-bi-ji-01/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://kevinyulei.github.io" target="_blank">雨泪丶</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/JavaScript/">JavaScript</a></div><div class="post_share"><div class="social-share" data-image="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/03/24/qian-duan-xue-xi/css/css-xue-xi-bi-ji-05/"><img class="prev-cover" src="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">CSS学习笔记Part05</div></div></a></div><div class="next-post pull-right"><a href="/2022/03/13/qian-duan-xue-xi/css/css-xue-xi-bi-ji-04/"><img class="next-cover" src="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">CSS学习笔记Part04</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">雨泪丶</div><div class="author-info__description">一位普通建筑生的心血来潮</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">JavaScript 学习笔记 Part01</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#title01"><span class="toc-number">1.1.</span> <span class="toc-text">1. DOM简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1 什么是DOM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2 DOM树</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#title02"><span class="toc-number">1.2.</span> <span class="toc-text">2. 获取元素</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1 如何获取页面元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2 根据ID获取</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.2.3.</span> <span class="toc-text">2.3 根据标签名获取</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.2.4.</span> <span class="toc-text">2.4 通过HTML5新增的方法获取</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.2.5.</span> <span class="toc-text">2.5 获取特殊元素（body、html）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#title03"><span class="toc-number">1.3.</span> <span class="toc-text">3. 事件基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.3.1.</span> <span class="toc-text">3.1 事件概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.3.2.</span> <span class="toc-text">3.2 事件三要素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.3.3.</span> <span class="toc-text">3.3 执行事件的步骤</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#title04"><span class="toc-number">1.4.</span> <span class="toc-text">4. 操作元素</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.4.1.</span> <span class="toc-text">4.1 改变元素内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.4.2.</span> <span class="toc-text">4.2 常用元素的属性操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#title05"><span class="toc-number">1.5.</span> <span class="toc-text">5. 节点操作</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><div class="content"><a class="title" href="/2022/03/24/qian-duan-xue-xi/css/css-xue-xi-bi-ji-05/" title="CSS学习笔记Part05">CSS学习笔记Part05</a><time datetime="2022-03-24T04:00:00.000Z" title="发表于 2022-03-24 12:00:00">2022-03-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/03/16/qian-duan-xue-xi/javascript/js-xue-xi-bi-ji-01/" title="JavaScript学习笔记Part01"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JavaScript学习笔记Part01"/></a><div class="content"><a class="title" href="/2022/03/16/qian-duan-xue-xi/javascript/js-xue-xi-bi-ji-01/" title="JavaScript学习笔记Part01">JavaScript学习笔记Part01</a><time datetime="2022-03-16T13:30:00.000Z" title="发表于 2022-03-16 21:30:00">2022-03-16</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2022/03/13/qian-duan-xue-xi/css/css-xue-xi-bi-ji-04/" title="CSS学习笔记Part04">CSS学习笔记Part04</a><time datetime="2022-03-13T13:30:00.000Z" title="发表于 2022-03-13 21:30:00">2022-03-13</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2022/02/28/csharpforgh/csharpforgh01/" title="基于CSharp的GH插件开发Part1">基于CSharp的GH插件开发Part1</a><time datetime="2022-02-28T06:30:00.000Z" title="发表于 2022-02-28 14:30:00">2022-02-28</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2022/02/23/jian-zhu-xue-xi/jian-zhu-jie-gou/2022-nian-jian-zhu-jie-gou-shi-ti-a/" title="西安交通大学2021-2022学年建筑结构与选型试题（A）">西安交通大学2021-2022学年建筑结构与选型试题（A）</a><time datetime="2022-02-23T09:26:00.000Z" title="发表于 2022-02-23 17:26:00">2022-02-23</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 雨泪丶</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
